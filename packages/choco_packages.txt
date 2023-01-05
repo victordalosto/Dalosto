@@ -1,0 +1,7 @@
+git
+corretto11jdk
+gitkraken --ignore-checksums
+cmder
+maven
+vscode
+virtualbox
