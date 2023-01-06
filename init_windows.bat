@@ -16,19 +16,19 @@
 @REM ###############################
 @echo  ## INSTALL CHOCOLATEY 
 @REM ###############################
-cmd /c bin\choco_install
+@cmd /c bin\choco_install
 
 
 @REM ###############################
 @echo ## INSTALL CHOCO PACKAGES 
 @REM ###############################
-for /F "tokens=*" %%A in (packages\choco_packages.txt) DO cmd /c bin\choco_install_package %%A
-cmd /c bin\choco_upgrade
+@for /F "tokens=*" %%A in (packages\choco_packages.txt) DO cmd /c bin\choco_install_package %%A
+@cmd /c bin\choco_upgrade
 
 
 @REM ###############################
 @echo ## UPDATING VSCODE EXTENSIONS
 @REM ###############################
-for /F "tokens=*" %%A in (extensions\vscode.txt) DO cmd /c bin\vscode_extension %%A
+@for /F "tokens=*" %%A in (vscode\extensions.txt) DO cmd /c bin\vscode_extension %%A
 
 @pause

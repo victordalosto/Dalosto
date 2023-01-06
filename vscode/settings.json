@@ -1,0 +1,45 @@
+// =================================
+//  SETTINGS FOR Visual Studio CODE
+//  Author: VictorDalosto
+//  Version: 1.0
+// =================================
+
+{
+  // VISUAL
+  "editor.minimap.enabled": false,
+  "workbench.statusBar.visible": false,
+  "workbench.sideBar.location": "right",
+  "workbench.colorTheme": "Dracula",
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": " Consolas, monaco, monospace, 'Courier New'",
+  "editor.tokenColorCustomizations": {"textMateRules": [{ // Java annotation theme to override workbench.colorTheme
+    "scope": "meta.declaration.annotation.java, storage.type.annotation.java, punctuation.definition.annotation-arguments.begin.bracket.round.java, punctuation.definition.annotation-arguments.end.bracket.round.java",
+    "settings": { "foreground": "#989191", "fontStyle": "italic"
+  }}]},
+
+
+  // EXTENSIONS CONFIGURATIONS
+  "files.autoSave": "onFocusChange",
+  "breadcrumbs.enabled": false,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+
+  // SYNC:
+  "settingsSync.ignoredSettings": [
+  
+  ],
+
+  // JAVA CONFIGURATIONS
+  "java.inlayHints.parameterNames.enabled": "all",
+  // "spring-boot.ls.java.home": "C:/Java/jdk-18.0.2.1",
+  // "java.maven.downloadSources": true,
+  // "java.eclipse.downloadSources": true,
+  // "java.debug.settings.hotCodeReplace": "auto",
+  // "java.debug.settings.console": "externalTerminal",
+  // "java.debug.settings.vmArgs": "-Xmx9g",
+
+
+  // NEW CONFIGS:
+
+}
