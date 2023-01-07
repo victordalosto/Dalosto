@@ -22,13 +22,15 @@
 @REM ###############################
 @echo ## INSTALL CHOCO PACKAGES 
 @REM ###############################
-@for /F "tokens=*" %%A in (packages\choco_packages.txt) DO cmd /c bin\choco_install_package %%A
+@for /F "tokens=*" %%A in (packages\choco_packages.txt) DO @cmd /c bin\choco_install_package %%A
 @cmd /c bin\choco_upgrade
 
 
 @REM ###############################
-@echo ## UPDATING VSCODE EXTENSIONS
+@echo ## VSCODE EXTENSIONS & SETTINGS
 @REM ###############################
-@for /F "tokens=*" %%A in (vscode\extensions.txt) DO cmd /c bin\vscode_extension %%A
+@for /F "tokens=*" %%A in (vscode\extensions.txt) DO @cmd /c bin\vscode_extension %%A
+@cmd /c bin\vscode_settings
+
 
 @pause
