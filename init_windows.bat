@@ -1,5 +1,5 @@
 @echo   + ========================= +
-@echo      BOOSTRAP: VictorDalosto
+@echo       BOOSTRAP FOR WINDOWS
 @echo   + ========================= +
 
 
