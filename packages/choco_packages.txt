@@ -1,7 +1,6 @@
 git
-corretto11jdk
 gitkraken
+corretto11jdk
 cmder
-maven
 vscode
 virtualbox
