@@ -7,6 +7,7 @@ bash bin/ubuntu_update.sh
 bash packages/ubuntu_packages.sh
 
 # Install VSCODE extensions
+bash bin/vscode_extension.sh
 
 # Install VSCODE settings and keybindings
 bash bin/vscode_settings.sh
