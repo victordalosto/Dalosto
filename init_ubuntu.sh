@@ -5,6 +5,7 @@ bash bin/ubuntu_update.sh
 
 # Install main packages
 bash packages/ubuntu_packages.sh
+bash bin/ubuntu_packages.sh
 
 # Install VSCODE extensions
 bash bin/vscode_extension.sh
