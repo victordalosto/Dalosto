@@ -181,6 +181,11 @@
         "when": "openFolderWorkspaceSupport"
     },
     {
+        "key": "ctrl+h",
+        "command": "editor.action.startFindReplaceAction",
+        "when": "editorFocus || editorIsOpen"
+    },
+    {
         "key": "ctrl+oem_period",
         "command": "breadcrumbs.toggle"
     },
@@ -1024,11 +1029,6 @@
         "key": "ctrl+f",
         "command": "-repl.action.filter",
         "when": "inDebugRepl && textInputFocus"
-    },
-    {
-        "key": "ctrl+h",
-        "command": "-editor.action.startFindReplaceAction",
-        "when": "editorFocus || editorIsOpen"
     },
     {
         "key": "ctrl+shift+oem_period",
