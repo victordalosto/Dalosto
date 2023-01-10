@@ -4,3 +4,4 @@ corretto11jdk
 cmder
 vscode
 virtualbox
+vagrant

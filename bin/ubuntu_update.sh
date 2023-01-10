@@ -3,6 +3,5 @@
 set -e
 sudo apt-get update -y
 sudo apt-get upgrade -y
-sudo apt-get dist-upgrade -y
-suto apt autoremove -y
-sudo apt clean -y
+suto apt-get autoremove -y
+sudo apt-get clean -y

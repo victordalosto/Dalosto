@@ -8,9 +8,9 @@
 )
 @cd %~dp0 & :: Changes current directory to original local of .bat
 
-@echo  ## INSTALL CHOCOLATEY 
-@cmd /c bin\choco_install
-@cmd /c bin\choco_install_package
+@echo  INSTALL CHOCOLATEY 
+@cmd /c bin\choco_install && @call RefreshEnv.cmd
+@cmd /c bin\choco_install_package && @call RefreshEnv.cmd
 @cmd /c bin\choco_upgrade
 
 @echo ## VSCODE EXTENSIONS & SETTINGS
