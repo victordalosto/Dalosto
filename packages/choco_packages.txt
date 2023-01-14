@@ -1,6 +1,7 @@
 git
 gitkraken
 corretto11jdk
+python3
 cmder
 vscode
 virtualbox
