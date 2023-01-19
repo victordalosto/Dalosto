@@ -1274,11 +1274,6 @@
         "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
     },
     {
-        "key": "ctrl+space",
-        "command": "-editor.action.triggerSuggest",
-        "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
-    },
-    {
         "key": "ctrl+k ctrl+x",
         "command": "-editor.action.trimTrailingWhitespace",
         "when": "editorTextFocus && !editorReadonly"
@@ -1560,10 +1555,6 @@
         "key": "ctrl+k ctrl+o",
         "command": "-workbench.action.files.openLocalFolder",
         "when": "remoteFileDialogVisible"
-    },
-    {
-        "key": "ctrl+oem_comma",
-        "command": "-workbench.action.openSettings"
     },
     {
         "key": "ctrl+right",

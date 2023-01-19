@@ -19,6 +19,7 @@
 
     // EXTENSIONS CONFIGURATIONS
     "files.autoSave": "onFocusChange",
+    "editor.foldingImportsByDefault": true,
     "editor.inlayHints.enabled": "offUnlessPressed",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
 
@@ -36,5 +37,6 @@
     // NEW CONFIGS:
     "settingsSync.ignoredSettings": [
     ],
+    "security.workspace.trust.untrustedFiles": "open",
     
 }
