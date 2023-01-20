@@ -204,6 +204,18 @@
         "command": "problems.action.showQuickFixes",
         "when": "problemFocus"
     },
+    {
+        "key": "alt+oem_3",
+        "command": "editor.action.quickFix"
+    },
+    {
+        "key": "ctrl+b",
+        "command": "workbench.action.toggleSidebarVisibility"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "editor.action.commentLine"
+    },
 
 
 
@@ -1001,10 +1013,6 @@
         "key": "escape",
         "command": "-settings.action.focusLevelUp",
         "when": "inSettingsEditor && !inSettingsJSONEditor && !inSettingsSearch"
-    },
-    {
-        "key": "ctrl+shift+z",
-        "command": "-redo"
     },
     {
         "key": "ctrl+y",

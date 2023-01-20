@@ -18,6 +18,7 @@
 
 
     // EXTENSIONS CONFIGURATIONS
+    "breadcrumbs.enabled": false,
     "files.autoSave": "onFocusChange",
     "editor.foldingImportsByDefault": true,
     "editor.inlayHints.enabled": "offUnlessPressed",
@@ -36,7 +37,6 @@
 
     // NEW CONFIGS:
     "settingsSync.ignoredSettings": [
-    ],
-    "security.workspace.trust.untrustedFiles": "open",
+    ]
     
 }
