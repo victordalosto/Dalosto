@@ -1,8 +1,9 @@
+cmder
+googlechrome
 git
-gitkraken
 corretto17jdk
 python3
-cmder
-vscode
+gitkraken
 virtualbox
+vscode
 vagrant
