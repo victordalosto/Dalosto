@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Updates and upgrades linux-ubuntu 
+# Updates and upgrades Linux 
 set -e
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -26,4 +26,5 @@ code --install-extension vscjava.vscode-maven
 code --install-extension rafapaulin.try-material-icon-theme
 
 # Install VSCODE settings and keybindings
-# MANUAL
+cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
+cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
