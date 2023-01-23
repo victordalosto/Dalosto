@@ -1,6 +1,6 @@
 git
 gitkraken
-corretto11jdk
+corretto17jdk
 python3
 cmder
 vscode

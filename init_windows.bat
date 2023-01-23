@@ -11,10 +11,10 @@
 @echo  INSTALL CHOCOLATEY 
 @cmd /c bin\choco_install && @call RefreshEnv.cmd
 @cmd /c bin\choco_install_package && @call RefreshEnv.cmd
-@cmd /c bin\choco_upgrade
+@cmd /c bin\choco_upgrade && @call RefreshEnv.cmd
 
 @echo ## VSCODE EXTENSIONS & SETTINGS
-@cmd /c bin\vscode_extension
 @cmd /c bin\vscode_settings
+@cmd /c bin\vscode_extension
 
 @pause
