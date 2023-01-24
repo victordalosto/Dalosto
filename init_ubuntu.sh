@@ -6,7 +6,7 @@ usermod -aG sudo victor
 # Updates and upgrades Linux 
 sudo apt-get update -y
 sudo apt-get full-upgrade -y
-suto apt-get autoremove -y
+sudo apt-get autoremove -y
 sudo apt-get clean -y
 
 # Install main packages
@@ -15,7 +15,6 @@ sudo apt-get install curl -y
 sudo apt-get install chromium-browser -y
 sudo apt-get install git -y
 sudo apt-get install openjdk-17-jdk -y
-sudo apt-get install docker -y
 sudo snap install gitkraken --classic
 sudo snap install code --classic
 
@@ -38,5 +37,5 @@ cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
 # New update calls
 sudo apt-get update -y
 sudo apt-get upgrade -y
-suto apt-get autoremove -y
+sudo apt-get autoremove -y
 sudo apt-get clean -y
