@@ -21,7 +21,7 @@ sudo snap install gitkraken --classic
 sudo snap install code --classic
 
 # Configuring JAVA_HOME
-sudo echo JAVA_HOME=\"$(readlink -f $(which java))\" >> /etc/environment
+sudo echo JAVA_HOME=\"$(readlink -f $(which java) | sed 's/........$//')\" >> /etc/environment
 
 # Install VSCODE extensions
 code --install-extension dracula-theme.theme-dracula
