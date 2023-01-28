@@ -26,10 +26,11 @@
 
 
     // JAVA CONFIGURATIONS
+    // "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    // "spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    "java.maven.downloadSources": true,
+    "java.eclipse.downloadSources": true,
     "java.inlayHints.parameterNames.enabled": "all",
-    // "spring-boot.ls.java.home": "C:/Java/jdk-18.0.2.1",
-    // "java.maven.downloadSources": true,
-    // "java.eclipse.downloadSources": true,
     // "java.debug.settings.hotCodeReplace": "auto",
     // "java.debug.settings.console": "externalTerminal",
     // "java.debug.settings.vmArgs": "-Xmx9g",

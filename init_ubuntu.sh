@@ -12,11 +12,16 @@ sudo apt-get clean -y
 # Install main packages
 sudo apt-get install iproute2 -y
 sudo apt-get install curl -y
+sudo apt install openssh-server -y
 sudo apt-get install chromium-browser -y
 sudo apt-get install git -y
 sudo apt-get install openjdk-17-jdk -y
+sudo apt-get install openjdk-17-source -y 
 sudo snap install gitkraken --classic
 sudo snap install code --classic
+
+# Configuring JAVA_HOME
+sudo echo JAVA_HOME=\"$(readlink -f $(which java))\" >> /etc/environment
 
 # Install VSCODE extensions
 code --install-extension dracula-theme.theme-dracula
