@@ -125,7 +125,7 @@
         "command": "welcome.showNewFileEntries"
     },
     {
-        "key": "ctrl+n",
+        "key": "ctrl+shift+n",
         "command": "explorer.newFolder"
     },
     {
@@ -254,6 +254,10 @@
         "key": "ctrl+alt+o",
         "command": "workbench.action.files.openFolder",
         "when": "openFolderWorkspaceSupport"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
     },
 
 
@@ -1358,10 +1362,6 @@
         "command": "-workbench.action.closeEditorsInGroup"
     },
     {
-        "key": "ctrl+w",
-        "command": "-workbench.action.closeActiveEditor"
-    },
-    {
         "key": "ctrl+k u",
         "command": "-workbench.action.closeUnmodifiedEditors"
     },
@@ -1745,5 +1745,5 @@
         "key": "ctrl+oem_3",
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
-    },
+    }
 ]
