@@ -26,6 +26,7 @@ sudo echo JAVA_HOME=\"$(readlink -f $(which java) | sed 's/........$//')\" >> /e
 # Install VSCODE extensions
 code --install-extension dracula-theme.theme-dracula
 code --install-extension redhat.java
+code --install-extension redhat.vscode-xml
 code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples
 code --install-extension VisualStudioExptTeam.vscodeintellicode
 code --install-extension vscjava.vscode-java-pack
@@ -34,6 +35,9 @@ code --install-extension vscjava.vscode-java-dependency
 code --install-extension vscjava.vscode-java-test
 code --install-extension vscjava.vscode-maven
 code --install-extension rafapaulin.try-material-icon-theme
+code --install-extension ritwickdey.LiveServer
+code --install-extension vscjava.vscode-spring-boot-dashboard
+code --install-extension vscjava.vscode-spring-initializr
 
 # Install VSCODE settings and keybindings
 cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
