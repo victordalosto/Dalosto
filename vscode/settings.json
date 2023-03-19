@@ -15,8 +15,8 @@
     "scope": "meta.declaration.annotation.java, storage.type.annotation.java, punctuation.definition.annotation-arguments.begin.bracket.round.java, punctuation.definition.annotation-arguments.end.bracket.round.java",
     "settings": { "foreground": "#989191", "fontStyle": "italic"
     }}]},
-
-
+    
+    
     // EXTENSIONS CONFIGURATIONS
     "breadcrumbs.enabled": false,
     "files.autoSave": "onFocusChange",
@@ -31,6 +31,7 @@
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
     "java.inlayHints.parameterNames.enabled": "all",
+    "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
     // "java.debug.settings.hotCodeReplace": "auto",
     // "java.debug.settings.console": "externalTerminal",
     // "java.debug.settings.vmArgs": "-Xmx9g",

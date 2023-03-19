@@ -1,5 +1,6 @@
 dracula-theme.theme-dracula
 redhat.java
+redhat.vscode-xml
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 vscjava.vscode-java-pack
@@ -9,3 +10,5 @@ vscjava.vscode-java-test
 vscjava.vscode-maven
 rafapaulin.try-material-icon-theme
 ritwickdey.LiveServer
+vscjava.vscode-spring-boot-dashboard
+vscjava.vscode-spring-initializr
