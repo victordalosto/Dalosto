@@ -1,25 +1,21 @@
 // =================================
 //  SETTINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.2.0
+//  Version: 1.3.0
 // =================================
 
 {
     // VISUAL
     "editor.minimap.enabled": false,
-    "editor.fontFamily": " Consolas, monaco, monospace, 'Courier New'",
+    "editor.fontFamily": " monaco, Consolas, monospace, 'Courier New'",
     "explorer.sortOrder": "filesFirst",
     "workbench.tree.indent": 18,
 
 
     // SECURITY
-    "explorer.confirmDragAndDrop": true,
-    "explorer.confirmDelete": true,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
     "security.workspace.trust.untrustedFiles": "open",
-
-
-    // EXTENSIONS CONFIGURATIONS
-    "breadcrumbs.enabled": false,
     "files.autoSave": "onFocusChange",
     "editor.foldingImportsByDefault": true,
     "editor.inlayHints.enabled": "offUnlessPressed",
@@ -36,24 +32,17 @@
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
     // "java.debug.settings.hotCodeReplace": "auto",
     // "java.debug.settings.console": "externalTerminal",
-    // "java.debug.settings.vmArgs": "-Xmx9g",
-
-    
-    // CUSTOMIZATION
-    "editor.lineNumbers": "off",
+    "java.debug.settings.vmArgs": "-Xmx8g",
     "workbench.sideBar.location": "right",
-    "workbench.statusBar.visible": false,
     "workbench.tree.renderIndentGuides": "always",
-    "window.menuBarVisibility": "compact",
     "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "sweet-vscode-icons",
     
 
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
         "editorBracketHighlight.foreground1": "#5ecfe9", // class
         "editorBracketHighlight.foreground2": "#f0359f", // methods
-        "editorBracketHighlight.foreground3": "#f6f7f8", // others
         "sideBar.background": "#26242c",
         "editor.background": "#26242c",
         "sideBar.foreground": "#fbf9f9",
@@ -62,6 +51,16 @@
         "activityBar.background": "#000000",
     },
 
+    // EXTENSIONS
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true
+    },
+
+
+    // CUSTOMIZATION
     "editor.tokenColorCustomizations": {
         "textMateRules": [
 
@@ -114,7 +113,7 @@
             {   // using in comma and brackets , and ;
                 "scope": "punctuation.separator, punctuation.terminator",
                 "settings": {
-                    "foreground": "#ffffff",
+                    "foreground": "#f0e3eae4",
                     "fontStyle": "",
                 }
             },
@@ -154,16 +153,21 @@
     },
 
 
-    // Excluded
+    // Excluded from view
     "files.exclude": {
         ".mvn": true,
-        ".vscode": true,
+        // ".vscode": true,
         "mvnw": true,
         "mvnw.cmd": true,
         "target/**": true
     },
-    
+
     "settingsSync.ignoredSettings": [
+
     ],
+
+
+    // NEW CONFIGS:
+   
     
 }
