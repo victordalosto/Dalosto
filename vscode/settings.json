@@ -1,15 +1,15 @@
 // =================================
 //  SETTINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.3.0
+//  Version: 1.2.1
 // =================================
 
 {
     // VISUAL
     "editor.minimap.enabled": false,
-    "editor.fontFamily": " monaco, Consolas, monospace, 'Courier New'",
+    "editor.fontFamily": " Consolas, monaco monospace, 'Courier New'",
     "explorer.sortOrder": "filesFirst",
-    "workbench.tree.indent": 18,
+    "workbench.tree.indent": 14,
 
 
     // SECURITY
@@ -33,23 +33,45 @@
     // "java.debug.settings.hotCodeReplace": "auto",
     // "java.debug.settings.console": "externalTerminal",
     "java.debug.settings.vmArgs": "-Xmx8g",
+    
+
+
+    // Excluded from view
+    "files.exclude": {
+        ".mvn": true,
+        ".idea": true,
+        "mvnw": true,
+        "mvnw.cmd": true,
+        "target/**": true,
+        
+        ".vscode": true,
+        ".gitignore": true,
+        "HELP.md": true,
+        "pom.xml": true,
+        "**/src/test/**": true
+    },
+    
+    // THEME
     "workbench.sideBar.location": "right",
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "sweet-vscode-icons",
+    "workbench.colorTheme": "IntelliJ Neo Dark",
+    "workbench.iconTheme": "eq-material-theme-icons-light",
     
 
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
-        "editorBracketHighlight.foreground1": "#5ecfe9", // class
-        "editorBracketHighlight.foreground2": "#f0359f", // methods
-        "sideBar.background": "#26242c",
-        "editor.background": "#26242c",
-        "sideBar.foreground": "#fbf9f9",
-        "terminal.background": "#26242c",
-        "panel.background": "#26242c",
-        "activityBar.background": "#000000",
+        // "editorBracketHighlight.foreground1": "#5ecfe9", // class
+        // "editorBracketHighlight.foreground2": "#f0359f", // methods
+        "sideBar.background": "#313335", //"sideBar.background": "#26242c",
+        "editor.background": "#272626", //"editor.background": "#26242c",
+        "editorGutter.background": "#292929"
+        // "sideBar.foreground": "#fbf9f9",
+        // "terminal.background": "#26242c",
+        // "panel.background": "#26242c",
+        // "activityBar.background": "#000000",
     },
+    
+    
 
     // EXTENSIONS
     "github.copilot.enable": {
@@ -72,102 +94,121 @@
             }, 
 
             {   // ANOTTATIONS
-                "scope": "meta.declaration.annotation, storage.type.annotation, punctuation.definition.annotation.java",
+                "scope": "entity.name.type.annotation, meta.declaration.annotation, storage.type.annotation, punctuation.definition.annotation.java",
                 "settings": {
-                    "foreground": "#bcb7b7",
+                    // "foreground": "#bcb7b7",
                     "fontStyle": "italic",
                 }
             },
 
-            {   // CLASSES
-                "scope": "entity.name.type.class, entity.name.function.java",
+            { // Type for Intellij Theme
+                "scope": "storage.type",
                 "settings": {
-                    "foreground": "#5ecfe9",
+                    "foreground": "#6094b5" // Replace with your desired color value
+                }
+            },
+
+            { // Type for Intellij Theme
+                "scope": "storage.type.java",
+                "settings": {
                     "fontStyle": "bold",
                 }
             },
 
-            {   // METHOD OVERIDE
-                "scope": "entity.name.function",
-                "settings": {
-                    "foreground": "#50fa7b",
-                    "fontStyle": "",
-                }
-            },
-
-            {   // ACCESS MODIFIERS
-                "scope": "storage.modifier",
-                "settings": {
-                    "foreground": "#f0359f",
-                }
-            },
-
-            {   // RETURN, NEW, OPERATORS
-                "scope": "keyword.operator, keyword.control, variable.language.this, variable.language.self",
-                "settings": {
-                    "foreground": "#f0359f",
-                    // "fontStyle": "bold",
-                }
-            },
-
-            {   // using in comma and brackets , and ;
-                "scope": "punctuation.separator, punctuation.terminator",
-                "settings": {
-                    "foreground": "#f0e3eae4",
-                    "fontStyle": "",
-                }
-            },
-
-            {   // BRACKET
-                "scope": "punctuation.definition.parenthesis, punctuation.definition.bracket",
-                "settings": {
-                    "foreground": "#ffffff",
-                    // "fontStyle": "bold",
-                }
-            },
-
-            {   // STRINGS
-                "scope": "string.quoted.double, punctuation.definition.string.begin, punctuation.definition.string.end",
-                "settings": {
-                    "foreground": "#e0e59f"
-                }
-            },
-
-            {   // REFERENCES
-                "scope": "variable.other",
-                "settings": {
-                    "foreground": "#ffffff",
-                    "fontStyle": "",
-                }
-            },
-
-            // {   // THIS KEYWORD
-            //     "scope": "variable.language.this, variable.language.self", 
+            // {   // CLASSES
+            //     "scope": "entity.name.type.class, entity.name.function.java",
             //     "settings": {
-            //         "fontStyle": "italic",
-            //         "foreground": "#bd93f9"
+            //         "foreground": "#5ecfe9",
+            //         "fontStyle": "bold",
             //     }
             // },
-            
+
+            // {   // METHOD OVERIDE
+            //     "scope": "entity.name.function",
+            //     "settings": {
+            //         "foreground": "#50fa7b",
+            //         "fontStyle": "",
+            //     }
+            // },
+
+            // {   // ACCESS MODIFIERS
+            //     "scope": "storage.modifier",
+            //     "settings": {
+            //         "foreground": "#f0359f",
+            //     }
+            // },
+
+            // {   // RETURN, NEW, OPERATORS
+            //     "scope": "keyword.operator, keyword.control, variable.language.this, variable.language.self",
+            //     "settings": {
+            //         "foreground": "#f0359f",
+            //         // "fontStyle": "bold",
+            //     }
+            // },
+
+            // {   // using in comma and brackets , and ;
+            //     "scope": "punctuation.separator, punctuation.terminator",
+            //     "settings": {
+            //         "foreground": "#f0e3eae4",
+            //         "fontStyle": "",
+            //     }
+            // },
+
+            // {   // BRACKET
+            //     "scope": "punctuation.definition.parenthesis, punctuation.definition.bracket",
+            //     "settings": {
+            //         "foreground": "#ffffff",
+            //         // "fontStyle": "bold",
+            //     }
+            // },
+
+            // {   // STRINGS
+            //     "scope": "string.quoted.double, punctuation.definition.string.begin, punctuation.definition.string.end",
+            //     "settings": {
+            //         "foreground": "#e0e59f"
+            //     }
+            // },
+
+            // {   // REFERENCES
+            //     "scope": "variable.other",
+            //     "settings": {
+            //         "foreground": "#ffffff",
+            //         "fontStyle": "",
+            //     }
+            // },
+
         ]
     },
 
-
-    // Excluded from view
-    "files.exclude": {
-        ".mvn": true,
-        // ".vscode": true,
-        "mvnw": true,
-        "mvnw.cmd": true,
-        "target/**": true
-    },
-
     "settingsSync.ignoredSettings": [
+
+    
 
     ],
 
 
     // NEW CONFIGS:
-   
-    
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "java.debug.settings.console": "externalTerminal",
+    "redhat.telemetry.enabled": true,
+    "debug.javascript.autoAttachFilter": "smart",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "liveServer.settings.donotShowInfoMsg": true,
+    "boot-java.rewrite.reconcile": true,
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.advanced": {
+        
+    },
+    "breadcrumbs.enabled": false,
+
 }
