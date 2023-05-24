@@ -40,11 +40,11 @@
     },
     {
         "key": "f9",
-        "command": "workbench.action.toggleActivityBarVisibility"
+        "command": "workbench.action.toggleMenuBar"
     },
     {
         "key": "f10",
-        "command": "workbench.action.toggleMenuBar"
+        "command": "workbench.action.toggleActivityBarVisibility"
     },
     {
         "key": "f11",
@@ -77,39 +77,39 @@
         "command": "workbench.view.extension.test"
     },
     {
-        "key": "ctrl+1",
+        "key": "ctrl+f1",
         "command": "workbench.action.openEditorAtIndex1"
     },
     {
-        "key": "ctrl+2",
+        "key": "ctrl+f2",
         "command": "workbench.action.openEditorAtIndex2"
     },
     {
-        "key": "ctrl+3",
+        "key": "ctrl+f3",
         "command": "workbench.action.openEditorAtIndex3"
     },
     {
-        "key": "ctrl+4",
+        "key": "ctrl+f4",
         "command": "workbench.action.openEditorAtIndex4"
     },
     {
-        "key": "ctrl+5",
+        "key": "ctrl+f5",
         "command": "workbench.action.openEditorAtIndex5"
     },
     {
-        "key": "ctrl+6",
+        "key": "ctrl+f6",
         "command": "workbench.action.openEditorAtIndex6"
     },
     {
-        "key": "ctrl+7",
+        "key": "ctrl+f7",
         "command": "workbench.action.openEditorAtIndex7"
     },
     {
-        "key": "ctrl+8",
+        "key": "ctrl+f8",
         "command": "workbench.action.openEditorAtIndex8"
     },
     {
-        "key": "ctrl+9",
+        "key": "ctrl+f9",
         "command": "workbench.action.openEditorAtIndex9"
     },
     {
@@ -254,10 +254,6 @@
         "key": "ctrl+alt+o",
         "command": "workbench.action.files.openFolder",
         "when": "openFolderWorkspaceSupport"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "explorer.newFile"
     },
 
 
@@ -1745,5 +1741,45 @@
         "key": "ctrl+oem_3",
         "command": "-workbench.action.terminal.toggleTerminal",
         "when": "terminal.active"
-    }
+    },
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile"
+    },
+    {
+        "key": "ctrl+shift+f1",
+        "command": "github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated"
+    },
+    {
+        "key": "ctrl+enter",
+        "command": "-github.copilot.generate",
+        "when": "editorTextFocus && github.copilot.activated"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorTabMovesFocus"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "editor.foldLevel1"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "editor.foldLevel2"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "editor.unfoldRecursively"
+    },
+    {
+        "key": "ctrl+4",
+        "command": "workbench.files.action.collapseExplorerFolders"
+    },
 ]
