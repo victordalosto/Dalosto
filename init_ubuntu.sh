@@ -59,6 +59,10 @@ cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
 sudo usermod -aG sudo victor
 sudo usermod -aG docker victor
 
+# Update view
+gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'gitkraken_gitkraken.desktop', 'code_code.desktop', 'gnome-control-center.desktop', 'chromium_chromium.desktop']"
+
+
 # New update calls
 sudo apt-get update -y
 sudo apt-get upgrade -y
