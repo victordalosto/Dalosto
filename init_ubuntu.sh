@@ -1,19 +1,16 @@
 #!/bin/bash
 
-
 # Updates and upgrades Linux 
 sudo apt-get update -y
 sudo apt-get full-upgrade -y
 sudo apt-get autoremove -y
 sudo apt-get clean -y
 
-# Gives sudo to user
-sudo usermod -aG sudo victor
-
 # Install certificates
 sudo apt-get install ca-certificates -y
 sudo apt-get install curl -y 
 sudo apt-get install gnupg -y
+sudo apt-get install gnupg2 -y
 
 # Install main packages
 sudo apt-get install iproute2 -y
@@ -33,7 +30,7 @@ echo \
   "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
   "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 
 # Configuring JAVA_HOME
 sudo echo JAVA_HOME=\"$(readlink -f $(which java) | sed 's/........$//')\" >> /etc/environment
@@ -57,6 +54,10 @@ code --install-extension vscjava.vscode-spring-initializr
 # Install VSCODE settings and keybindings
 cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
 cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
+
+# Gives sudo to user
+sudo usermod -aG sudo victor
+sudo usermod -aG docker victor
 
 # New update calls
 sudo apt-get update -y
