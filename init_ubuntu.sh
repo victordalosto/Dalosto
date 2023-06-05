@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Gives sudo to user
-usermod -aG sudo victor
 
 # Updates and upgrades Linux 
 sudo apt-get update -y
@@ -9,9 +7,16 @@ sudo apt-get full-upgrade -y
 sudo apt-get autoremove -y
 sudo apt-get clean -y
 
+# Gives sudo to user
+sudo usermod -aG sudo victor
+
+# Install certificates
+sudo apt-get install ca-certificates -y
+sudo apt-get install curl -y 
+sudo apt-get install gnupg -y
+
 # Install main packages
 sudo apt-get install iproute2 -y
-sudo apt-get install curl -y
 sudo apt install openssh-server -y
 sudo apt-get install chromium-browser -y
 sudo apt-get install git -y
@@ -19,6 +24,16 @@ sudo apt-get install openjdk-17-jdk -y
 sudo apt-get install openjdk-17-source -y 
 sudo snap install gitkraken --classic
 sudo snap install code --classic
+
+# Install docker
+sudo install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+sudo chmod a+r /etc/apt/keyrings/docker.gpg
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 # Configuring JAVA_HOME
 sudo echo JAVA_HOME=\"$(readlink -f $(which java) | sed 's/........$//')\" >> /etc/environment
