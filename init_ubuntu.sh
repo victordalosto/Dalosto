@@ -65,6 +65,9 @@ gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org
 # Update keyboard input type to pt-br
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'br')]"
 
+# Change black screen delay
+gsettings set org.gnome.desktop.session idle-delay 1800
+
 # New update calls
 sudo apt-get update -y
 sudo apt-get upgrade -y
