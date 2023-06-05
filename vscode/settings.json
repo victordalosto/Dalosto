@@ -1,10 +1,61 @@
 // =================================
 //  SETTINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.2.1
+//  Version: 1.2.4
 // =================================
 
 {
+
+
+    // JAVA CONFIGURATIONS
+    //"spring-boot.ls.java.home": "C:\\Program Files\\Amazon Corretto\\jdk17.0.6_10",
+    //"java.jdt.ls.java.home": "C:\\Program Files\\Amazon Corretto\\jdk17.0.6_10",
+    "maven.terminal.useJavaHome": true,
+    "java.maven.downloadSources": true,
+    "java.eclipse.downloadSources": true,
+    "java.inlayHints.parameterNames.enabled": "all",
+    "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
+    "java.debug.settings.console": "externalTerminal",
+    "java.debug.settings.vmArgs": "-Xmx8g",
+
+
+
+    // Excluded from view
+    "files.exclude": {
+        ".idea": true,
+        ".gitignore": true,
+        ".vscode": true,
+        ".mvn": true,
+        "mvnw": true,
+        "mvnw.cmd": true,
+        "LICENSE": true,
+        "HELP.md": true,
+        "target/**": true,
+        
+        // ".github":true,
+        "Dockerfile": true,
+        
+        "Readme.md": true,
+        // "pom.xml": true,
+        "**/src/test/**": true
+    },
+
+
+
+    // CONFIGS
+    "editor.foldingImportsByDefault": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+
+
+
+    // GUI
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorTheme": "IntelliJ Neo Dark",
+    "workbench.iconTheme": "eq-material-theme-icons-light",
+
+
+
     // VISUAL
     "editor.minimap.enabled": false,
     "editor.fontFamily": " Consolas, monaco monospace, 'Courier New'",
@@ -12,66 +63,23 @@
     "workbench.tree.indent": 14,
 
 
-    // SECURITY
-    "explorer.confirmDragAndDrop": false,
-    "explorer.confirmDelete": false,
-    "security.workspace.trust.untrustedFiles": "open",
-    "files.autoSave": "onFocusChange",
-    "editor.foldingImportsByDefault": true,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-
-
-    // JAVA CONFIGURATIONS
-    // "spring-boot.ls.java.home": "C:/Java/jdk-18.0.2.1",
-    "java.jdt.ls.java.home": "C:\\Program Files\\Amazon Corretto\\jdk17.0.6_10",
-    "maven.terminal.useJavaHome": true,
-    "java.maven.downloadSources": true,
-    "java.eclipse.downloadSources": true,
-    "java.inlayHints.parameterNames.enabled": "all",
-    "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
-    // "java.debug.settings.hotCodeReplace": "auto",
-    // "java.debug.settings.console": "externalTerminal",
-    "java.debug.settings.vmArgs": "-Xmx8g",
-    
-
-
-    // Excluded from view
-    "files.exclude": {
-        ".mvn": true,
-        ".idea": true,
-        "mvnw": true,
-        "mvnw.cmd": true,
-        "target/**": true,
-        
-        ".vscode": true,
-        ".gitignore": true,
-        "HELP.md": true,
-        "pom.xml": true,
-        "**/src/test/**": true
-    },
-    
-    // THEME
-    "workbench.sideBar.location": "right",
-    "workbench.tree.renderIndentGuides": "always",
-    "workbench.colorTheme": "IntelliJ Neo Dark",
-    "workbench.iconTheme": "eq-material-theme-icons-light",
-    
 
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
         // "editorBracketHighlight.foreground1": "#5ecfe9", // class
         // "editorBracketHighlight.foreground2": "#f0359f", // methods
-        "sideBar.background": "#313335", //"sideBar.background": "#26242c",
-        "editor.background": "#272626", //"editor.background": "#26242c",
+        //"sideBar.background": "#26242c", // dracula
+        //"editor.background": "#26242c", // dracula
+        "editor.background": "#272626", // intellij
+        "sideBar.background": "#313335", // intellij
         "editorGutter.background": "#292929"
         // "sideBar.foreground": "#fbf9f9",
         // "terminal.background": "#26242c",
         // "panel.background": "#26242c",
         // "activityBar.background": "#000000",
     },
-    
-    
+
+
 
     // EXTENSIONS
     "github.copilot.enable": {
@@ -80,6 +88,7 @@
         "plaintext": true,
         "markdown": true
     },
+
 
 
     // CUSTOMIZATION
@@ -138,8 +147,15 @@
             //     }
             // },
 
-            // {   // RETURN, NEW, OPERATORS
-            //     "scope": "keyword.operator, keyword.control, variable.language.this, variable.language.self",
+            {   // NEW, OPERATORS
+                "scope": "variable.language.this, variable.language.self, keyword.control",
+                "settings": {
+                    "foreground": "#cc7631",
+                }
+            },
+
+            // {   // RETURN
+            //     "scope": "keyword.operator",
             //     "settings": {
             //         "foreground": "#f0359f",
             //         // "fontStyle": "bold",
@@ -180,18 +196,28 @@
         ]
     },
 
+
+
+    // SECURITY
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.autoSave": "onFocusChange",
+
+
+
+    // FUTURE
     "settingsSync.ignoredSettings": [
 
-    
 
     ],
+
 
 
     // NEW CONFIGS:
     "[python]": {
         "editor.formatOnType": true
     },
-    "java.debug.settings.console": "externalTerminal",
     "redhat.telemetry.enabled": true,
     "debug.javascript.autoAttachFilter": "smart",
     "[javascript]": {
@@ -210,5 +236,7 @@
         
     },
     "breadcrumbs.enabled": false,
+    "editor.showFoldingControls": "always",
+    "workbench.productIconTheme": "el-vsc-v1-icons",
 
 }
