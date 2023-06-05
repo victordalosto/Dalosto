@@ -62,6 +62,8 @@ sudo usermod -aG docker victor
 # Update view
 gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'gitkraken_gitkraken.desktop', 'code_code.desktop', 'gnome-control-center.desktop', 'chromium_chromium.desktop']"
 
+# Update keyboard input type to pt-br
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'br')]"
 
 # New update calls
 sudo apt-get update -y
