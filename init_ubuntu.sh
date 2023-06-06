@@ -6,15 +6,18 @@ sudo apt-get full-upgrade -y
 sudo apt-get autoremove -y
 sudo apt-get clean -y
 
-# Install certificates
+# Install utils
 sudo apt-get install ca-certificates -y
 sudo apt-get install curl -y 
 sudo apt-get install gnupg -y
 sudo apt-get install gnupg2 -y
 
-# Install main packages
+# Install importante packages
 sudo apt-get install iproute2 -y
 sudo apt install openssh-server -y
+sudo apt install dnsutils -y
+
+# Install developer packages
 sudo apt-get install chromium-browser -y
 sudo apt-get install git -y
 sudo apt-get install openjdk-17-jdk -y
