@@ -55,21 +55,21 @@ code --install-extension vscjava.vscode-spring-boot-dashboard
 code --install-extension vscjava.vscode-spring-initializr
 
 # Install VSCODE settings and keybindings
-cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
-cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
+sudo cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
+sudo cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
 
 # Gives sudo to user
-sudo usermod -aG sudo victor
-sudo usermod -aG docker victor
+sudo usermod -aG sudo $(whoami)
+sudo usermod -aG docker $(whoami)
 
 # Update view
-gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'gitkraken_gitkraken.desktop', 'code_code.desktop', 'gnome-control-center.desktop', 'chromium_chromium.desktop']"
+sudo gsettings set org.gnome.shell favorite-apps "['org.gnome.Nautilus.desktop', 'org.gnome.Terminal.desktop', 'gitkraken_gitkraken.desktop', 'code_code.desktop', 'gnome-control-center.desktop', 'chromium_chromium.desktop']"
 
 # Update keyboard input type to pt-br
-gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'br')]"
+sudo gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'br')]"
 
 # Change black screen delay
-gsettings set org.gnome.desktop.session idle-delay 1800
+sudo gsettings set org.gnome.desktop.session idle-delay 1800
 
 # New update calls
 sudo apt-get update -y
