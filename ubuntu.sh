@@ -93,22 +93,7 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
-
-
-
-echo ""
-echo ""
-echo "#########################"
-echo "Removing Ubuntu shortcuts"
-echo "#########################"
-gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
-# Add home folder via alt+e
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Open Home Folder'
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'nautilus --new-window /home/victor'
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Alt>e'
-
-  
+ 
 
 
 echo ""
