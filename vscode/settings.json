@@ -1,42 +1,45 @@
+
 // =================================
 //  SETTINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.2.4
+//  Version: 1.2.5
 // =================================
 
 {
 
 
     // JAVA CONFIGURATIONS
-    //"spring-boot.ls.java.home": "C:\\Program Files\\Amazon Corretto\\jdk17.0.6_10",
-    //"java.jdt.ls.java.home": "C:\\Program Files\\Amazon Corretto\\jdk17.0.6_10",
+    //"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    //"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
     "java.inlayHints.parameterNames.enabled": "all",
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
     "java.debug.settings.console": "externalTerminal",
-    "java.debug.settings.vmArgs": "-Xmx8g",
+    // "java.debug.settings.vmArgs": "-Xmx8g",
 
 
 
     // Excluded from view
     "files.exclude": {
-        ".idea": true,
         ".gitignore": true,
         ".vscode": true,
-        ".mvn": true,
-        "mvnw": true,
-        "mvnw.cmd": true,
-        "LICENSE": true,
-        "HELP.md": true,
-        "target/**": true,
+        ".git": true,
+        ".github":true,
+
+        // ".idea": true,
+        // ".mvn": true,
+        // "mvnw": true,
+        // "mvnw.cmd": true,
+        // "LICENSE": true,
+        // "HELP.md": true,
+        // "target/**": true,
+        "**/__pytorch__/*": true,
         
-        // ".github":true,
         "Dockerfile": true,
-        
         "Readme.md": true,
-        // "pom.xml": true,
+        "pom.xml": true,
         "**/src/test/**": true
     },
 
@@ -51,8 +54,8 @@
 
     // GUI
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.colorTheme": "IntelliJ Neo Dark",
-    "workbench.iconTheme": "eq-material-theme-icons-light",
+    "workbench.colorTheme": "Dracula",
+    "workbench.iconTheme": "material-icon-theme",
 
 
 
@@ -63,6 +66,10 @@
     "workbench.tree.indent": 14,
 
 
+    // Other ui
+    "editor.showFoldingControls": "always",
+    "breadcrumbs.enabled": false,
+
 
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
@@ -70,9 +77,7 @@
         // "editorBracketHighlight.foreground2": "#f0359f", // methods
         //"sideBar.background": "#26242c", // dracula
         //"editor.background": "#26242c", // dracula
-        "editor.background": "#272626", // intellij
-        "sideBar.background": "#313335", // intellij
-        "editorGutter.background": "#292929"
+        // "editorGutter.background": "#292929"
         // "sideBar.foreground": "#fbf9f9",
         // "terminal.background": "#26242c",
         // "panel.background": "#26242c",
@@ -105,22 +110,8 @@
             {   // ANOTTATIONS
                 "scope": "entity.name.type.annotation, meta.declaration.annotation, storage.type.annotation, punctuation.definition.annotation.java",
                 "settings": {
-                    // "foreground": "#bcb7b7",
+                    "foreground": "#bcb7b7",
                     "fontStyle": "italic",
-                }
-            },
-
-            { // Type for Intellij Theme
-                "scope": "storage.type",
-                "settings": {
-                    "foreground": "#6094b5" // Replace with your desired color value
-                }
-            },
-
-            { // Type for Intellij Theme
-                "scope": "storage.type.java",
-                "settings": {
-                    "fontStyle": "bold",
                 }
             },
 
@@ -147,12 +138,12 @@
             //     }
             // },
 
-            {   // NEW, OPERATORS
-                "scope": "variable.language.this, variable.language.self, keyword.control",
-                "settings": {
-                    "foreground": "#cc7631",
-                }
-            },
+            // {   // NEW, OPERATORS
+            //     "scope": "variable.language.this, variable.language.self, keyword.control",
+            //     "settings": {
+            //         "foreground": "#cc7631",
+            //     }
+            // },
 
             // {   // RETURN
             //     "scope": "keyword.operator",
@@ -205,9 +196,17 @@
     "files.autoSave": "onFocusChange",
 
 
+    // UI
+    "redhat.telemetry.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.advanced": {
+        
+    },
 
     // FUTURE
     "settingsSync.ignoredSettings": [
+
+
 
 
     ],
@@ -218,25 +217,13 @@
     "[python]": {
         "editor.formatOnType": true
     },
-    "redhat.telemetry.enabled": true,
-    "debug.javascript.autoAttachFilter": "smart",
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "liveServer.settings.donotShowInfoMsg": true,
-    "boot-java.rewrite.reconcile": true,
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "editor.inlineSuggest.enabled": true,
-    "github.copilot.advanced": {
-        
-    },
-    "breadcrumbs.enabled": false,
-    "editor.showFoldingControls": "always",
-    "workbench.productIconTheme": "el-vsc-v1-icons",
+    "workbench.statusBar.visible": false,
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    
+    
 
 }
