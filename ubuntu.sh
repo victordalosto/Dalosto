@@ -17,6 +17,10 @@ echo "#########################"
 echo " Installing certificates"
 echo "#########################"
 sudo apt-get install ca-certificates curl gnupg gnupg2 -y
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
+gsettings set org.gnome.desktop.input-sources xkb-options "[]"
+
+
 
 
 
