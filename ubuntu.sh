@@ -17,10 +17,6 @@ echo "#########################"
 echo " Installing certificates"
 echo "#########################"
 sudo apt-get install ca-certificates curl gnupg gnupg2 -y
-gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
-gsettings set org.gnome.desktop.input-sources xkb-options "[]"
-gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
-
 
 
 
@@ -78,14 +74,16 @@ echo "    VSCode settings"
 echo "#########################"
 sudo cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
 sudo cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
+sudo chmod a+w $HOME/.config/Code/User/settings.json
+sudo chmod a+w $HOME/.config/Code/User/keybindings.json
 
 
 
+echo ""
 echo ""
 echo "#########################"
 echo "    Installing Docker"
 echo "#########################"
-echo ""
 sudo install -m 0755 -d /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg --y
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
@@ -95,13 +93,29 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
+
+
+
+echo ""
+echo ""
+echo "#########################"
+echo "Removing Ubuntu shortcuts"
+echo "#########################"
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+# Add home folder via alt+e
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'Open Home Folder'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ command 'nautilus --new-window /home/victor'
+gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Alt>e'
+
+  
+
+
+echo ""
+echo ""
+echo "#########################"
+echo "  Finishing Installation"
+echo "#########################"
 sudo usermod -aG sudo $(whoami)
 sudo usermod -aG docker $(whoami)
-
-
-echo ""
-echo "#########################"
-echo "    Finishing"
-echo "#########################"
-echo ""
 sudo apt-get update -y && sudo apt-get full-upgrade -y && sudo apt-get autoremove -y && sudo apt-get clean -y
