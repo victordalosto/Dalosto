@@ -99,6 +99,16 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin 
 echo ""
 echo ""
 echo "#########################"
+echo "Removing Ubuntu shortcuts"
+echo "#########################"
+gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+
+  
+
+echo ""
+echo ""
+echo "#########################"
 echo "  Finishing Installation"
 echo "#########################"
 sudo usermod -aG sudo $(whoami)
