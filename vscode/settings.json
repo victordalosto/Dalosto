@@ -2,7 +2,7 @@
 // =================================
 //  SETTINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.2.5
+//  Version: 1.2.6
 // =================================
 
 {
@@ -16,7 +16,8 @@
     "java.eclipse.downloadSources": true,
     "java.inlayHints.parameterNames.enabled": "all",
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
-    "java.debug.settings.console": "externalTerminal",
+    "java.debug.settings.console": "integratedTerminal",
+    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
     // "java.debug.settings.vmArgs": "-Xmx8g",
 
 
@@ -28,19 +29,19 @@
         ".git": true,
         ".github":true,
 
-        // ".idea": true,
-        // ".mvn": true,
-        // "mvnw": true,
-        // "mvnw.cmd": true,
-        // "LICENSE": true,
-        // "HELP.md": true,
-        // "target/**": true,
+        ".idea": true,
+        ".mvn": true,
+        "mvnw": true,
+        "mvnw.cmd": true,
+        "LICENSE": true,
+        "HELP.md": true,
+        "target/**": true,
         "**/__pytorch__/*": true,
         
         "Dockerfile": true,
         "Readme.md": true,
-        "pom.xml": true,
-        "**/src/test/**": true
+        // "pom.xml": true,
+        // "**/src/test/**": true
     },
 
 
@@ -55,7 +56,7 @@
     // GUI
     "workbench.tree.renderIndentGuides": "always",
     "workbench.colorTheme": "Dracula",
-    "workbench.iconTheme": "material-icon-theme",
+    "workbench.iconTheme": "vscode-icons",
 
 
 
@@ -153,13 +154,13 @@
             //     }
             // },
 
-            // {   // using in comma and brackets , and ;
-            //     "scope": "punctuation.separator, punctuation.terminator",
-            //     "settings": {
-            //         "foreground": "#f0e3eae4",
-            //         "fontStyle": "",
-            //     }
-            // },
+            {   // using in comma and brackets , and ;
+                "scope": "punctuation.separator, punctuation.terminator",
+                "settings": {
+                    "foreground": "#b8b5b6e4",
+                    "fontStyle": "",
+                }
+            },
 
             // {   // BRACKET
             //     "scope": "punctuation.definition.parenthesis, punctuation.definition.bracket",
@@ -199,31 +200,32 @@
     // UI
     "redhat.telemetry.enabled": true,
     "editor.inlineSuggest.enabled": true,
+    "workbench.activityBar.visible": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.statusBar.visible": false,
     "github.copilot.advanced": {
         
     },
 
-    // FUTURE
-    "settingsSync.ignoredSettings": [
-
-
-
-
-    ],
-
-
-
-    // NEW CONFIGS:
+    
     "[python]": {
         "editor.formatOnType": true
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-    "workbench.statusBar.visible": false,
-    "workbench.activityBar.visible": false,
-    "window.menuBarVisibility": "toggle",
-    
-    
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+
+    // FUTURE
+    "settingsSync.ignoredSettings": [
+    ],
+
+
+
+    // NEW CONFIGS:
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "boot-java.rewrite.reconcile": true,
 
 }
