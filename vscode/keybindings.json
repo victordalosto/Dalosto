@@ -1,7 +1,7 @@
 // =====================================
 //  KEYBINDINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.1.4
+//  Version: 1.1.5
 // =====================================
 
 [
@@ -1796,5 +1796,20 @@
         "key": "alt+f1",
         "command": "-workbench.action.terminal.showAccessibilityHelp",
         "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleFindCaseSensitive",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-toggleSearchCaseSensitive",
+        "when": "searchViewletFocus"
+    },
+    {
+        "key": "alt+c",
+        "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+        "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
     },
 ]
