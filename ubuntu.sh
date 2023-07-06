@@ -53,7 +53,7 @@ echo ""
 echo "#########################"
 echo "    VSCODE Extensions   "
 echo "#########################"
-code --install-extension dracula-theme.theme-dracula ; \
+code --install-extension gerane.Theme-Dracula ; \
 code --install-extension redhat.java ; \
 code --install-extension redhat.vscode-xml ; \
 code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples ; \
@@ -63,7 +63,9 @@ code --install-extension vscjava.vscode-java-debug ; \
 code --install-extension vscjava.vscode-java-dependency ; \
 code --install-extension vscjava.vscode-java-test ; \
 code --install-extension vscjava.vscode-maven ; \
-code --install-extension ms-python.python
+code --install-extension ms-python.python ; \
+code --install-extension vscode-icons-team.vscode-icons ; \
+code --install-extension vmware.vscode-boot-dev-pack ; \
 
 
 
@@ -72,8 +74,12 @@ echo ""
 echo "#########################"
 echo "    VSCode settings"
 echo "#########################"
-sudo cp ./vscode/settings.json $HOME/.config/Code/User/settings.json
-sudo cp ./vscode/keybindings.json $HOME/.config/Code/User/keybindings.json
+if [ ! -d "$HOME/.config/Code/User" ]; then
+  mkdir -p "$HOME/.config/Code/User"
+fi
+# Copy the files to the destination folder
+sudo cp ./vscode/settings.json "$HOME/.config/Code/User/settings.json"
+sudo cp ./vscode/keybindings.json "$HOME/.config/Code/User/keybindings.json"
 sudo chmod a+w $HOME/.config/Code/User/settings.json
 sudo chmod a+w $HOME/.config/Code/User/keybindings.json
 
