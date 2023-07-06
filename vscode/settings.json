@@ -2,7 +2,7 @@
 // =================================
 //  SETTINGS FOR Visual Studio CODE
 //  Author: VictorDalosto
-//  Version: 1.2.6
+//  Version: 1.2.7
 // =================================
 
 {
@@ -55,7 +55,6 @@
 
     // GUI
     "workbench.tree.renderIndentGuides": "always",
-    "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "vscode-icons",
 
 
@@ -64,13 +63,12 @@
     "editor.minimap.enabled": false,
     "editor.fontFamily": " Consolas, monaco monospace, 'Courier New'",
     "explorer.sortOrder": "filesFirst",
-    "workbench.tree.indent": 14,
+    "workbench.tree.indent": 5,
 
 
     // Other ui
     "editor.showFoldingControls": "always",
     "breadcrumbs.enabled": false,
-
 
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
@@ -94,6 +92,9 @@
         "plaintext": true,
         "markdown": true
     },
+    "workbench.colorTheme": "Dracula",
+    "window.titleBarStyle": "custom",
+    "window.customMenuBarAltFocus": false,
 
 
 
@@ -200,9 +201,6 @@
     // UI
     "redhat.telemetry.enabled": true,
     "editor.inlineSuggest.enabled": true,
-    "workbench.activityBar.visible": false,
-    "window.menuBarVisibility": "toggle",
-    "workbench.statusBar.visible": false,
     "github.copilot.advanced": {
         
     },
@@ -220,6 +218,9 @@
 
     // FUTURE
     "settingsSync.ignoredSettings": [
+
+
+
     ],
 
 
@@ -227,5 +228,11 @@
     // NEW CONFIGS:
     "terminal.integrated.defaultProfile.linux": "bash",
     "boot-java.rewrite.reconcile": true,
+    "settingsSync.ignoredExtensions": [
+    
+    ],
+    "workbench.activityBar.visible": false,
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "compact",
 
 }
