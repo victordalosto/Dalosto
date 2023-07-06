@@ -1,16 +1,9 @@
-
-// =================================
-//  SETTINGS FOR Visual Studio CODE
-//  Author: VictorDalosto
-//  Version: 1.2.7
-// =================================
-
 {
 
 
     // JAVA CONFIGURATIONS
-    //"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
-    //"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    "spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
@@ -25,21 +18,21 @@
     // Excluded from view
     "files.exclude": {
         ".gitignore": true,
-        ".vscode": true,
         ".git": true,
         ".github":true,
-
         ".idea": true,
         ".mvn": true,
+        
         "mvnw": true,
         "mvnw.cmd": true,
         "LICENSE": true,
         "HELP.md": true,
+        "Dockerfile": true,
         "target/**": true,
         "**/__pytorch__/*": true,
         
-        "Dockerfile": true,
         "Readme.md": true,
+        // ".vscode": true,
         // "pom.xml": true,
         // "**/src/test/**": true
     },
@@ -49,7 +42,7 @@
     // CONFIGS
     "editor.foldingImportsByDefault": true,
     "editor.inlayHints.enabled": "offUnlessPressed",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "vsintellicode.modify.editor.suggestSelection": "disabled",
 
 
 
@@ -66,21 +59,24 @@
     "workbench.tree.indent": 5,
 
 
+
     // Other ui
     "editor.showFoldingControls": "always",
     "breadcrumbs.enabled": false,
 
+
+
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
-        // "editorBracketHighlight.foreground1": "#5ecfe9", // class
-        // "editorBracketHighlight.foreground2": "#f0359f", // methods
-        //"sideBar.background": "#26242c", // dracula
-        //"editor.background": "#26242c", // dracula
-        // "editorGutter.background": "#292929"
-        // "sideBar.foreground": "#fbf9f9",
-        // "terminal.background": "#26242c",
-        // "panel.background": "#26242c",
-        // "activityBar.background": "#000000",
+        "editorBracketHighlight.foreground1": "#5ecfe9", // class
+        "editorBracketHighlight.foreground2": "#f0359f", // methods
+        "sideBar.background": "#26242c", // dracula
+        "editor.background": "#26242c", // dracula
+        "editorGutter.background": "#292929",
+        "sideBar.foreground": "#fbf9f9",
+        "terminal.background": "#26242c",
+        "panel.background": "#26242c",
+        "activityBar.background": "#000000"
     },
 
 
@@ -92,9 +88,10 @@
         "plaintext": true,
         "markdown": true
     },
-    "workbench.colorTheme": "Dracula",
     "window.titleBarStyle": "custom",
     "window.customMenuBarAltFocus": false,
+    "workbench.statusBar.visible": false,
+    "window.menuBarVisibility": "compact",
 
 
 
@@ -133,12 +130,12 @@
             //     }
             // },
 
-            // {   // ACCESS MODIFIERS
-            //     "scope": "storage.modifier",
-            //     "settings": {
-            //         "foreground": "#f0359f",
-            //     }
-            // },
+            {   // ACCESS MODIFIERS
+                "scope": "storage.modifier",
+                "settings": {
+                    "foreground": "#f0359f",
+                }
+            },
 
             // {   // NEW, OPERATORS
             //     "scope": "variable.language.this, variable.language.self, keyword.control",
@@ -198,41 +195,48 @@
     "files.autoSave": "onFocusChange",
 
 
+    // DISABLE ANNOYING BOX
+    "editor.parameterHints.enabled": false, // disable pop-up box top
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.suggest.showStatusBar": false,
+    "editor.inlineSuggest.enabled": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "editor.suggest.selectionMode": "never",
+    "editor.suggest.matchOnWordStartOnly": false,
+    "editor.suggest.showEvents": false,
+    "editor.suggest.showKeywords": false,
+    "editor.suggest.showModules": false,
+    "editor.suggest.showProperties": false,
+    "editor.suggest.showSnippets": false,
+    "editor.suggest.showUnits": false,
+    "editor.suggest.showWords": false,
+
+
+
     // UI
     "redhat.telemetry.enabled": true,
-    "editor.inlineSuggest.enabled": true,
     "github.copilot.advanced": {
         
     },
-
-    
-    "[python]": {
-        "editor.formatOnType": true
-    },
-    "[jsonc]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-
-    // FUTURE
-    "settingsSync.ignoredSettings": [
-
-
-
-    ],
 
 
 
     // NEW CONFIGS:
     "terminal.integrated.defaultProfile.linux": "bash",
     "boot-java.rewrite.reconcile": true,
+
     "settingsSync.ignoredExtensions": [
-    
+
     ],
-    "workbench.activityBar.visible": false,
-    "workbench.statusBar.visible": false,
-    "window.menuBarVisibility": "compact",
+
+
+
+    "[python]": {"editor.formatOnType": true},
+    "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+
+
 
 }
