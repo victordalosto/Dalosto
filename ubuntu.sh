@@ -56,7 +56,6 @@ echo "#########################"
 code --install-extension gerane.Theme-Dracula ; \
 code --install-extension redhat.java ; \
 code --install-extension redhat.vscode-xml ; \
-code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples ; \
 code --install-extension VisualStudioExptTeam.vscodeintellicode ; \
 code --install-extension vscjava.vscode-java-pack ; \
 code --install-extension vscjava.vscode-java-debug ; \
