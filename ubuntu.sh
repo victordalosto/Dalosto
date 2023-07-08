@@ -108,6 +108,9 @@ echo "Removing Ubuntu shortcuts"
 echo "#########################"
 gsettings set org.gnome.desktop.wm.keybindings panel-main-menu "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-input-source "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "['']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-up "['']"
+
 
   
 
