@@ -1,6 +1,4 @@
 {
-
-
     // JAVA CONFIGURATIONS
     "spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
     "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
@@ -9,7 +7,7 @@
     "java.eclipse.downloadSources": true,
     "java.inlayHints.parameterNames.enabled": "all",
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
-    "java.debug.settings.console": "integratedTerminal",
+    "java.debug.settings.console": "externalTerminal",
     "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
     // "java.debug.settings.vmArgs": "-Xmx8g",
 
@@ -17,7 +15,7 @@
 
     // Excluded from view
     "files.exclude": {
-        ".gitignore": true,
+        // ".gitignore": true,
         ".git": true,
         ".github":true,
         ".idea": true,
@@ -29,9 +27,10 @@
         "HELP.md": true,
         "Dockerfile": true,
         "target/**": true,
-        "**/__pytorch__/*": true,
+        "**/__pytorch__": true,
+        "**/__pycache__":true,
         
-        "Readme.md": true,
+        // "Readme.md": true,
         // ".vscode": true,
         // "pom.xml": true,
         // "**/src/test/**": true
@@ -88,9 +87,9 @@
         "plaintext": true,
         "markdown": true
     },
+
     "window.titleBarStyle": "custom",
     "window.customMenuBarAltFocus": false,
-    "workbench.statusBar.visible": false,
     "window.menuBarVisibility": "compact",
 
 
@@ -193,23 +192,26 @@
     "explorer.confirmDelete": false,
     "security.workspace.trust.untrustedFiles": "open",
     "files.autoSave": "onFocusChange",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "boot-java.rewrite.reconcile": true,
 
 
     // DISABLE ANNOYING BOX
     "editor.parameterHints.enabled": false, // disable pop-up box top
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.suggest.showStatusBar": false,
-    "editor.inlineSuggest.enabled": false,
-    "editor.inlineSuggest.suppressSuggestions": true,
-    "editor.suggest.selectionMode": "never",
-    "editor.suggest.matchOnWordStartOnly": false,
-    "editor.suggest.showEvents": false,
-    "editor.suggest.showKeywords": false,
-    "editor.suggest.showModules": false,
-    "editor.suggest.showProperties": false,
-    "editor.suggest.showSnippets": false,
-    "editor.suggest.showUnits": false,
-    "editor.suggest.showWords": false,
+    // "editor.suggestOnTriggerCharacters": false,
+    // "editor.suggest.showStatusBar": false,
+    // "editor.inlineSuggest.suppressSuggestions": true,
+    // "editor.suggest.selectionMode": "never",
+    // "editor.suggest.matchOnWordStartOnly": false,
+    // "editor.suggest.showEvents": false,
+    // "editor.suggest.showKeywords": false,
+    // "editor.suggest.showModules": false,
+    // "editor.suggest.showProperties": false,
+    // "editor.suggest.showSnippets": false,
+    // "editor.suggest.showUnits": false,
+    // "editor.suggest.showWords": false,
+    // "editor.inlineSuggest.enabled": true,
+    "editor.inlineSuggest.enabled": true,
 
 
 
@@ -221,21 +223,28 @@
 
 
 
-    // NEW CONFIGS:
-    "terminal.integrated.defaultProfile.linux": "bash",
-    "boot-java.rewrite.reconcile": true,
-
-    "settingsSync.ignoredExtensions": [
-
-    ],
-
-
-
+    
+    
     "[python]": {"editor.formatOnType": true},
     "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
+    "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"},
+    
+    
+    // NEW CONFIGS:
+    "settingsSync.ignoredSettings": [
+
+
+
+
+    ],
+    "settingsSync.ignoredExtensions": [
+    ],
+    "editor.codeActionsOnSave": {
+    
     },
+    "window.zoomLevel": 1,
+    "workbench.colorTheme": "Dracula",
+
 
 
 
