@@ -231,7 +231,7 @@
         "command": "editor.action.insertCursorAbove"
     },
     {
-        "key": "ctrl+alt+pagedown",
+        "key": "ctrl+alt+down",
         "command": "editor.action.insertCursorBelow"
     },
     {
