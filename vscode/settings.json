@@ -13,27 +13,38 @@
 
 
 
-    // Excluded from view
-    "files.exclude": {
+        "files.exclude": {
         // ".gitignore": true,
         ".git": true,
         ".github":true,
-        ".idea": true,
-        ".mvn": true,
         
+        ".idea": true,
+        "Dockerfile": true,
+
+        ".mvn": true,
         "mvnw": true,
         "mvnw.cmd": true,
         "LICENSE": true,
         "HELP.md": true,
-        "Dockerfile": true,
-        "target/**": true,
+            
         "**/__pytorch__": true,
         "**/__pycache__":true,
-        
-        // "Readme.md": true,
-        // ".vscode": true,
+
+        "gradlew": true,
+        ".gradle": true,
+        "settings.gradle": true,
+        "gradlew.bat": true,
+        "gradle": true,
+        "build": true,
+        "bin": true,
+
+        // "build.gradle": true,
         // "pom.xml": true,
+        
+        // ".vscode": true,
+        // "Readme.md": true,
         // "**/src/test/**": true
+        "target/**": true,
     },
 
 
@@ -67,15 +78,15 @@
 
     // VSCODE CUSTOMIZATION
     "workbench.colorCustomizations": {
-        "editorBracketHighlight.foreground1": "#5ecfe9", // class
-        "editorBracketHighlight.foreground2": "#f0359f", // methods
-        "sideBar.background": "#26242c", // dracula
-        "editor.background": "#26242c", // dracula
-        "editorGutter.background": "#292929",
-        "sideBar.foreground": "#fbf9f9",
-        "terminal.background": "#26242c",
-        "panel.background": "#26242c",
-        "activityBar.background": "#000000"
+        // "editorBracketHighlight.foreground1": "#5ecfe9", // class
+        // "editorBracketHighlight.foreground2": "#f0359f", // methods
+        // "sideBar.background": "#26242c", // dracula
+        // "editor.background": "#26242c", // dracula
+        // "editorGutter.background": "#292929",
+        // "sideBar.foreground": "#fbf9f9",
+        // "terminal.background": "#26242c",
+        // "panel.background": "#26242c",
+        // "activityBar.background": "#000000"
     },
 
 
