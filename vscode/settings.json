@@ -49,7 +49,7 @@
         // "**/Readme.md": true,
         
         // "**/src/test/**": true,
-        "**/target/**": true,
+        "**/target/**": true
 },
 
 
@@ -66,7 +66,7 @@
     // GUI
     "workbench.tree.renderIndentGuides": "always",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+    "workbench.colorTheme": "Monokai Dimmed",
 
 
 
@@ -82,7 +82,6 @@
     "editor.showFoldingControls": "always",
     "breadcrumbs.enabled": false,
     "window.zoomLevel": 2,
-    "workbench.activityBar.visible": false,
     "workbench.tips.enabled": false,
     "workbench.statusBar.visible": false,
 
@@ -93,7 +92,7 @@
     "workbench.colorCustomizations": {
         "editorBracketHighlight.foreground1": "#FC618D", // class
         "editorBracketHighlight.foreground2": "#5ecfe9", // methods
-        "editorBracketHighlight.foreground3": "#7BD88F", // blocks-inside-methods
+        "editorBracketHighlight.foreground3": "#50FA7B", // blocks-inside-methods
         "editorBracketHighlight.foreground4": "#ffffff", // additional
         "editorBracketHighlight.foreground5": "#DED55E", // additional2
         
@@ -127,144 +126,103 @@
         "textMateRules": [
 
             {   // IMPORTS, PACKAGE, 
-                "scope": "storage.modifier.import.java, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java",
-                "settings": {
-                    "foreground": "#888886",
-                }
-            }, 
+                "scope": "keyword.control.import.ts, keyword.control.from.ts, storage.modifier.import.java, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
+                    "foreground": "#888886", "fontStyle": ""
+            }}, 
 
             {   // @Annotation java
-                "scope": "storage.type.annotation.java",
-                "settings": {
-                    // "foreground": "#aaaaa5",
+                "scope": "storage.type.annotation.java, punctuation.definition.annotation", "settings": {
                     "foreground": "#289e98",
                     "fontStyle": "italic"
-                }
-            }, 
+            }}, 
 
-            {   // public, private
-                "scope": "storage.modifier.java, storage.modifier.ts",
-                "settings": {
-                    "foreground": "#FC618D",
-                    "fontStyle": ""
-                }
-            }, 
-            
-            {   // Class
-                "scope": "entity.name.type.class.java",
-                "settings": {
-                    "foreground": "#fcfcfc",
-                }
-            }, 
+            {   // ACESSOR: public, private, proteced
+                "scope": "storage.modifier.java, storage.modifier.ts", "settings": {
+                    "foreground": "#FC618D", "fontStyle": ""
+            }}, 
 
             {   // Types
-                "scope": " storage.type.ts, storage.type.property.ts, storage.type.class.ts, meta.type.annotation.ts",
-                "settings": {
-                    "foreground": "#FC618D",
-                    // "foreground": "#f0359f",
-                    "fontStyle": ""
-                }
-            }, 
-            
-            {   // return type
-                "scope": "entity.name.type.ts, support.type.primitive.ts",
-                "settings": {
+                "scope": "storage.type, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, entity.name.type.class, support.class, entity.name.type.interface", "settings": {
                     "foreground": "#5AD4E6",
                     "fontStyle": ""
-                }
-            }, 
-
-            {   // this.field
-                "scope": "variable.other.object.property.ts",
-                "settings": {
-                    "fontStyle": "bold",
-                    "foreground": "#ffffffda"
-                }
-            }, 
+            }}, 
             
             {   // methods
-                "scope": "entity.name.function, variable.other.object.ts",
-                "settings": {
-                    "foreground": "#7BD88F",
-                }
-            }, 
+                "scope": "entity.name.function, variable.other.object.ts", "settings": {
+                    "foreground": "#50FA7B", "fontStyle": ""
+            }}, 
+        
+            {   // FIELD   AND   field in this.FIELD
+                "scope": "variable.other.property, variable.other.object.property, support.variable.property", "settings": {
+                    "foreground": "#ffffffda",
+                    "fontStyle": "bold"
+            }}, 
 
-            {   // variable
-                "scope": "variable, meta.method.declaration.ts",
-                "settings": {
-                    // "foreground": "#FD9353",
-                }
-            }, 
+            {   // variable method parameter
+                "scope": "variable.parameter", "settings": {
+                  "foreground": "#ffffff", "fontStyle": ""
+            }}, 
 
-            {   // variable inside methods
-                "scope": "variable.other, variable.other.constant.ts",
-                "settings": {
-                    "foreground": "#ffffff",
-                }
-            }, 
-
-            {   // variable parameter
-                "scope": "variable.parameter, ",
-                "settings": {
-                  "foreground": "#ffffff",
-                //   "foreground": "#FD9353",
-                  "fontStyle": ""
-                }
-            }, 
+            {   // variable created inside method
+                "scope": "variable.other.constant", "settings": {
+                    "foreground": "#c0bdbd", "fontStyle": ""
+            }}, 
 
             {   // String
-                "scope": "string",
-                "settings": {
+                "scope": "string", "settings": {
                     "foreground": "#ded55e",
                     "fontStyle": "italic"
-                }
-            }, 
+            }}, 
 
             {   // keywords
-                "scope": "storage.type.local.java",
-                "settings": {
-                    "foreground": "#FC618D",
-                    "fontStyle": "bold"
-                }
-            }, 
+                "scope": "keyword.control", "settings": {
+                    "foreground": "#FC618D", "fontStyle": ""
+            }}, 
 
             {   // this
-                "scope": "keyword.control.java, variable.language.this.java,variable.language.this.ts",
-                "settings": {
-                    "foreground": "#FC618D",
-                }
-            }, 
+                "scope": "keyword, keyword.operator.new, keyword.control.java, variable.language.this.java,variable.language.this.ts", "settings": {
+                    "foreground": "#FC618D", "fontStyle": ""
+            }}, 
 
             {   // ponctuator
-                "scope": "ponctuation",
-                "settings": {
-                    "foreground": "#FC618D",
-                }
-            }, 
+                "scope": "ponctuation, punctuation.definition, meta.brace, punctuation.section, punctuation.bracket.round", "settings": {
+                    "foreground": "#FC618D", "fontStyle": ""
+            }}, 
 
             { // ;
-                "scope":"punctuation.terminator.java, punctuation.terminator.statement.ts",
-                "settings": {
-                    "foreground": "#565655",
-                    "fontStyle": ""
+                "scope":"punctuation.terminator.java, punctuation.terminator.statement.ts", "settings": {
+                    "foreground": "#565655", "fontStyle": ""
                 }
             },
 
             { // .
-                "scope": "punctuation.separator.period.java, ponctuation.acessor",
-                "settings": {
-                    "foreground": "#9f9f99",
-                    "fontStyle": ""
+                "scope": "punctuation.separator.period.java, ponctuation.acessor, punctuation.accessor.ts", "settings": {
+                    "foreground": "#9f9f99", "fontStyle": ""
                 }
             },
 
             { // : + = * / -
-                "scope": "keyword.operator",
-                "settings": {
-                    "foreground": "#9f9f99",
-                    "fontStyle": ""
+                "scope": "keyword.operator, punctuation.separator.parameter", "settings": {
+                    "foreground": "#9f9f99", "fontStyle": ""
                 }
             },
+
+            { // quotes as in ' "
+                "scope": "punctuation.definition", "settings": {
+                    "foreground": "#DED55E", "fontStyle": ""
+                }
+            },
+
+            {   // STATIC Methods
+                "scope": "support, support.function, support.other.variable, variable.other.object.ts", "settings": {
+                    "foreground": "#BD93F9", "fontStyle": ""
+            }}, 
+
+            {   // Others
+                "scope": "constant.numeric", "settings": {
+                    "fontStyle": ""
+            }}
+
         ]
     },
 
@@ -279,7 +237,7 @@
     "boot-java.rewrite.reconcile": true,
 
 
-    
+
     // DISABLE ANNOYING BOX
     "editor.parameterHints.enabled": false, // disable pop-up box top
     "editor.inlineSuggest.enabled": true,
@@ -303,13 +261,11 @@
     "redhat.telemetry.enabled": true,
     "[python]": {"editor.formatOnType": true},
     "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
-    "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"},
+    "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"}
     
     
-
 
     // NEW CONFIGS:
-
 
 
 }
