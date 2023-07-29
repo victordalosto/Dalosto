@@ -1,11 +1,9 @@
 dracula-theme.theme-dracula
-dracula-theme.theme-dracula
-formulahendry.auto-close-tag
-formulahendry.auto-complete-tag
-formulahendry.auto-rename-tag
 GitHub.copilot
+monokai.theme-monokai-pro-vscode
 ms-python.python
 ms-python.vscode-pylance
+ms-vscode.vscode-typescript-next
 redhat.java
 redhat.vscode-xml
 VisualStudioExptTeam.intellicode-api-usage-examples
