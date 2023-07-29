@@ -7,45 +7,50 @@
     "java.eclipse.downloadSources": true,
     "java.inlayHints.parameterNames.enabled": "all",
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
-    "java.debug.settings.console": "externalTerminal",
-    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
+    // "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
     // "java.debug.settings.vmArgs": "-Xmx8g",
 
 
 
-        "files.exclude": {
-        // ".gitignore": true,
-        ".git": true,
-        ".github":true,
+    "files.exclude": {
+        "**/.gitignore": true,
+        "**/.git": true,
+        "**/.github":true,
         
-        ".idea": true,
-        "Dockerfile": true,
+        "**/.idea": true,
+        "**/Dockerfile": true,
 
-        ".mvn": true,
-        "mvnw": true,
-        "mvnw.cmd": true,
-        "LICENSE": true,
-        "HELP.md": true,
+        "**/.mvn": true,
+        "**/mvnw": true,
+        "**/mvnw.cmd": true,
+        "**/LICENSE": true,
+        "**/HELP.md": true,
             
         "**/__pytorch__": true,
         "**/__pycache__":true,
 
-        "gradlew": true,
-        ".gradle": true,
-        "settings.gradle": true,
-        "gradlew.bat": true,
-        "gradle": true,
-        "build": true,
-        "bin": true,
+        "**/gradlew": true,
+        "**/.gradle": true,
+        "**/settings.gradle": true,
+        "**/gradlew.bat": true,
+        "**/gradle": true,
+        "**/build": true,
+        "**/bin": true,
 
-        // "build.gradle": true,
-        // "pom.xml": true,
+        "node_modules": true,
+        "**/package-lock.json": true,
+        "**/servidor-api": true,
+
+
+        // "**/build.gradle": true,
+        // "**/pom.xml": true,
         
-        // ".vscode": true,
-        // "Readme.md": true,
-        // "**/src/test/**": true
-        "target/**": true,
-    },
+        "**/.vscode": true,
+        // "**/Readme.md": true,
+        
+        // "**/src/test/**": true,
+        "**/target/**": true,
+},
 
 
 
@@ -53,12 +58,15 @@
     "editor.foldingImportsByDefault": true,
     "editor.inlayHints.enabled": "offUnlessPressed",
     "vsintellicode.modify.editor.suggestSelection": "disabled",
+    "workbench.editor.enablePreview": false,
+    "terminal.explorerKind": "external",
 
 
 
     // GUI
     "workbench.tree.renderIndentGuides": "always",
     "workbench.iconTheme": "vscode-icons",
+    "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
 
 
 
@@ -73,20 +81,29 @@
     // Other ui
     "editor.showFoldingControls": "always",
     "breadcrumbs.enabled": false,
+    "window.zoomLevel": 2,
+    "workbench.activityBar.visible": false,
+    "workbench.tips.enabled": false,
+    "workbench.statusBar.visible": false,
 
 
 
     // VSCODE CUSTOMIZATION
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "workbench.colorCustomizations": {
-        // "editorBracketHighlight.foreground1": "#5ecfe9", // class
-        // "editorBracketHighlight.foreground2": "#f0359f", // methods
-        // "sideBar.background": "#26242c", // dracula
-        // "editor.background": "#26242c", // dracula
-        // "editorGutter.background": "#292929",
-        // "sideBar.foreground": "#fbf9f9",
-        // "terminal.background": "#26242c",
-        // "panel.background": "#26242c",
-        // "activityBar.background": "#000000"
+        "editorBracketHighlight.foreground1": "#FC618D", // class
+        "editorBracketHighlight.foreground2": "#5ecfe9", // methods
+        "editorBracketHighlight.foreground3": "#7BD88F", // blocks-inside-methods
+        "editorBracketHighlight.foreground4": "#ffffff", // additional
+        "editorBracketHighlight.foreground5": "#DED55E", // additional2
+        
+        "sideBar.background": "#141317", // dracula
+        "editor.background": "#141317", // dracula
+        "editorGutter.background": "#141317",
+        "sideBar.foreground": "#858383",
+        "terminal.background": "#141317",
+        "panel.background": "#141317",
+        "activityBar.background": "#000000"
     },
 
 
@@ -110,89 +127,144 @@
         "textMateRules": [
 
             {   // IMPORTS, PACKAGE, 
-                "scope": "keyword.other, entity.name",
+                "scope": "storage.modifier.import.java, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java",
                 "settings": {
                     "foreground": "#888886",
                 }
             }, 
 
-            {   // ANOTTATIONS
-                "scope": "entity.name.type.annotation, meta.declaration.annotation, storage.type.annotation, punctuation.definition.annotation.java",
+            {   // @Annotation java
+                "scope": "storage.type.annotation.java",
                 "settings": {
-                    "foreground": "#bcb7b7",
-                    "fontStyle": "italic",
+                    // "foreground": "#aaaaa5",
+                    "foreground": "#289e98",
+                    "fontStyle": "italic"
+                }
+            }, 
+
+            {   // public, private
+                "scope": "storage.modifier.java, storage.modifier.ts",
+                "settings": {
+                    "foreground": "#FC618D",
+                    "fontStyle": ""
+                }
+            }, 
+            
+            {   // Class
+                "scope": "entity.name.type.class.java",
+                "settings": {
+                    "foreground": "#fcfcfc",
+                }
+            }, 
+
+            {   // Types
+                "scope": " storage.type.ts, storage.type.property.ts, storage.type.class.ts, meta.type.annotation.ts",
+                "settings": {
+                    "foreground": "#FC618D",
+                    // "foreground": "#f0359f",
+                    "fontStyle": ""
+                }
+            }, 
+            
+            {   // return type
+                "scope": "entity.name.type.ts, support.type.primitive.ts",
+                "settings": {
+                    "foreground": "#5AD4E6",
+                    "fontStyle": ""
+                }
+            }, 
+
+            {   // this.field
+                "scope": "variable.other.object.property.ts",
+                "settings": {
+                    "fontStyle": "bold",
+                    "foreground": "#ffffffda"
+                }
+            }, 
+            
+            {   // methods
+                "scope": "entity.name.function, variable.other.object.ts",
+                "settings": {
+                    "foreground": "#7BD88F",
+                }
+            }, 
+
+            {   // variable
+                "scope": "variable, meta.method.declaration.ts",
+                "settings": {
+                    // "foreground": "#FD9353",
+                }
+            }, 
+
+            {   // variable inside methods
+                "scope": "variable.other, variable.other.constant.ts",
+                "settings": {
+                    "foreground": "#ffffff",
+                }
+            }, 
+
+            {   // variable parameter
+                "scope": "variable.parameter, ",
+                "settings": {
+                  "foreground": "#ffffff",
+                //   "foreground": "#FD9353",
+                  "fontStyle": ""
+                }
+            }, 
+
+            {   // String
+                "scope": "string",
+                "settings": {
+                    "foreground": "#ded55e",
+                    "fontStyle": "italic"
+                }
+            }, 
+
+            {   // keywords
+                "scope": "storage.type.local.java",
+                "settings": {
+                    "foreground": "#FC618D",
+                    "fontStyle": "bold"
+                }
+            }, 
+
+            {   // this
+                "scope": "keyword.control.java, variable.language.this.java,variable.language.this.ts",
+                "settings": {
+                    "foreground": "#FC618D",
+                }
+            }, 
+
+            {   // ponctuator
+                "scope": "ponctuation",
+                "settings": {
+                    "foreground": "#FC618D",
+                }
+            }, 
+
+            { // ;
+                "scope":"punctuation.terminator.java, punctuation.terminator.statement.ts",
+                "settings": {
+                    "foreground": "#565655",
+                    "fontStyle": ""
                 }
             },
 
-            // {   // CLASSES
-            //     "scope": "entity.name.type.class, entity.name.function.java",
-            //     "settings": {
-            //         "foreground": "#5ecfe9",
-            //         "fontStyle": "bold",
-            //     }
-            // },
-
-            // {   // METHOD OVERIDE
-            //     "scope": "entity.name.function",
-            //     "settings": {
-            //         "foreground": "#50fa7b",
-            //         "fontStyle": "",
-            //     }
-            // },
-
-            {   // ACCESS MODIFIERS
-                "scope": "storage.modifier",
+            { // .
+                "scope": "punctuation.separator.period.java, ponctuation.acessor",
                 "settings": {
-                    "foreground": "#f0359f",
+                    "foreground": "#9f9f99",
+                    "fontStyle": ""
                 }
             },
 
-            // {   // NEW, OPERATORS
-            //     "scope": "variable.language.this, variable.language.self, keyword.control",
-            //     "settings": {
-            //         "foreground": "#cc7631",
-            //     }
-            // },
-
-            // {   // RETURN
-            //     "scope": "keyword.operator",
-            //     "settings": {
-            //         "foreground": "#f0359f",
-            //         // "fontStyle": "bold",
-            //     }
-            // },
-
-            {   // using in comma and brackets , and ;
-                "scope": "punctuation.separator, punctuation.terminator",
+            { // : + = * / -
+                "scope": "keyword.operator",
                 "settings": {
-                    "foreground": "#b8b5b6e4",
-                    "fontStyle": "",
+                    "foreground": "#9f9f99",
+                    "fontStyle": ""
                 }
             },
-
-            // {   // BRACKET
-            //     "scope": "punctuation.definition.parenthesis, punctuation.definition.bracket",
-            //     "settings": {
-            //         "foreground": "#ffffff",
-            //         // "fontStyle": "bold",
-            //     }
-            // },
-
-            // {   // STRINGS
-            //     "scope": "string.quoted.double, punctuation.definition.string.begin, punctuation.definition.string.end",
-            //     "settings": {
-            //         "foreground": "#e0e59f"
-            //     }
-            // },
-
-            // {   // REFERENCES
-            //     "scope": "variable.other",
-            //     "settings": {
-            //         "foreground": "#ffffff",
-            //         "fontStyle": "",
-            //     }
-            // },
-
         ]
     },
 
@@ -207,8 +279,10 @@
     "boot-java.rewrite.reconcile": true,
 
 
+    
     // DISABLE ANNOYING BOX
     "editor.parameterHints.enabled": false, // disable pop-up box top
+    "editor.inlineSuggest.enabled": true,
     // "editor.suggestOnTriggerCharacters": false,
     // "editor.suggest.showStatusBar": false,
     // "editor.inlineSuggest.suppressSuggestions": true,
@@ -222,40 +296,19 @@
     // "editor.suggest.showUnits": false,
     // "editor.suggest.showWords": false,
     // "editor.inlineSuggest.enabled": true,
-    "editor.inlineSuggest.enabled": true,
 
 
 
     // UI
     "redhat.telemetry.enabled": true,
-    "github.copilot.advanced": {
-        
-    },
-
-
-
-    
-    
     "[python]": {"editor.formatOnType": true},
     "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
     "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"},
     
     
+
+
     // NEW CONFIGS:
-    "settingsSync.ignoredSettings": [
-
-
-
-
-    ],
-    "settingsSync.ignoredExtensions": [
-    ],
-    "editor.codeActionsOnSave": {
-    
-    },
-    "window.zoomLevel": 1,
-    "workbench.colorTheme": "Dracula",
-
 
 
 
