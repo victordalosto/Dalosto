@@ -53,26 +53,32 @@ echo ""
 echo "#########################"
 echo "    VSCODE Extensions   "
 echo "#########################"
-code --install-extension dracula-theme.theme-dracula ; \
-code --install-extension GitHub.copilot ; \
-code --install-extension monokai.theme-monokai-pro-vscode ; \
-code --install-extension ms-python.python ; \
-code --install-extension ms-python.vscode-pylance ; \
-code --install-extension ms-vscode.vscode-typescript-next ; \
-code --install-extension redhat.java ; \
-code --install-extension redhat.vscode-xml ; \
-code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples ; \
-code --install-extension VisualStudioExptTeam.vscodeintellicode ; \
-code --install-extension vmware.vscode-boot-dev-pack ; \
-code --install-extension vmware.vscode-spring-boot ; \
-code --install-extension vscjava.vscode-java-debug ; \
-code --install-extension vscjava.vscode-java-dependency ; \
-code --install-extension vscjava.vscode-java-pack ; \
-code --install-extension vscjava.vscode-java-test ; \
-code --install-extension vscjava.vscode-maven ; \
-code --install-extension vscjava.vscode-spring-boot-dashboard ; \
-code --install-extension vscjava.vscode-spring-initializr ; \
-code --install-extension vscode-icons-team.vscode-icons ; \
+code --install-extension bierner.color-info; \
+code --install-extension dracula-theme.theme-dracula; \
+code --install-extension formulahendry.auto-close-tag; \
+code --install-extension formulahendry.auto-complete-tag; \
+code --install-extension formulahendry.auto-rename-tag; \
+code --install-extension GitHub.copilot; \
+code --install-extension GitHub.copilot-chat; \
+code --install-extension monokai.theme-monokai-pro-vscode; \
+code --install-extension ms-python.python; \
+code --install-extension ms-python.vscode-pylance; \
+code --install-extension ms-vscode.vscode-typescript-next; \
+code --install-extension redhat.java; \
+code --install-extension redhat.vscode-xml; \
+code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples; \
+code --install-extension VisualStudioExptTeam.vscodeintellicode; \
+code --install-extension vmware.vscode-boot-dev-pack; \
+code --install-extension vmware.vscode-spring-boot; \
+code --install-extension vscjava.vscode-java-debug; \
+code --install-extension vscjava.vscode-java-dependency; \
+code --install-extension vscjava.vscode-java-pack; \
+code --install-extension vscjava.vscode-java-test; \
+code --install-extension vscjava.vscode-maven; \
+code --install-extension vscjava.vscode-spring-boot-dashboard; \
+code --install-extension vscjava.vscode-spring-initializr; \
+code --install-extension vscode-icons-team.vscode-icons; \
+code --install-extension zhang-renyang.chat-gpt; \
 
 
 echo ""
