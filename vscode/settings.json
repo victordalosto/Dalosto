@@ -37,9 +37,9 @@
         "**/build": true,
         "**/bin": true,
 
-        "node_modules": true,
-        "**/package-lock.json": true,
-        "**/servidor-api": true,
+        // "node_modules": true,
+        // "**/package-lock.json": true,
+        // "**/servidor-api": true,
 
 
         // "**/build.gradle": true,
@@ -66,7 +66,7 @@
     // GUI
     "workbench.tree.renderIndentGuides": "always",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Monokai Dimmed",
+    "workbench.colorTheme": "Dracula",
 
 
 
@@ -99,7 +99,7 @@
         "sideBar.background": "#141317", // dracula
         "editor.background": "#141317", // dracula
         "editorGutter.background": "#141317",
-        "sideBar.foreground": "#858383",
+        // "sideBar.foreground": "#858383",
         "terminal.background": "#141317",
         "panel.background": "#141317",
         "activityBar.background": "#000000"
@@ -142,9 +142,14 @@
             }}, 
 
             {   // Types
-                "scope": "storage.type, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, entity.name.type.class, support.class, entity.name.type.interface", "settings": {
+                "scope": "meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, entity.name.type.class, support.class, entity.name.type.interface", "settings": {
                     "foreground": "#5AD4E6",
                     "fontStyle": ""
+            }}, 
+
+            {   // const, let, var
+                "scope": "variable.other, storage.type", "settings": {
+                    "foreground": "#FC618D", "fontStyle": ""
             }}, 
             
             {   // methods
@@ -164,8 +169,10 @@
             }}, 
 
             {   // variable created inside method
-                "scope": "variable.other.constant", "settings": {
-                    "foreground": "#c0bdbd", "fontStyle": ""
+                "scope": "variable.other.constant", 
+                "settings": {
+                    "foreground": "#ffffff", 
+                    "fontStyle": ""
             }}, 
 
             {   // String
@@ -175,7 +182,7 @@
             }}, 
 
             {   // keywords
-                "scope": "keyword.control", "settings": {
+                "scope": "keyword.control, punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
             }}, 
 
@@ -217,6 +224,11 @@
                 "scope": "support, support.function, support.other.variable, variable.other.object.ts", "settings": {
                     "foreground": "#BD93F9", "fontStyle": ""
             }}, 
+
+            {   // Nao definido
+                "scope": "entity.name.type", "settings": {
+                    "foreground": "#ffffff", "fontStyle": ""
+            }},
 
             {   // Others
                 "scope": "constant.numeric", "settings": {
@@ -261,7 +273,10 @@
     "redhat.telemetry.enabled": true,
     "[python]": {"editor.formatOnType": true},
     "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
-    "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"}
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "chatgpt.lang": "en"
     
     
 
