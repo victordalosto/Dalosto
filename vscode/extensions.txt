@@ -1,5 +1,10 @@
+bierner.color-info
 dracula-theme.theme-dracula
+formulahendry.auto-close-tag
+formulahendry.auto-complete-tag
+formulahendry.auto-rename-tag
 GitHub.copilot
+GitHub.copilot-chat
 monokai.theme-monokai-pro-vscode
 ms-python.python
 ms-python.vscode-pylance
@@ -18,3 +23,4 @@ vscjava.vscode-maven
 vscjava.vscode-spring-boot-dashboard
 vscjava.vscode-spring-initializr
 vscode-icons-team.vscode-icons
+zhang-renyang.chat-gpt
