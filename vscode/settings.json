@@ -1,7 +1,7 @@
 {
     // JAVA CONFIGURATIONS
-    "spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
-    "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    "spring-boot.ls.java.home": "C:\\java",
+    "java.jdt.ls.java.home": "C:\\java",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
@@ -13,7 +13,7 @@
 
 
     "files.exclude": {
-        "**/.gitignore": true,
+        // "**/.gitignore": true,
         "**/.git": true,
         "**/.github":true,
         
@@ -37,10 +37,9 @@
         "**/build": true,
         "**/bin": true,
 
-        // "node_modules": true,
-        // "**/package-lock.json": true,
-        // "**/servidor-api": true,
-
+        "node_modules": true,
+        "**/package-lock.json": true,
+        "**/servidor-api": true,
 
         // "**/build.gradle": true,
         // "**/pom.xml": true,
@@ -127,12 +126,12 @@
 
             {   // IMPORTS, PACKAGE, 
                 "scope": "keyword.control.import.ts, keyword.control.from.ts, storage.modifier.import.java, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
-                    "foreground": "#888886", "fontStyle": ""
+                    "foreground": "#999996", "fontStyle": ""
             }}, 
 
             {   // @Annotation java
                 "scope": "storage.type.annotation.java, punctuation.definition.annotation", "settings": {
-                    "foreground": "#289e98",
+                    "foreground": "#c0c0c0",
                     "fontStyle": "italic"
             }}, 
 
@@ -142,13 +141,13 @@
             }}, 
 
             {   // Types
-                "scope": "meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, entity.name.type.class, support.class, entity.name.type.interface", "settings": {
+                "scope": "entity.name.type.enum, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
                     "foreground": "#5AD4E6",
                     "fontStyle": ""
             }}, 
-
+            
             {   // const, let, var
-                "scope": "variable.other, storage.type", "settings": {
+                "scope": "variable.other, storage.type, meta.definition.variable.local", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
             }}, 
             
@@ -159,26 +158,26 @@
         
             {   // FIELD   AND   field in this.FIELD
                 "scope": "variable.other.property, variable.other.object.property, support.variable.property", "settings": {
-                    "foreground": "#ffffffda",
+                    "foreground": "#ffffff",
                     "fontStyle": "bold"
             }}, 
 
             {   // variable method parameter
                 "scope": "variable.parameter", "settings": {
-                  "foreground": "#ffffff", "fontStyle": ""
+                  "foreground": "#ffffffe2", "fontStyle": ""
             }}, 
 
             {   // variable created inside method
-                "scope": "variable.other.constant", 
+                "scope": "variable.other.constant, variable.other", 
                 "settings": {
-                    "foreground": "#ffffff", 
+                    "foreground": "#ffffffe2", 
                     "fontStyle": ""
             }}, 
 
             {   // String
                 "scope": "string", "settings": {
                     "foreground": "#ded55e",
-                    "fontStyle": "italic"
+                    "fontStyle": ""
             }}, 
 
             {   // keywords
@@ -227,7 +226,7 @@
 
             {   // Nao definido
                 "scope": "entity.name.type", "settings": {
-                    "foreground": "#ffffff", "fontStyle": ""
+                    "foreground": "#ffffffe2", "fontStyle": ""
             }},
 
             {   // Others
