@@ -65,7 +65,6 @@
     // GUI
     "workbench.tree.renderIndentGuides": "always",
     "workbench.iconTheme": "vscode-icons",
-    "workbench.colorTheme": "Dracula",
 
 
 
@@ -177,6 +176,12 @@
             {   // String
                 "scope": "string", "settings": {
                     "foreground": "#ded55e",
+                    "fontStyle": ""
+            }}, 
+
+            {   // Comments
+                "scope": "comment, punctuation.definition.comment", "settings": {
+                    "foreground": "#6272A4",
                     "fontStyle": ""
             }}, 
 
