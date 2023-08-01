@@ -1,7 +1,9 @@
 {
     // JAVA CONFIGURATIONS
-    "spring-boot.ls.java.home": "C:\\java",
-    "java.jdt.ls.java.home": "C:\\java",
+    "spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    // "spring-boot.ls.java.home": "C:\\java",
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    // "java.jdt.ls.java.home": "C:\\java",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
@@ -13,10 +15,10 @@
 
 
     "files.exclude": {
-        // "**/.gitignore": true,
+        "**/.gitignore": true,
         "**/.git": true,
         "**/.github":true,
-        
+
         "**/.idea": true,
         "**/Dockerfile": true,
 
@@ -25,7 +27,7 @@
         "**/mvnw.cmd": true,
         "**/LICENSE": true,
         "**/HELP.md": true,
-            
+
         "**/__pytorch__": true,
         "**/__pycache__":true,
 
@@ -37,16 +39,17 @@
         "**/build": true,
         "**/bin": true,
 
-        "node_modules": true,
-        "**/package-lock.json": true,
-        "**/servidor-api": true,
+        // "node_modules": true,
+        // "**/package-lock.json": true,
+        // "**/servidor-api": true,
+
 
         // "**/build.gradle": true,
         // "**/pom.xml": true,
-        
+
         "**/.vscode": true,
         // "**/Readme.md": true,
-        
+
         // "**/src/test/**": true,
         "**/target/**": true
 },
@@ -58,12 +61,8 @@
     "editor.inlayHints.enabled": "offUnlessPressed",
     "vsintellicode.modify.editor.suggestSelection": "disabled",
     "workbench.editor.enablePreview": false,
-    "terminal.explorerKind": "external",
-
-
-
-    // GUI
-    "workbench.tree.renderIndentGuides": "always",
+    "workbench.colorTheme": "Dracula",
+    "files.trimTrailingWhitespace": true,
     "workbench.iconTheme": "vscode-icons",
 
 
@@ -72,28 +71,28 @@
     "editor.minimap.enabled": false,
     "editor.fontFamily": " Consolas, monaco monospace, 'Courier New'",
     "explorer.sortOrder": "filesFirst",
-    "workbench.tree.indent": 5,
+    "workbench.tree.indent": 22,
+    "workbench.tree.renderIndentGuides": "always",
 
 
 
     // Other ui
     "editor.showFoldingControls": "always",
     "breadcrumbs.enabled": false,
-    "window.zoomLevel": 2,
     "workbench.tips.enabled": false,
-    "workbench.statusBar.visible": false,
-
+    "window.customMenuBarAltFocus": false,
 
 
     // VSCODE CUSTOMIZATION
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "workbench.colorCustomizations": {
+
         "editorBracketHighlight.foreground1": "#FC618D", // class
         "editorBracketHighlight.foreground2": "#5ecfe9", // methods
         "editorBracketHighlight.foreground3": "#50FA7B", // blocks-inside-methods
         "editorBracketHighlight.foreground4": "#ffffff", // additional
         "editorBracketHighlight.foreground5": "#DED55E", // additional2
-        
+
         "sideBar.background": "#141317", // dracula
         "editor.background": "#141317", // dracula
         "editorGutter.background": "#141317",
@@ -113,92 +112,88 @@
         "markdown": true
     },
 
-    "window.titleBarStyle": "custom",
-    "window.customMenuBarAltFocus": false,
-    "window.menuBarVisibility": "compact",
-
 
 
     // CUSTOMIZATION
     "editor.tokenColorCustomizations": {
         "textMateRules": [
 
-            {   // IMPORTS, PACKAGE, 
+            {   // IMPORTS, PACKAGE,
                 "scope": "keyword.control.import.ts, keyword.control.from.ts, storage.modifier.import.java, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
                     "foreground": "#999996", "fontStyle": ""
-            }}, 
+            }},
 
             {   // @Annotation java
                 "scope": "storage.type.annotation.java, punctuation.definition.annotation", "settings": {
                     "foreground": "#c0c0c0",
                     "fontStyle": "italic"
-            }}, 
+            }},
 
             {   // ACESSOR: public, private, proteced
                 "scope": "storage.modifier.java, storage.modifier.ts", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
-            }}, 
+            }},
 
             {   // Types
-                "scope": "entity.name.type.enum, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
-                    "foreground": "#5AD4E6",
-                    "fontStyle": ""
-            }}, 
-            
+                "scope": "entity.name.type.class, entity.name.type.enum, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
+                    "foreground": "#5be9ff",
+                    "fontStyle": "",
+            }},
+
             {   // const, let, var
                 "scope": "variable.other, storage.type, meta.definition.variable.local", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
-            }}, 
-            
+            }},
+
             {   // methods
                 "scope": "entity.name.function, variable.other.object.ts", "settings": {
                     "foreground": "#50FA7B", "fontStyle": ""
-            }}, 
-        
+            }},
+
             {   // FIELD   AND   field in this.FIELD
-                "scope": "variable.other.property, variable.other.object.property, support.variable.property", "settings": {
+                "scope": "variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property", "settings": {
                     "foreground": "#ffffff",
                     "fontStyle": "bold"
-            }}, 
+            }},
 
             {   // variable method parameter
                 "scope": "variable.parameter", "settings": {
                   "foreground": "#ffffffe2", "fontStyle": ""
-            }}, 
+            }},
 
             {   // variable created inside method
-                "scope": "variable.other.constant, variable.other", 
+                "scope": "variable.other.constant, variable.other",
                 "settings": {
-                    "foreground": "#ffffffe2", 
+                    "foreground": "#ffffffe2",
                     "fontStyle": ""
-            }}, 
+            }},
 
             {   // String
                 "scope": "string", "settings": {
                     "foreground": "#ded55e",
                     "fontStyle": ""
-            }}, 
+            }},
 
             {   // Comments
                 "scope": "comment, punctuation.definition.comment", "settings": {
                     "foreground": "#6272A4",
                     "fontStyle": ""
-            }}, 
+            }},
 
             {   // keywords
                 "scope": "keyword.control, punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
-            }}, 
+            }},
 
             {   // this
                 "scope": "keyword, keyword.operator.new, keyword.control.java, variable.language.this.java,variable.language.this.ts", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
-            }}, 
+            }},
 
             {   // ponctuator
                 "scope": "ponctuation, punctuation.definition, meta.brace, punctuation.section, punctuation.bracket.round", "settings": {
                     "foreground": "#FC618D", "fontStyle": ""
-            }}, 
+            }},
 
             { // ;
                 "scope":"punctuation.terminator.java, punctuation.terminator.statement.ts", "settings": {
@@ -209,6 +204,12 @@
             { // .
                 "scope": "punctuation.separator.period.java, ponctuation.acessor, punctuation.accessor.ts", "settings": {
                     "foreground": "#9f9f99", "fontStyle": ""
+                }
+            },
+
+            { // && > < <= >=
+                "scope": "keyword.operator.logical, keyword.operator.relational", "settings": {
+                    "foreground": "#BD93F9", "fontStyle": ""
                 }
             },
 
@@ -227,7 +228,7 @@
             {   // STATIC Methods
                 "scope": "support, support.function, support.other.variable, variable.other.object.ts", "settings": {
                     "foreground": "#BD93F9", "fontStyle": ""
-            }}, 
+            }},
 
             {   // Nao definido
                 "scope": "entity.name.type", "settings": {
@@ -244,12 +245,13 @@
 
 
 
+
     // SECURITY
     "explorer.confirmDragAndDrop": false,
     "explorer.confirmDelete": false,
     "security.workspace.trust.untrustedFiles": "open",
     "files.autoSave": "onFocusChange",
-    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
     "boot-java.rewrite.reconcile": true,
 
 
@@ -273,18 +275,27 @@
 
 
 
+    // NEW CONFIGS
+    "chatgpt.lang": "en",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "vsicons.presets.hideExplorerArrows": true,
+    "vsicons.presets.foldersAllDefaultIcon": true,
+
+
+
+    "window.zoomLevel": 2,
+    "material-icon-theme.hidesExplorerArrows": true,
+    "editor.lineNumbers": "off",
+
+
+
     // UI
-    "redhat.telemetry.enabled": true,
     "[python]": {"editor.formatOnType": true},
     "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
-    "[xml]": {
-        "editor.defaultFormatter": "redhat.vscode-xml"
-    },
-    "chatgpt.lang": "en"
-    
-    
-
-    // NEW CONFIGS:
-
-
+    "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"},
+    "redhat.telemetry.enabled": true,
+    "window.menuBarVisibility": "toggle",
+    "window.enableMenuBarMnemonics": false,
+    "workbench.activityBar.visible": false,
 }
