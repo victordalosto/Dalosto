@@ -90,8 +90,8 @@
         "editorBracketHighlight.foreground1": "#FC618D", // class
         "editorBracketHighlight.foreground2": "#5ecfe9", // methods
         "editorBracketHighlight.foreground3": "#50FA7B", // blocks-inside-methods
-        "editorBracketHighlight.foreground4": "#ffffff", // additional
-        "editorBracketHighlight.foreground5": "#DED55E", // additional2
+        "editorBracketHighlight.foreground4": "#FFB86C", // additional
+        "editorBracketHighlight.foreground5": "#BD93F9", // additional2
 
         "sideBar.background": "#141317", // dracula
         "editor.background": "#141317", // dracula
@@ -158,7 +158,7 @@
 
             {   // variable method parameter
                 "scope": "variable.parameter", "settings": {
-                  "foreground": "#ffffffe2", "fontStyle": ""
+                  "foreground": "#FFB86C", "fontStyle": ""
             }},
 
             {   // variable created inside method
