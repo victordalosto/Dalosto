@@ -1,26 +1,32 @@
-bierner.color-info
-dracula-theme.theme-dracula
-formulahendry.auto-close-tag
-formulahendry.auto-complete-tag
-formulahendry.auto-rename-tag
-GitHub.copilot
-GitHub.copilot-chat
-monokai.theme-monokai-pro-vscode
-ms-python.python
-ms-python.vscode-pylance
-ms-vscode.vscode-typescript-next
-redhat.java
-redhat.vscode-xml
-VisualStudioExptTeam.intellicode-api-usage-examples
-VisualStudioExptTeam.vscodeintellicode
-vmware.vscode-boot-dev-pack
-vmware.vscode-spring-boot
-vscjava.vscode-java-debug
-vscjava.vscode-java-dependency
-vscjava.vscode-java-pack
-vscjava.vscode-java-test
-vscjava.vscode-maven
-vscjava.vscode-spring-boot-dashboard
-vscjava.vscode-spring-initializr
-vscode-icons-team.vscode-icons
-zhang-renyang.chat-gpt
+code --install-extension bierner.color-info
+code --install-extension dracula-theme.theme-dracula
+code --install-extension fabiospampinato.vscode-highlight
+code --install-extension formulahendry.auto-close-tag
+code --install-extension formulahendry.auto-complete-tag
+code --install-extension formulahendry.auto-rename-tag
+code --install-extension GitHub.copilot
+code --install-extension GitHub.copilot-chat
+code --install-extension kreativ-software.csharpextensions
+code --install-extension monokai.theme-monokai-pro-vscode
+code --install-extension ms-dotnettools.csdevkit
+code --install-extension ms-dotnettools.csharp
+code --install-extension ms-dotnettools.vscode-dotnet-runtime
+code --install-extension ms-dotnettools.vscodeintellicode-csharp
+code --install-extension ms-python.python
+code --install-extension ms-python.vscode-pylance
+code --install-extension ms-vscode.vscode-typescript-next
+code --install-extension redhat.java
+code --install-extension redhat.vscode-xml
+code --install-extension VisualStudioExptTeam.intellicode-api-usage-examples
+code --install-extension VisualStudioExptTeam.vscodeintellicode
+code --install-extension vmware.vscode-boot-dev-pack
+code --install-extension vmware.vscode-spring-boot
+code --install-extension vscjava.vscode-java-debug
+code --install-extension vscjava.vscode-java-dependency
+code --install-extension vscjava.vscode-java-pack
+code --install-extension vscjava.vscode-java-test
+code --install-extension vscjava.vscode-maven
+code --install-extension vscjava.vscode-spring-boot-dashboard
+code --install-extension vscjava.vscode-spring-initializr
+code --install-extension vscode-icons-team.vscode-icons
+code --install-extension zhang-renyang.chat-gpt
