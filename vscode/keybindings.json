@@ -1811,7 +1811,7 @@
         "command": "workbench.action.openApplicationSettingsJson"
     },
     {
-        "key": "ctrl+'",
+        "key": "ctrl+p",
         "command": "workbench.actions.view.problems"
     },
     {
