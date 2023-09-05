@@ -1773,7 +1773,7 @@
         "command": "editor.unfoldRecursively"
     },
     {
-        "key": "ctrl+4",
+        "key": "ctrl+5",
         "command": "workbench.files.action.collapseExplorerFolders"
     },
     {
@@ -1841,5 +1841,9 @@
           "text": "\u0003"
         },
         "when": "terminalFocus"
-      }
+    },
+    {
+        "key": "ctrl+4",
+        "command": "editor.unfoldAll"
+    }
 ]
