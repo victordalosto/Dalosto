@@ -1,26 +1,4 @@
 {
-    // JAVA CONFIGURATIONS
-    //"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
-    "spring-boot.ls.java.home": "C:\\dev\\Java\\jdk-17",
-    //"java.jdt.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
-    "java.jdt.ls.java.home": "C:\\dev\\Java\\jdk-17",
-    "maven.terminal.useJavaHome": true,
-    "java.maven.downloadSources": true,
-    "java.eclipse.downloadSources": true,
-    "java.inlayHints.parameterNames.enabled": "all",
-    "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
-    "java.debug.settings.vmArgs": "-Xmx8g",
-
-    "java.debug.settings.console": "externalTerminal",
-    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
-    "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
-
-    "csharp.suppressBuildAssetsNotification": true,
-    "dotnet.server.useOmnisharp": true,
-    "csharp.debug.logging.moduleLoad": false,
-    "csharp.debug.console": "integratedTerminal",
-
-
 
     // Excluded files
     "files.exclude": {
@@ -30,7 +8,7 @@
         "**/.github":true,
 
         "**/.idea": true,
-        "**/Dockerfile": true,
+        // "**/Dockerfile": true,
 
         // "**/.mvn": true,
         // "**/mvnw": true,
@@ -49,9 +27,9 @@
         "**/build": true,
         "**/bin": true,
 
-        "node_modules": true,
-        // "**/package-lock.json": true,
-        // "**/servidor-api": true,
+        "**/node_modules": true,
+        "**/package-lock.json": true,
+        "**/servidor-api": true,
 
         "**/obj": true,
         // "**/*.csproj": true,
@@ -70,41 +48,6 @@
         "**/target/**": true
     },
 
-
-
-
-    // CONFIGS
-    "editor.foldingImportsByDefault": true,
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "vsintellicode.modify.editor.suggestSelection": "disabled",
-    "workbench.editor.enablePreview": false,
-    "files.trimTrailingWhitespace": true,
-
-
-
-    // VISUAL
-    "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Dracula",
-    "editor.fontFamily": "Consolas, Cascadia Mono, monaco monospace, 'Courier New'",
-    "explorer.sortOrder": "filesFirst",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.tree.indent": 16,
-    "workbench.tree.renderIndentGuides": "always",
-    "window.zoomLevel": 1,
-    "material-icon-theme.hidesExplorerArrows": true,
-
-
-
-
-    // Other ui
-    "editor.showFoldingControls": "always",
-    "breadcrumbs.enabled": false,
-    "workbench.tips.enabled": false,
-    "window.customMenuBarAltFocus": false,
-
-
-
-
     // VSCODE CUSTOMIZATION
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "workbench.colorCustomizations": {
@@ -115,52 +58,82 @@
         "editorBracketHighlight.foreground4": "#FFB86C", // additional
         "editorBracketHighlight.foreground5": "#BD93F9", // additional2
 
-        "sideBar.background": "#141317", // dracula
-        "editor.background": "#141317", // dracula
-        "editorGutter.background": "#141317",
-        // "sideBar.foreground": "#858383",
-        "terminal.background": "#141317",
-        "panel.background": "#141317",
-        "activityBar.background": "#000000"
+        "editor.background": "#0f0f11", // desktop
+        "editorGutter.background": "#0f0f11", // numbers
+
+        "sideBar.background": "#000000", // explorer
+
+        "terminal.background": "#000000", // terminal
+        "panel.background": "#000000", // terminal header
+
+        "activityBar.background": "#000000", // left-side menu
+
+        "statusBar.background": "#000000", // bottom bar
+        "titleBar.activeBackground": "#000000", // top menu
+
+        "tab.activeBackground": "#220736", // tab active
+        "tab.activeForeground": "#fffefe",
+        "tab.activeBorderTop": "#BD93F9",
+        "tab.inactiveBackground": "#353535", // tab inactive
+        "tab.inactiveForeground": "#fffefe",
+
+        "tab.border": "#000000",
+        "editorGroupHeader.tabsBackground": "#000000", // tab header
+        "editorGroupHeader.tabsBorder": "#000000", // tab header border
+
+        "editorGroup.border": "#BD93F9", // tab header border
+
     },
 
 
     "highlight.regexes": {
-        "(.*)(//(.?)+)(.*)": [{},{
-            "color": "#6272A4", "fontStyle": ""
-        }],
         "(.*)(using(.*)|namespace(.*)|package(.*)|import(.*))(.*)": [{},{
             "color": "#999996", "fontStyle": ""
         }],
-        "(.*)(\\[ApiController\\]|\\[Route\\(|\\[HttpGet\\]|\\[HttpGet|\\[HttpPost\\]|\\[HttpPost|\\[HttpPut|\\[HttpDelete|\\)\\])(.*)": [{},{
+        "(.*)(\\[Key\\]|\\[(.?)+\\])(.*)": [{},{
             "color": "#c0c0c0", "fontStyle": "italic"
         }],
-        "(.*)(\\[(.?)+\\(|\\[Key\\])(.*)": [{},{
-            "color": "#c0c0c0", "fontStyle": "italic"
-        }],
-        "(.*)( string | int | bool | boolean | char | decimal | double | float | long | short )(.*)": [{},{
+        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short |function )(.*)": [{},{
             "color": "#4de0ff", "fontStyle": ""
         }],
         "(.*)( void )(.*)": [{},{
-            "color": "#4de0ffbf", "fontStyle": "italic"
+            "color": "#fc618de1", "fontStyle": "italic"
         }],
         "(.*)( public | private | protected )(.*)": [{},{
             "color": "#FC618D", "fontStyle": ""
         }],
-        "(.*)( const | let | var )(.*)": [{},{
-            "color": "#FC618D", "fontStyle": ""
+        "(.*)(const |let |var )(.*)": [{},{
+            "color": "#7fc2f8", "fontStyle": ""
         }],
-        "(.*)(internal | readonly | static )(.*)": [{},{
-            "color": "#fc618dcb", "fontStyle": "italic"
+        "(.*)( =\\> )(.*)": [{},{
+            "color": "#BD93F9", "fontStyle": ""
+        }],
+        "(.*)( virtual | readonly | static )(.*)": [{},{
+            "color": "#FC618Dde", "fontStyle": "italic"
+        }],
+        "(.*)( static )(.*)": [{},{
+            "color": "#FC618Dde", "fontStyle": "italic"
+        }],
+        "(.*)(@media |@keyframes )(.*)": [{},{
+            "color": "#50FA7B", "fontStyle": "italic"
+        }],
+        "(.*)({(.*)get;(.*)}|{(.*)set;(.*)})(.*)": [{},{
+            "color": "#929290", "fontStyle": ""
         }],
         "(.*)( this\\.| self\\.)(.*)": [{},{
         "color": "#FC618D", "fontStyle": "italic"
         }],
-        "(.*)(;|,)(.*)": [{},{
+        "(.*)(;)": [{},{
             "color": "#565655", "fontStyle": ""
         }],
-        "(.*)(null)(.*)": [{},{
+        "(.*)( null| async|await)(.*)": [{},{
             "color": "#BD93F9", "fontStyle": "italic"
+        }],
+        "(.*)(\\?| using| foreach|return )(.*)": [{},{
+            "color": "#BD93F9", "fontStyle": ""
+        }],
+        "(.*)(// (.?)+)(.*)": [{},{ // comments
+            "color": "#6272A4", "fontStyle": ""
         }],
     },
 
@@ -186,35 +159,35 @@
         }},
 
         {   // ACESSOR: public, private, proteced
-            "scope": "storage.modifier.java, storage.modifier.ts", "settings": {
+            "scope": "storage.modifier.cs, storage.modifier.java, storage.modifier.ts", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
         }},
 
         {   // Types
-            "scope": "entity.name.type.cs, keyword.type.cs, entity.name.type.class, entity.name.type.enum, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
-                "foreground": "#5be9ff",
+            "scope": "entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.class, entity.name.type.enum, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
+                "foreground": "#4de0ff",
                 "fontStyle": "",
         }},
 
         {   // methods
-            "scope": "entity.name.function, variable.other.object.ts", "settings": {
+            "scope": "entity.name.function.extension.cs, entity.name.function, variable.other.object.ts", "settings": {
                 "foreground": "#50FA7B", "fontStyle": ""
         }},
 
         {   // variable method parameter
-            "scope": "variable.parameter", "settings": {
+            "scope": "variable.parameter, entity.name.variable.parameter.cs", "settings": {
                 "foreground": "#FFB86C", "fontStyle": ""
         }},
 
         {   // variable created inside method
-            "scope": "variable.other.readwrite.cs, variable.other.constant, variable.other",
+            "scope": "entity.name.variable.local.cs, variable.other.readwrite.cs, variable.other.constant, variable.other",
             "settings": {
-                "foreground": "#ffffffe2", "fontStyle": ""
+                "foreground": "#fffffff5", "fontStyle": ""
         }},
 
         {   // String
             "scope": "string", "settings": {
-                "foreground": "#ded55e", "fontStyle": ""
+                "foreground": "#ce9178", "fontStyle": ""
         }},
 
         {   // Comments
@@ -226,6 +199,17 @@
             "scope": "keyword.control, punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
         }},
+
+        {   // HTML Tags
+            "scope": "entity.name.tag.js", "settings": {
+                "foreground": "#c8ce7edc", "fontStyle": ""
+        }},
+
+        { // HTML DIAMONDS < >
+            "scope": "punctuation.definition.tag.begin.js, punctuation.definition.tag.end.js", "settings": {
+                "foreground": "#c8ce7edc", "fontStyle": "bold"
+            }
+        },
 
         {   // this
             "scope": "keyword, keyword.operator.new, keyword.control.java, variable.language.this.java,variable.language.this.ts", "settings": {
@@ -240,7 +224,7 @@
         {   // diamonds <>
             "scope": "punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end", "settings": {
                 "foreground": "#ffffff",
-                "fontStyle": ""
+                "fontStyle": "bold",
         }},
 
         { // .
@@ -257,7 +241,7 @@
 
         { // : + = * / -
             "scope": "punctuation.terminator.statement.cs, keyword.operator, punctuation.separator.parameter, entity.name.function.member.overload.cs", "settings": {
-                "foreground": "#9f9f99", "fontStyle": ""
+                "foreground": "#b3b3ac", "fontStyle": ""
             }
         },
 
@@ -268,8 +252,8 @@
         },
 
         { // quotes as in ' "
-            "scope": "punctuation.definition", "settings": {
-                "foreground": "#DED55E", "fontStyle": ""
+            "scope": "punctuation.definition, punctuation.definition.string.begin, punctuation.definition.string.end", "settings": {
+                "foreground": "#ce9178", "fontStyle": ""
             }
         },
 
@@ -280,7 +264,7 @@
 
         {   // Nao definido
             "scope": "entity.name.type", "settings": {
-                "foreground": "#ffffffe2", "fontStyle": ""
+                "foreground": "#fffffff5", "fontStyle": ""
         }},
 
         {   // Others
@@ -295,10 +279,61 @@
         }},
 
         {   // FIELD   AND   field in this.FIELD
-            "scope": "entity.name.variable.property.cs, variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property", "settings": {
+            "scope": "entity.name.variable.field.cs, variable.other.enummember, entity.name.variable.property.cs, variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property", "settings": {
                 "foreground": "#ffffff", "fontStyle": "bold"
         }},
+
+        {   // null
+            "scope": "constant.language.null.cs", "settings": {
+                "foreground": "#BD93F9", "fontStyle": "italic"
+        }},
     ]},
+
+
+    // JAVA CONFIGURATIONS
+    //"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
+    "spring-boot.ls.java.home": "C:\\dev\\Java\\jdk-17",
+    "java.jdt.ls.java.home": "C:\\dev\\Java\\jdk-17",
+    "maven.terminal.useJavaHome": true,
+    "java.maven.downloadSources": true,
+    "java.eclipse.downloadSources": true,
+    "java.inlayHints.parameterNames.enabled": "all",
+    "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
+    "java.debug.settings.vmArgs": "-Xmx8g",
+
+    "java.debug.settings.console": "externalTerminal",
+    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
+    "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+
+    "csharp.suppressBuildAssetsNotification": true,
+    "dotnet.server.useOmnisharp": true,
+    "csharp.debug.logging.moduleLoad": false,
+    "csharp.debug.console": "integratedTerminal",
+
+
+
+
+
+    // CONFIGS
+    "editor.foldingImportsByDefault": true,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "vsintellicode.modify.editor.suggestSelection": "disabled",
+    "workbench.editor.enablePreview": false,
+    "files.trimTrailingWhitespace": true,
+
+
+
+    // VISUAL
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Dracula",
+    "explorer.sortOrder": "filesFirst",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.indent": 16,
+    "workbench.tree.renderIndentGuides": "always",
+    "material-icon-theme.hidesExplorerArrows": true,
+    "workbench.tips.enabled": false,
+    "window.customMenuBarAltFocus": false,
+
 
 
 
@@ -309,7 +344,6 @@
     "security.workspace.trust.untrustedFiles": "open",
     "files.autoSave": "onFocusChange",
     "boot-java.rewrite.reconcile": true,
-
 
 
 
@@ -340,13 +374,28 @@
     "terminal.integrated.tabs.enabled": false,
 
     // OTHER UI
-    "redhat.telemetry.enabled": true,
+    "redhat.telemetry.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "workbench.layoutControl.enabled": false,
     "csharpextensions.useFileScopedNamespace": true,
     "editor.fontSize": 17,
-    "workbench.statusBar.visible": false,
     "editor.codeLens": false,
+    "files.associations": {
+        "*.cs": "csharp"
+    },
+    "window.zoomLevel": 1,
+    "editor.fontFamily": "Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New'",
+    "window.menuBarVisibility": "compact",
+    "htmlhint.documentSelector": [
+        "js",
+        "html",
+        "htm"
+    ],
+    "editor.snippetSuggestions": "top",
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "dotnet.preferRuntimeFromSDK": true,
+    "breadcrumbs.enabled": false,
+    "workbench.activityBar.visible": false,
 
 
 
