@@ -2,19 +2,23 @@
 
     // Excluded files
     "files.exclude": {
+        "**/.vs": true,
+        // "**/.vscode": true,
+        // "**/Dockerfile": true,
+
         "**/.gitattributes": true,
         "**/.gitignore": true,
         "**/.git": true,
         "**/.github":true,
 
         "**/.idea": true,
-        // "**/Dockerfile": true,
 
-        // "**/.mvn": true,
-        // "**/mvnw": true,
-        // "**/mvnw.cmd": true,
-        // "**/LICENSE": true,
-        // "**/HELP.md": true,
+        "**/.mvn": true,
+        "**/mvnw": true,
+        "**/mvnw.cmd": true,
+        "**/LICENSE": true,
+        "**/HELP.md": true,
+        // "**/Readme.md": true,
 
         "**/__pytorch__": true,
         "**/__pycache__":true,
@@ -24,7 +28,11 @@
         "**/settings.gradle": true,
         "**/gradlew.bat": true,
         "**/gradle": true,
-        "**/build": true,
+
+        // "**/build.gradle": true,
+        // "**/pom.xml": true,
+
+        // "**/build": true,
         "**/bin": true,
 
         "**/node_modules": true,
@@ -32,21 +40,15 @@
         "**/servidor-api": true,
 
         "**/obj": true,
-        // "**/*.csproj": true,
-        // "**/*.csproj.*": true,
-        // "**/*.sln": true,
+        "**/*.csproj": true,
+        "**/*.csproj.*": true,
+        "**/*.sln": true,
 
-
-        // "**/build.gradle": true,
-        // "**/pom.xml": true,
-
-        "**/.vs": true,
-        "**/.vscode": true,
-        // "**/Readme.md": true,
-
-        // "**/src/test/**": true,
         "**/target/**": true
+        // "**/src/test/**": true,
     },
+
+
 
     // VSCODE CUSTOMIZATION
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
@@ -58,83 +60,84 @@
         "editorBracketHighlight.foreground4": "#FFB86C", // additional
         "editorBracketHighlight.foreground5": "#BD93F9", // additional2
 
-        "editor.background": "#0f0f11", // desktop
-        "editorGutter.background": "#0f0f11", // numbers
+        "editor.background": "#131315",       // desktop
+        "editorGutter.background": "#131315", // numbers
 
-        "sideBar.background": "#000000", // explorer
+        "sideBar.background": "#000000",      // explorer
 
-        "terminal.background": "#000000", // terminal
-        "panel.background": "#000000", // terminal header
+        "terminal.background": "#000000",     // terminal
+        "panel.background": "#000000",        // terminal header
 
-        "activityBar.background": "#000000", // left-side menu
+        "activityBar.background": "#000000",  // left-side menu
 
-        "statusBar.background": "#000000", // bottom bar
+        "statusBar.background": "#000000",      // bottom bar
         "titleBar.activeBackground": "#000000", // top menu
 
-        "tab.activeBackground": "#220736", // tab active
+        "tab.activeBackground": "#220736",
         "tab.activeForeground": "#fffefe",
         "tab.activeBorderTop": "#BD93F9",
-        "tab.inactiveBackground": "#353535", // tab inactive
+        "tab.inactiveBackground": "#353535",
         "tab.inactiveForeground": "#fffefe",
 
         "tab.border": "#000000",
         "editorGroupHeader.tabsBackground": "#000000", // tab header
-        "editorGroupHeader.tabsBorder": "#000000", // tab header border
+        "editorGroupHeader.tabsBorder": "#000000",     // tab header border
 
         "editorGroup.border": "#BD93F9", // tab header border
 
     },
 
 
+
     "highlight.regexes": {
-        "(.*)(using(.*)|namespace(.*)|package(.*)|import(.*))(.*)": [{},{
+        "(.*)(using (.*)|namespace (.*)|package (.*)|import (.*))(.*)": [{},{
             "color": "#999996", "fontStyle": ""
-        }],
-        "(.*)(\\[Key\\]|\\[(.?)+\\])(.*)": [{},{
-            "color": "#c0c0c0", "fontStyle": "italic"
         }],
         "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short |function )(.*)": [{},{
             "color": "#4de0ff", "fontStyle": ""
         }],
-        "(.*)( void )(.*)": [{},{
-            "color": "#fc618de1", "fontStyle": "italic"
-        }],
-        "(.*)( public | private | protected )(.*)": [{},{
-            "color": "#FC618D", "fontStyle": ""
-        }],
-        "(.*)(const |let |var )(.*)": [{},{
-            "color": "#7fc2f8", "fontStyle": ""
-        }],
-        "(.*)( =\\> )(.*)": [{},{
-            "color": "#BD93F9", "fontStyle": ""
-        }],
-        "(.*)( virtual | readonly | static )(.*)": [{},{
-            "color": "#FC618Dde", "fontStyle": "italic"
-        }],
-        "(.*)( static )(.*)": [{},{
-            "color": "#FC618Dde", "fontStyle": "italic"
-        }],
-        "(.*)(@media |@keyframes )(.*)": [{},{
-            "color": "#50FA7B", "fontStyle": "italic"
-        }],
-        "(.*)({(.*)get;(.*)}|{(.*)set;(.*)})(.*)": [{},{
-            "color": "#929290", "fontStyle": ""
-        }],
-        "(.*)( this\\.| self\\.)(.*)": [{},{
-        "color": "#FC618D", "fontStyle": "italic"
-        }],
-        "(.*)(;)": [{},{
-            "color": "#565655", "fontStyle": ""
-        }],
-        "(.*)( null| async|await)(.*)": [{},{
-            "color": "#BD93F9", "fontStyle": "italic"
-        }],
-        "(.*)(\\?| using| foreach|return )(.*)": [{},{
-            "color": "#BD93F9", "fontStyle": ""
-        }],
-        "(.*)(// (.?)+)(.*)": [{},{ // comments
-            "color": "#6272A4", "fontStyle": ""
-        }],
+    //     "(.*)(\\[Key\\]|\\[(.?)+\\])(.*)": [{},{
+    //         "color": "#c0c0c0", "fontStyle": "italic"
+    //     }],
+    //     "(.*)( void )(.*)": [{},{
+    //         "color": "#fc618de1", "fontStyle": "italic"
+    //     }],
+    //     "(.*)( public | private | protected )(.*)": [{},{
+    //         "color": "#FC618D", "fontStyle": ""
+    //     }],
+    //     "(.*)(const |let |var )(.*)": [{},{
+    //         "color": "#7fc2f8", "fontStyle": ""
+    //     }],
+    //     "(.*)( =\\> )(.*)": [{},{
+    //         "color": "#BD93F9", "fontStyle": ""
+    //     }],
+    //     "(.*)( virtual | readonly | static )(.*)": [{},{
+    //         "color": "#FC618Dde", "fontStyle": "italic"
+    //     }],
+    //     "(.*)( static )(.*)": [{},{
+    //         "color": "#FC618Dde", "fontStyle": "italic"
+    //     }],
+    //     "(.*)(@media |@keyframes )(.*)": [{},{
+    //         "color": "#50FA7B", "fontStyle": "italic"
+    //     }],
+    //     "(.*)({(.*)get;(.*)}|{(.*)set;(.*)})(.*)": [{},{
+    //         "color": "#929290", "fontStyle": ""
+    //     }],
+    //     "(.*)( this\\.| self\\.)(.*)": [{},{
+    //     "color": "#FC618D", "fontStyle": "italic"
+    //     }],
+    //     "(.*)(;)": [{},{
+    //         "color": "#565655", "fontStyle": ""
+    //     }],
+    //     "(.*)( null| async|await)(.*)": [{},{
+    //         "color": "#BD93F9", "fontStyle": "italic"
+    //     }],
+    //     "(.*)(\\?| using| foreach|return )(.*)": [{},{
+    //         "color": "#BD93F9", "fontStyle": ""
+    //     }],
+    //     "(.*)(// (.?)+)(.*)": [{},{ // comments
+    //         "color": "#6272A4", "fontStyle": ""
+    //     }],
     },
 
 
@@ -146,7 +149,6 @@
         "plaintext": true,
         "markdown": true
     },
-
 
 
 
@@ -164,7 +166,7 @@
         }},
 
         {   // Types
-            "scope": "entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.class, entity.name.type.enum, meta.method.identifier.java, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
+            "scope": "entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.class, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
                 "foreground": "#4de0ff",
                 "fontStyle": "",
         }},
@@ -211,9 +213,14 @@
             }
         },
 
-        {   // this
-            "scope": "keyword, keyword.operator.new, keyword.control.java, variable.language.this.java,variable.language.this.ts", "settings": {
+        {   // return, new,
+            "scope": "keyword, keyword.operator.new, keyword.control.java, ", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
+        }},
+
+        {   // this
+            "scope": "variable.language.this.java,variable.language.this.ts", "settings": {
+                "foreground": "#BD93F9", "fontStyle": "italic"
         }},
 
         {   // ponctuator
@@ -228,7 +235,7 @@
         }},
 
         { // .
-            "scope": "punctuation.separator.period.java, ponctuation.acessor, punctuation.accessor.ts", "settings": {
+            "scope": "punctuation.separator.period.java, ponctuation.acessor, punctuation.accessor.ts, meta.method.identifier.java", "settings": {
                 "foreground": "#9f9f99", "fontStyle": ""
             }
         },
@@ -287,17 +294,22 @@
             "scope": "constant.language.null.cs", "settings": {
                 "foreground": "#BD93F9", "fontStyle": "italic"
         }},
+
+        {   // text - xml
+            "scope": "text.xml, storage", "settings": {
+                "foreground": "#ffffff", "fontStyle": ""
+        }},
     ]},
 
 
+
     // JAVA CONFIGURATIONS
-    //"spring-boot.ls.java.home": "/usr/lib/jvm/java-17-openjdk-amd64/",
-    "spring-boot.ls.java.home": "C:\\dev\\Java\\jdk-17",
-    "java.jdt.ls.java.home": "C:\\dev\\Java\\jdk-17",
+    //////  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\Java\\jdk-21"
+    "spring-boot.ls.java.home": "C:\\dev\\Java\\jdk-21",
+    "java.jdt.ls.java.home": "C:\\dev\\Java\\jdk-21",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
-    "java.inlayHints.parameterNames.enabled": "all",
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
     "java.debug.settings.vmArgs": "-Xmx8g",
 
@@ -305,6 +317,22 @@
     "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
     "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
 
+
+
+    // TYPESCRIPT
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
+
+
+    // C#
+    "csharpextensions.useFileScopedNamespace": true,
+    "dotnetAcquisitionExtension.enableTelemetry": false,
+    "files.associations": { "*.cs": "csharp" },
+
+
+
+    // C#
     "csharp.suppressBuildAssetsNotification": true,
     "dotnet.server.useOmnisharp": true,
     "csharp.debug.logging.moduleLoad": false,
@@ -312,29 +340,51 @@
 
 
 
+    // UI
+    "[xml]":    {"editor.defaultFormatter": "redhat.vscode-xml" },
+    "[jsonc]":  {"editor.defaultFormatter": "vscode.json-language-features"},
+    "[python]": {"editor.formatOnType": true},
+
 
 
     // CONFIGS
     "editor.foldingImportsByDefault": true,
+    "java.inlayHints.parameterNames.enabled": "all",
     "editor.inlayHints.enabled": "offUnlessPressed",
     "vsintellicode.modify.editor.suggestSelection": "disabled",
-    "workbench.editor.enablePreview": false,
     "files.trimTrailingWhitespace": true,
+    "explorer.sortOrder": "filesFirst",
+
+
+
+    // // DISABLE ANNOYING BOX
+    "editor.parameterHints.enabled": false,
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showModules": false,
+    "editor.suggest.showKeywords": false,
 
 
 
     // VISUAL
+    "editor.fontSize": 17,
+    "editor.fontFamily": "Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
     "editor.minimap.enabled": false,
     "workbench.colorTheme": "Dracula",
-    "explorer.sortOrder": "filesFirst",
     "workbench.iconTheme": "vscode-icons",
     "workbench.tree.indent": 16,
     "workbench.tree.renderIndentGuides": "always",
-    "material-icon-theme.hidesExplorerArrows": true,
     "workbench.tips.enabled": false,
     "window.customMenuBarAltFocus": false,
-
-
+    "editor.snippetSuggestions": "top",
+    "vsicons.presets.hideExplorerArrows": true,
+    "vsicons.presets.foldersAllDefaultIcon": true,
+    "workbench.layoutControl.enabled": false,
+    "breadcrumbs.enabled": false,
+    "terminal.integrated.tabs.enabled": false,
+    "window.menuBarVisibility": "compact",
+    "window.enableMenuBarMnemonics": false,
+    "outline.showPackages": false,
+    "diffEditor.wordWrap": "on",
 
 
 
@@ -343,61 +393,10 @@
     "explorer.confirmDelete": false,
     "security.workspace.trust.untrustedFiles": "open",
     "files.autoSave": "onFocusChange",
-    "boot-java.rewrite.reconcile": true,
 
 
 
-    // DISABLE ANNOYING BOX
-    "editor.parameterHints.enabled": false, // disable pop-up box top
-    "editor.inlineSuggest.enabled": true,
-
-
-
-
-    // NEW CONFIGS
-    "chatgpt.lang": "en",
-    "typescript.updateImportsOnFileMove.enabled": "always",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "vsicons.presets.hideExplorerArrows": true,
-    "vsicons.presets.foldersAllDefaultIcon": true,
-
-
-
-
-    // UI
-    "[python]": {"editor.formatOnType": true},
-    "[jsonc]": {"editor.defaultFormatter": "vscode.json-language-features"},
-    "[xml]": {"editor.defaultFormatter": "redhat.vscode-xml"},
-
-
-    // TERMINAL TABS
-    "terminal.integrated.tabs.enabled": false,
-
-    // OTHER UI
+    // OTHER
     "redhat.telemetry.enabled": false,
-    "window.enableMenuBarMnemonics": false,
-    "workbench.layoutControl.enabled": false,
-    "csharpextensions.useFileScopedNamespace": true,
-    "editor.fontSize": 17,
-    "editor.codeLens": false,
-    "files.associations": {
-        "*.cs": "csharp"
-    },
-    "window.zoomLevel": 1,
-    "editor.fontFamily": "Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New'",
-    "window.menuBarVisibility": "compact",
-    "htmlhint.documentSelector": [
-        "js",
-        "html",
-        "htm"
-    ],
-    "editor.snippetSuggestions": "top",
-    "dotnetAcquisitionExtension.enableTelemetry": false,
-    "dotnet.preferRuntimeFromSDK": true,
-    "breadcrumbs.enabled": false,
-    "workbench.activityBar.visible": false,
-
-
-
 
 }
