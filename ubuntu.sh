@@ -16,7 +16,7 @@ echo ""
 echo "#########################"
 echo " Installing certificates"
 echo "#########################"
-sudo apt-get install ca-certificates curl gnupg gnupg2 -y
+sudo apt-get install net-tools ca-certificates curl gnupg gnupg2 -y
 
 
 
