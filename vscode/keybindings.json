@@ -1861,5 +1861,13 @@
     {
         "key": "ctrl+k ctrl+oem_5",
         "command": "-workbench.action.splitEditorRight"
+    },
+    {
+        "key": "f8",
+        "command": "quarkusTools.debugQuarkusProject.short"
+    },
+    {
+        "key": "f6",
+        "command": "workbench.action.debug.disconnectAndSuspend"
     }
 ]
