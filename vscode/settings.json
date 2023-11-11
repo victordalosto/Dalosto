@@ -9,7 +9,7 @@
         "**/.gitattributes": true,
         "**/.gitignore": true,
         "**/.git": true,
-        "**/.github":true,
+        // "**/.github":true,
 
         "**/.idea": true,
 
@@ -87,57 +87,59 @@
 
     },
 
+    "workbench.statusBar.visible": false,
+    "workbench.colorTheme": "Dracula",
+
 
 
     "highlight.regexes": {
-        "(.*)(using (.*)|namespace (.*)|package (.*)|import (.*))(.*)": [{},{
+
+        // using (.*)|namespace (.*)|
+        "(.*)(package (.*)|import (.*))(.*)": [{},{
             "color": "#999996", "fontStyle": ""
         }],
-        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short |function )(.*)": [{},{
+        "(.*)(// (.?)+||/** (.?)+)(.*)": [{},{ // comments
+            "color": "#6272A4", "fontStyle": ""
+        }],
+        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short | function )(.*)": [{},{
             "color": "#4de0ff", "fontStyle": ""
         }],
-    //     "(.*)(\\[Key\\]|\\[(.?)+\\])(.*)": [{},{
-    //         "color": "#c0c0c0", "fontStyle": "italic"
-    //     }],
-    //     "(.*)( void )(.*)": [{},{
-    //         "color": "#fc618de1", "fontStyle": "italic"
-    //     }],
-    //     "(.*)( public | private | protected )(.*)": [{},{
-    //         "color": "#FC618D", "fontStyle": ""
-    //     }],
-    //     "(.*)(const |let |var )(.*)": [{},{
-    //         "color": "#7fc2f8", "fontStyle": ""
-    //     }],
-    //     "(.*)( =\\> )(.*)": [{},{
-    //         "color": "#BD93F9", "fontStyle": ""
-    //     }],
-    //     "(.*)( virtual | readonly | static )(.*)": [{},{
-    //         "color": "#FC618Dde", "fontStyle": "italic"
-    //     }],
-    //     "(.*)( static )(.*)": [{},{
-    //         "color": "#FC618Dde", "fontStyle": "italic"
-    //     }],
-    //     "(.*)(@media |@keyframes )(.*)": [{},{
-    //         "color": "#50FA7B", "fontStyle": "italic"
-    //     }],
-    //     "(.*)({(.*)get;(.*)}|{(.*)set;(.*)})(.*)": [{},{
-    //         "color": "#929290", "fontStyle": ""
-    //     }],
-    //     "(.*)( this\\.| self\\.)(.*)": [{},{
-    //     "color": "#FC618D", "fontStyle": "italic"
-    //     }],
-    //     "(.*)(;)": [{},{
-    //         "color": "#565655", "fontStyle": ""
-    //     }],
-    //     "(.*)( null| async|await)(.*)": [{},{
-    //         "color": "#BD93F9", "fontStyle": "italic"
-    //     }],
-    //     "(.*)(\\?| using| foreach|return )(.*)": [{},{
-    //         "color": "#BD93F9", "fontStyle": ""
-    //     }],
-    //     "(.*)(// (.?)+)(.*)": [{},{ // comments
-    //         "color": "#6272A4", "fontStyle": ""
-    //     }],
+        "(.*)( void )(.*)": [{},{
+            "color": "#4de0ff", "fontStyle": ""
+        }],
+        "(.*)( public | private | protected )(.*)": [{},{
+            "color": "#FC618D", "fontStyle": ""
+        }],
+        "(.*)( implements | extends )(.*)": [{},{
+            "color": "#FC618D", "fontStyle": ""
+        }],
+        "(.*)(const |let |var )(.*)": [{},{
+            "color": "#7fc2f8", "fontStyle": ""
+        }],
+        "(.*)( =\\> )(.*)": [{},{
+            "color": "#BD93F9", "fontStyle": ""
+        }],
+        "(.*)( virtual | readonly | static )(.*)": [{},{
+            "color": "#FC618Dde", "fontStyle": "italic"
+        }],
+        "(.*)(@media |@keyframes )(.*)": [{},{
+            "color": "#50FA7B", "fontStyle": "italic"
+        }],
+        "(.*)({(.*)get;(.*)}|{(.*)set;(.*)})(.*)": [{},{
+            "color": "#929290", "fontStyle": ""
+        }],
+        "(.*)( this\\.| self\\.)(.*)": [{},{
+        "color": "#FC618D", "fontStyle": "italic"
+        }],
+        "(.*)(;)": [{},{
+            "color": "#565655", "fontStyle": ""
+        }],
+        "(.*)( null| async| await)(.*)": [{},{
+            "color": "#BD93F9", "fontStyle": "italic"
+        }],
+        "(.*)(\\?| using| foreach|return )(.*)": [{},{
+            "color": "#BD93F9", "fontStyle": ""
+        }],
     },
 
 
@@ -156,7 +158,7 @@
     "editor.tokenColorCustomizations": {"textMateRules": [
 
         {   // IMPORTS, PACKAGE,
-            "scope": "keyword.control.import.ts, keyword.control.from.ts, storage.modifier.import.java, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
+            "scope": "storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
                 "foreground": "#999996", "fontStyle": ""
         }},
 
@@ -166,7 +168,8 @@
         }},
 
         {   // Types
-            "scope": "entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.class, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.namespace", "settings": {
+        //, entity.name.namespace
+            "scope": "entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class", "settings": {
                 "foreground": "#4de0ff",
                 "fontStyle": "",
         }},
@@ -304,9 +307,8 @@
 
 
     // JAVA CONFIGURATIONS
-    //////  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\Java\\jdk-21"
-    "spring-boot.ls.java.home": "C:\\dev\\Java\\jdk-21",
-    "java.jdt.ls.java.home": "C:\\dev\\Java\\jdk-21",
+    //////  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\jdk-21"
+    "spring-boot.ls.java.home": "C:\\dev\\jdk-21",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
@@ -361,7 +363,6 @@
     "editor.parameterHints.enabled": false,
     "editor.inlineSuggest.enabled": true,
     "editor.suggest.showModules": false,
-    "editor.suggest.showKeywords": false,
 
 
 
@@ -369,19 +370,16 @@
     "editor.fontSize": 17,
     "editor.fontFamily": "Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Dracula",
     "workbench.iconTheme": "vscode-icons",
     "workbench.tree.indent": 16,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tips.enabled": false,
     "window.customMenuBarAltFocus": false,
-    "editor.snippetSuggestions": "top",
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
     "workbench.layoutControl.enabled": false,
     "breadcrumbs.enabled": false,
     "terminal.integrated.tabs.enabled": false,
-    "window.menuBarVisibility": "compact",
     "window.enableMenuBarMnemonics": false,
     "outline.showPackages": false,
     "diffEditor.wordWrap": "on",
@@ -393,10 +391,19 @@
     "explorer.confirmDelete": false,
     "security.workspace.trust.untrustedFiles": "open",
     "files.autoSave": "onFocusChange",
+    "vsicons.dontShowNewVersionMessage": true,
+    "microprofile.tools.codeLens.urlCodeLensEnabled": false,
+
+
+    "quarkus.tools.debug.terminateProcessOnExit": "Always terminate",
+    "window.menuBarVisibility": "compact",
 
 
 
     // OTHER
     "redhat.telemetry.enabled": false,
+    "extensions.ignoreRecommendations": true,
+    "window.zoomLevel": 1,
+
 
 }
