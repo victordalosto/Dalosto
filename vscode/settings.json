@@ -1,17 +1,30 @@
 {
 
+
     // Excluded files
     "files.exclude": {
+        "docs": true,
         "**/.vs": true,
-        // "**/.vscode": true,
-        // "**/Dockerfile": true,
+        "**/.vscode": true,
+        "**/.editorconfig": true,
+        "**/Dockerfile": true,
 
         "**/.gitattributes": true,
         "**/.gitignore": true,
         "**/.git": true,
-        // "**/.github":true,
+        "**/.dockerignore":true,
+        "**/.github":true,
 
         "**/.idea": true,
+        "**/suppressions.xml": true,
+        "**/checkstyle.xml": true,
+        "**/project-suppression.xml": true,
+        "**/assembly-kubernetes": true,
+        "**/kubernetes/**": true,
+        "**/pipelines/**": true,
+        "**/maven-version-rules.xml": true,
+        "**/checkstyle-suppressions.xml": true,
+        "**/mockserver.properties": true,
 
         "**/.mvn": true,
         "**/mvnw": true,
@@ -29,10 +42,10 @@
         "**/gradlew.bat": true,
         "**/gradle": true,
 
-        // "**/build.gradle": true,
+        "**/build.gradle": true,
         // "**/pom.xml": true,
 
-        // "**/build": true,
+        "**/build": true,
         "**/bin": true,
 
         "**/node_modules": true,
@@ -43,9 +56,14 @@
         "**/*.csproj": true,
         "**/*.csproj.*": true,
         "**/*.sln": true,
+        "**/*.meta": true,
 
-        "**/target/**": true
+        "**/target/**": true,
         // "**/src/test/**": true,
+
+        "**/UserSettings": true,
+        "**/Logs": true,
+        "**/Packages": true,
     },
 
 
@@ -56,9 +74,9 @@
 
         "editorBracketHighlight.foreground1": "#FC618D", // class
         "editorBracketHighlight.foreground2": "#50FA7B", // blocks-inside-methods
-        "editorBracketHighlight.foreground3": "#5ecfe9", // methods
-        "editorBracketHighlight.foreground4": "#FFB86C", // additional
-        "editorBracketHighlight.foreground5": "#BD93F9", // additional2
+        "editorBracketHighlight.foreground3": "#4de0ff", // methods
+        "editorBracketHighlight.foreground4": "#ce9178", // additional
+        "editorBracketHighlight.foreground5": "#6272A4", // additional2
 
         "editor.background": "#131315",       // desktop
         "editorGutter.background": "#131315", // numbers
@@ -86,8 +104,6 @@
         "editorGroup.border": "#BD93F9", // tab header border
 
     },
-
-    "workbench.statusBar.visible": false,
     "workbench.colorTheme": "Dracula",
 
 
@@ -107,39 +123,6 @@
         "(.*)( void )(.*)": [{},{
             "color": "#4de0ff", "fontStyle": ""
         }],
-        "(.*)( public | private | protected )(.*)": [{},{
-            "color": "#FC618D", "fontStyle": ""
-        }],
-        "(.*)( implements | extends )(.*)": [{},{
-            "color": "#FC618D", "fontStyle": ""
-        }],
-        "(.*)(const |let |var )(.*)": [{},{
-            "color": "#7fc2f8", "fontStyle": ""
-        }],
-        "(.*)( =\\> )(.*)": [{},{
-            "color": "#BD93F9", "fontStyle": ""
-        }],
-        "(.*)( virtual | readonly | static )(.*)": [{},{
-            "color": "#FC618Dde", "fontStyle": "italic"
-        }],
-        "(.*)(@media |@keyframes )(.*)": [{},{
-            "color": "#50FA7B", "fontStyle": "italic"
-        }],
-        "(.*)({(.*)get;(.*)}|{(.*)set;(.*)})(.*)": [{},{
-            "color": "#929290", "fontStyle": ""
-        }],
-        "(.*)( this\\.| self\\.)(.*)": [{},{
-        "color": "#FC618D", "fontStyle": "italic"
-        }],
-        "(.*)(;)": [{},{
-            "color": "#565655", "fontStyle": ""
-        }],
-        "(.*)( null| async| await)(.*)": [{},{
-            "color": "#BD93F9", "fontStyle": "italic"
-        }],
-        "(.*)(\\?| using| foreach|return )(.*)": [{},{
-            "color": "#BD93F9", "fontStyle": ""
-        }],
     },
 
 
@@ -158,12 +141,12 @@
     "editor.tokenColorCustomizations": {"textMateRules": [
 
         {   // IMPORTS, PACKAGE,
-            "scope": "storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
+            "scope": "storage.type.annotation.java, punctuation.definition.annotation, storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
                 "foreground": "#999996", "fontStyle": ""
         }},
 
         {   // ACESSOR: public, private, proteced
-            "scope": "storage.modifier.cs, storage.modifier.java, storage.modifier.ts", "settings": {
+            "scope": "storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
         }},
 
@@ -185,13 +168,13 @@
         }},
 
         {   // variable created inside method
-            "scope": "entity.name.variable.local.cs, variable.other.readwrite.cs, variable.other.constant, variable.other",
+            "scope": "entity.name.variable.local.cs, variable.other.readwrite.cs, variable.other.constant, variable.other, variable.parameter",
             "settings": {
                 "foreground": "#fffffff5", "fontStyle": ""
         }},
 
         {   // String
-            "scope": "string", "settings": {
+            "scope": "string, meta.record.java", "settings": {
                 "foreground": "#ce9178", "fontStyle": ""
         }},
 
@@ -222,7 +205,7 @@
         }},
 
         {   // this
-            "scope": "variable.language.this.java,variable.language.this.ts", "settings": {
+            "scope": "variable.language.this.java, variable.language.this.ts, variable.language.this", "settings": {
                 "foreground": "#BD93F9", "fontStyle": "italic"
         }},
 
@@ -309,6 +292,7 @@
     // JAVA CONFIGURATIONS
     //////  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\jdk-21"
     "spring-boot.ls.java.home": "C:\\dev\\jdk-21",
+    "java.jdt.ls.java.home": "C:\\dev\\jdk-21",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
@@ -328,9 +312,10 @@
 
 
     // C#
-    "csharpextensions.useFileScopedNamespace": true,
     "dotnetAcquisitionExtension.enableTelemetry": false,
-    "files.associations": { "*.cs": "csharp" },
+    "files.associations": {
+        "*.cs": "csharp"
+    },
 
 
 
@@ -356,11 +341,6 @@
     "vsintellicode.modify.editor.suggestSelection": "disabled",
     "files.trimTrailingWhitespace": true,
     "explorer.sortOrder": "filesFirst",
-
-
-
-    // // DISABLE ANNOYING BOX
-    "editor.parameterHints.enabled": false,
     "editor.inlineSuggest.enabled": true,
     "editor.suggest.showModules": false,
 
@@ -382,7 +362,6 @@
     "terminal.integrated.tabs.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "outline.showPackages": false,
-    "diffEditor.wordWrap": "on",
 
 
 
@@ -396,14 +375,52 @@
 
 
     "quarkus.tools.debug.terminateProcessOnExit": "Always terminate",
-    "window.menuBarVisibility": "compact",
+
+    // "editor.suggest.insertMode": "replace",
+    // "editor.acceptSuggestionOnEnter": "off",
+
+
+    "java.referencesCodeLens.enabled": true,
+    "java.implementationsCodeLens.enabled": true,
+    "java.checkstyle.configuration": "C:\\dev\\lint",
+    "sonarlint.rules": {
+        "csharpsquid:S3903": {
+            "level": "off"
+        },
+        "csharpsquid:S1186": {
+            "level": "off"
+        },
+        "csharpsquid:S1104": {
+            "level": "off"
+        }
+    },
+
+
+
+    "extensions.ignoreRecommendations": true,
+    "workbench.editor.enablePreview": false,
+    "quarkus.tools.alwaysShowWelcomePage": false,
+
+
+
+    "editor.detectIndentation": false,
+    "editor.parameterHints.enabled": false,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "microprofile.tools.inlayHint.enabled": true,
 
 
 
     // OTHER
     "redhat.telemetry.enabled": false,
-    "extensions.ignoreRecommendations": true,
-    "window.zoomLevel": 1,
+    "window.zoomLevel": -1,
+    "dotnet.codeLens.enableReferencesCodeLens": false,
+    "dotnet.codeLens.enableTestsCodeLens": false,
+
+    // Change the formatting so it
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+        "editor.autoClosingBrackets": "always",
+    },
 
 
 }
