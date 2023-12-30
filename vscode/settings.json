@@ -64,6 +64,13 @@
         "**/UserSettings": true,
         "**/Logs": true,
         "**/Packages": true,
+        "**/Assets/TutorialInfo": true,
+        "**/Assets/Settings": true,
+        "**/Assets/Prefabs": true,
+        "**/Assets/Scenes": true,
+        "**/Assets/Actions": true,
+        "**/Assets_": true,
+        "**/*.inputactions": true,
     },
 
 
@@ -104,26 +111,7 @@
         "editorGroup.border": "#BD93F9", // tab header border
 
     },
-    "workbench.colorTheme": "Dracula",
-
-
-
-    "highlight.regexes": {
-
-        // using (.*)|namespace (.*)|
-        "(.*)(package (.*)|import (.*))(.*)": [{},{
-            "color": "#999996", "fontStyle": ""
-        }],
-        "(.*)(// (.?)+||/** (.?)+)(.*)": [{},{ // comments
-            "color": "#6272A4", "fontStyle": ""
-        }],
-        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short | function )(.*)": [{},{
-            "color": "#4de0ff", "fontStyle": ""
-        }],
-        "(.*)( void )(.*)": [{},{
-            "color": "#4de0ff", "fontStyle": ""
-        }],
-    },
+    "workbench.colorTheme": "Visual Studio Dark",
 
 
 
@@ -146,13 +134,13 @@
         }},
 
         {   // ACESSOR: public, private, proteced
-            "scope": "storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java", "settings": {
+            "scope": "storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
         }},
 
         {   // Types
         //, entity.name.namespace
-            "scope": "entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class", "settings": {
+            "scope": "hcl-blockType, terraform-variable, entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class", "settings": {
                 "foreground": "#4de0ff",
                 "fontStyle": "",
         }},
@@ -200,7 +188,7 @@
         },
 
         {   // return, new,
-            "scope": "keyword, keyword.operator.new, keyword.control.java, ", "settings": {
+            "scope": "keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java, ", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
         }},
 
@@ -227,7 +215,7 @@
         },
 
         { // && > < <= >=
-            "scope": "keyword.operator.logical, keyword.operator.relational", "settings": {
+            "scope": "entity.name.variable.event, keyword.operator.logical, keyword.operator.relational", "settings": {
                 "foreground": "#BD93F9", "fontStyle": ""
             }
         },
@@ -251,14 +239,14 @@
         },
 
         {   // STATIC Methods
-            "scope": "support, support.function, support.other.variable, variable.other.object.ts", "settings": {
+            "scope": "support, support.function, support.other.variable, variable.other.object.ts, storage.type.event.cs", "settings": {
                 "foreground": "#BD93F9", "fontStyle": ""
         }},
 
-        {   // Nao definido
-            "scope": "entity.name.type", "settings": {
-                "foreground": "#fffffff5", "fontStyle": ""
-        }},
+        // {   // Nao definido
+        //     "scope": "entity.name.type", "settings": {
+        //         "foreground": "#fffffff5", "fontStyle": ""
+        // }},
 
         {   // Others
             "scope": "constant.numeric", "settings": {
@@ -287,6 +275,30 @@
         }},
     ]},
 
+
+
+
+    "highlight.regexes": {
+        // using (.*)|namespace (.*)|
+        "(.*)(package (.*)|import (.*))(.*)": [{},{
+            "color": "#999996", "fontStyle": ""
+        }],
+        "(.*)(// (.?)+||/** (.?)+)(.*)": [{},{ // comments
+            "color": "#6272A4", "fontStyle": ""
+        }],
+        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short | function |variable )(.*)": [{},{
+            "color": "#4de0ff", "fontStyle": ""
+        }],
+        "(.*)( bool )(.*)": [{},{
+            "color": "#4de0ff", "fontStyle": ""
+        }],
+        "(.*)( void )(.*)": [{},{
+            "color": "#4de0ff", "fontStyle": ""
+        }],
+        "(.*)( event )(.*)": [{},{
+            "color": "#9a4dff", "fontStyle": ""
+        }],
+    },
 
 
     // JAVA CONFIGURATIONS
@@ -392,6 +404,9 @@
         },
         "csharpsquid:S1104": {
             "level": "off"
+        },
+        "csharpsquid:S3400": {
+            "level": "off"
         }
     },
 
@@ -420,6 +435,10 @@
     "[csharp]": {
         "editor.defaultFormatter": "ms-dotnettools.csharp",
         "editor.autoClosingBrackets": "always",
+    },
+    "highlight.regexFlags": "",
+    "highlight.decorations": {
+        "rangeBehavior": 3
     },
 
 
