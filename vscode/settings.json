@@ -3,28 +3,29 @@
 
     // Excluded files
     "files.exclude": {
-        "docs": true,
-        "**/.vs": true,
-        "**/.vscode": true,
+        // "docs": true,
+        // "**/.vs": true,
+        // "**/.vscode": true,
         "**/.editorconfig": true,
-        "**/Dockerfile": true,
+        // "**/Dockerfile": true,
 
         "**/.gitattributes": true,
-        "**/.gitignore": true,
+        // "**/.gitignore": true,
         "**/.git": true,
         "**/.dockerignore":true,
         "**/.github":true,
 
         "**/.idea": true,
+
+        // BMW
         "**/suppressions.xml": true,
         "**/checkstyle.xml": true,
-        "**/project-suppression.xml": true,
-        "**/assembly-kubernetes": true,
-        "**/kubernetes/**": true,
-        "**/pipelines/**": true,
         "**/maven-version-rules.xml": true,
         "**/checkstyle-suppressions.xml": true,
         "**/mockserver.properties": true,
+        "**/assembly-kubernetes": true,
+        // "**/kubernetes/**": true,
+        // "**/pipelines/**": true,
 
         "**/.mvn": true,
         "**/mvnw": true,
@@ -50,7 +51,6 @@
 
         "**/node_modules": true,
         "**/package-lock.json": true,
-        "**/servidor-api": true,
 
         "**/obj": true,
         "**/*.csproj": true,
@@ -61,16 +61,16 @@
         "**/target/**": true,
         // "**/src/test/**": true,
 
-        "**/UserSettings": true,
-        "**/Logs": true,
-        "**/Packages": true,
-        "**/Assets/TutorialInfo": true,
-        "**/Assets/Settings": true,
-        "**/Assets/Prefabs": true,
-        "**/Assets/Scenes": true,
-        "**/Assets/Actions": true,
-        "**/Assets_": true,
-        "**/*.inputactions": true,
+        // "**/UserSettings": true,
+        // "**/Logs": true,
+        // "**/Packages": true,
+        // "**/Assets/TutorialInfo": true,
+        // "**/Assets/Settings": true,
+        // "**/Assets/Prefabs": true,
+        // "**/Assets/Scenes": true,
+        // "**/Assets/Actions": true,
+        // "**/Assets_": true,
+        // "**/*.inputactions": true,
     },
 
 
@@ -80,23 +80,27 @@
     "workbench.colorCustomizations": {
 
         "editorBracketHighlight.foreground1": "#FC618D", // class
+        // "editorBracketHighlight.foreground1": "#FF79C6", // class
         "editorBracketHighlight.foreground2": "#50FA7B", // blocks-inside-methods
         "editorBracketHighlight.foreground3": "#4de0ff", // methods
         "editorBracketHighlight.foreground4": "#ce9178", // additional
         "editorBracketHighlight.foreground5": "#6272A4", // additional2
 
-        "editor.background": "#131315",       // desktop
-        "editorGutter.background": "#131315", // numbers
+        // "editor.background": "#131315",       // desktop
+        "editor.background": "#171620",       // desktop
+        "editorGutter.background": "#171620", // numbers
 
-        "sideBar.background": "#000000",      // explorer
+        // "sideBar.background": "#000000",      // explorer
+        "sideBar.background": "#141119",      // explorer
 
-        "terminal.background": "#000000",     // terminal
-        "panel.background": "#000000",        // terminal header
+        "terminal.background": "#141119",     // terminal
+        "panel.background": "#141119",        // terminal header
 
-        "activityBar.background": "#000000",  // left-side menu
+        "activityBar.background": "#141119",  // left-side menu
 
-        "statusBar.background": "#000000",      // bottom bar
-        "titleBar.activeBackground": "#000000", // top menu
+        "statusBar.background": "#141119",      // bottom bar
+        "titleBar.activeBackground": "#141119", // top menu
+        "titleBar.inactiveBackground": "#141119",
 
         "tab.activeBackground": "#220736",
         "tab.activeForeground": "#fffefe",
@@ -105,13 +109,13 @@
         "tab.inactiveForeground": "#fffefe",
 
         "tab.border": "#000000",
-        "editorGroupHeader.tabsBackground": "#000000", // tab header
-        "editorGroupHeader.tabsBorder": "#000000",     // tab header border
+        "editorGroupHeader.tabsBackground": "#141119", // tab header
+        "editorGroupHeader.tabsBorder": "#141119",     // tab header border
 
         "editorGroup.border": "#BD93F9", // tab header border
 
     },
-    "workbench.colorTheme": "Visual Studio Dark",
+    "workbench.colorTheme": "Dracula",
 
 
 
@@ -134,8 +138,9 @@
         }},
 
         {   // ACESSOR: public, private, proteced
-            "scope": "storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java", "settings": {
+            "scope": "storage.type.primitive.java, storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
+                // "foreground": "#FF79C6", "fontStyle": ""
         }},
 
         {   // Types
@@ -143,6 +148,13 @@
             "scope": "hcl-blockType, terraform-variable, entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class", "settings": {
                 "foreground": "#4de0ff",
                 "fontStyle": "",
+        }},
+
+        {   // HTML
+        //, entity.name.namespace
+            "scope": "entity.other.attribute-name.html", "settings": {
+                "foreground": "#4de0ff",
+                "fontStyle": "italic",
         }},
 
         {   // methods
@@ -162,8 +174,8 @@
         }},
 
         {   // String
-            "scope": "string, meta.record.java", "settings": {
-                "foreground": "#ce9178", "fontStyle": ""
+            "scope": "string", "settings": {
+                "foreground": "#F1FA8C", "fontStyle": ""
         }},
 
         {   // Comments
@@ -172,13 +184,24 @@
         }},
 
         {   // keywords
-            "scope": "keyword.control, punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html", "settings": {
+            "scope": "storage.type.function.js, storage.type.js, storage.type.function.ts, storage.type.ts,keyword.control, storage.type.interface.ts", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
+                // "foreground": "#FF79C6", "fontStyle": ""
+        }},
+
+        {   // HTML Tags
+            "scope": "punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html", "settings": {
+                "foreground": "#747272", "fontStyle": ""
         }},
 
         {   // HTML Tags
             "scope": "entity.name.tag.js", "settings": {
                 "foreground": "#c8ce7edc", "fontStyle": ""
+        }},
+
+        {   // HTML Tags ==
+            "scope": "punctuation.separator.key-value.html", "settings": {
+                "foreground": "#747470dc", "fontStyle": ""
         }},
 
         { // HTML DIAMONDS < >
@@ -188,8 +211,9 @@
         },
 
         {   // return, new,
-            "scope": "keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java, ", "settings": {
+            "scope": "keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java", "settings": {
                 "foreground": "#FC618D", "fontStyle": ""
+                // "foreground": "#FF79C6", "fontStyle": ""
         }},
 
         {   // this
@@ -199,7 +223,8 @@
 
         {   // ponctuator
             "scope": "ponctuation, punctuation.definition, meta.brace, punctuation.section, punctuation.bracket.round", "settings": {
-                "foreground": "#FC618D", "fontStyle": ""
+                // "foreground": "#FC618D", "fontStyle": ""
+                "foreground": "#FF79C6", "fontStyle": ""
         }},
 
         {   // diamonds <>
@@ -260,18 +285,35 @@
         }},
 
         {   // FIELD   AND   field in this.FIELD
-            "scope": "entity.name.variable.field.cs, variable.other.enummember, entity.name.variable.property.cs, variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property", "settings": {
-                "foreground": "#ffffff", "fontStyle": "bold"
+            "scope": "text.html.derivative, entity.name.variable.field.cs, variable.other.enummember, entity.name.variable.property.cs, variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property", "settings": {
+                // "foreground": "#ffffff", "fontStyle": "bold"
+                "foreground": "#ffffff", "fontStyle": ""
         }},
 
         {   // null
-            "scope": "constant.language.null.cs", "settings": {
+            "scope": ", constant.language.null.cs", "settings": {
                 "foreground": "#BD93F9", "fontStyle": "italic"
+        }},
+
+        {   // == !=
+            "scope": "keyword.operator.comparison", "settings": {
+                "foreground": "#BD93F9", "fontStyle": ""
         }},
 
         {   // text - xml
             "scope": "text.xml, storage", "settings": {
                 "foreground": "#ffffff", "fontStyle": ""
+        }},
+
+        {   // text - xml
+            "scope": "variable.parameter", "settings": {
+                "foreground": "#FFB86C", "fontStyle": "italic"
+        }},
+
+        {   // text - xml
+            "scope": "constant.numeric", "settings": {
+                // "foreground": "#4DE0FF", "fontStyle": ""
+                "foreground": "#BD93F9", "fontStyle": ""
         }},
     ]},
 
@@ -279,6 +321,7 @@
 
 
     "highlight.regexes": {
+
         // using (.*)|namespace (.*)|
         "(.*)(package (.*)|import (.*))(.*)": [{},{
             "color": "#999996", "fontStyle": ""
@@ -292,13 +335,15 @@
         "(.*)( bool )(.*)": [{},{
             "color": "#4de0ff", "fontStyle": ""
         }],
-        "(.*)( void )(.*)": [{},{
+        "(.*)( void |const)(.*)": [{},{
             "color": "#4de0ff", "fontStyle": ""
         }],
         "(.*)( event )(.*)": [{},{
             "color": "#9a4dff", "fontStyle": ""
         }],
     },
+
+
 
 
     // JAVA CONFIGURATIONS
@@ -314,6 +359,7 @@
     "java.debug.settings.console": "externalTerminal",
     "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
     "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+    "terminal.integrated.fontSize": 12,
 
 
 
@@ -339,10 +385,13 @@
 
 
 
-    // UI
+    // FORMATTERS
     "[xml]":    {"editor.defaultFormatter": "redhat.vscode-xml" },
     "[jsonc]":  {"editor.defaultFormatter": "vscode.json-language-features"},
     "[python]": {"editor.formatOnType": true},
+    "[javascript]": {"editor.defaultFormatter": "vscode.typescript-language-features"},
+    "[typescript]": {"editor.defaultFormatter": "vscode.typescript-language-features"},
+    "[csharp]": {"editor.defaultFormatter": "ms-dotnettools.csharp","editor.autoClosingBrackets": "always",},
 
 
 
@@ -355,23 +404,25 @@
     "explorer.sortOrder": "filesFirst",
     "editor.inlineSuggest.enabled": true,
     "editor.suggest.showModules": false,
-
-
-
-    // VISUAL
-    "editor.fontSize": 17,
-    "editor.fontFamily": "Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
+    "editor.fontFamily": "Fira Code, MonacoB, Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
+    "editor.lineHeight": 1.5,
+    "editor.rulers": [80, 120],
+    "editor.renderLineHighlight": "gutter",
+    "csharp.semanticHighlighting.enabled": false,
+    "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
+
     "workbench.iconTheme": "vscode-icons",
     "workbench.tree.indent": 16,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tips.enabled": false,
     "window.customMenuBarAltFocus": false,
+    "windows.titleBarStyle": "native",
+
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
     "workbench.layoutControl.enabled": false,
     "breadcrumbs.enabled": false,
-    "terminal.integrated.tabs.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "outline.showPackages": false,
 
@@ -407,13 +458,17 @@
         },
         "csharpsquid:S3400": {
             "level": "off"
+        },
+        "IDE:1006": {
+            "level": "off"
+        },
+        "csharpsquid:S2436": {
+            "level": "off"
         }
     },
 
 
-
     "extensions.ignoreRecommendations": true,
-    "workbench.editor.enablePreview": false,
     "quarkus.tools.alwaysShowWelcomePage": false,
 
 
@@ -425,21 +480,54 @@
 
 
 
-    // OTHER
-    "redhat.telemetry.enabled": false,
-    "window.zoomLevel": -1,
-    "dotnet.codeLens.enableReferencesCodeLens": false,
-    "dotnet.codeLens.enableTestsCodeLens": false,
-
     // Change the formatting so it
-    "[csharp]": {
-        "editor.defaultFormatter": "ms-dotnettools.csharp",
-        "editor.autoClosingBrackets": "always",
-    },
+
     "highlight.regexFlags": "",
     "highlight.decorations": {
         "rangeBehavior": 3
     },
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.editor.enablePreview": false,
+    "editor.titleBar.enabled": false,
 
+
+    "diffEditor.codeLens": true,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "sonarlint.pathToNodeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+    "editor.autoClosingQuotes": "never",
+    "html.autoCreateQuotes": false,
+
+    "apc.electron": {
+        "titleBarStyle": "hidden",
+        "trafficLightPosition": {
+            "x": 5,
+            "y": 5
+        },
+        "frame": false,
+    },
+    "apc.header": {
+        "height": 26,
+    },
+    "apc.activityBar": {
+      "size": 40,
+      "itemSize": 40,
+      "itemMargin": 0
+    },
+    "apc.stylesheet": {
+      ".title-label": "display: none !important",
+      ".composite.title": "display: block",
+      ".composite-bar-container": "display: flex !important; padding: 0 0",
+      ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: space-evenly !important",
+    },
+    "apc.menubar.compact": true,
+
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+
+    // OTHER
+
+
+    "redhat.telemetry.enabled": false,
+    "window.commandCenter": false,
+    "editor.stickyScroll.scrollWithEditor": false,
 
 }
