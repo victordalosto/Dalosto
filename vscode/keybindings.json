@@ -1869,5 +1869,19 @@
     {
         "key": "f6",
         "command": "workbench.action.debug.disconnectAndSuspend"
+    },
+    {
+        "key": "ctrl+shift+h",
+        "command": "extension.formatSelectionAsHtml"
+    },
+    {
+        "key": "alt+g",
+        "command": "workbench.view.scm",
+        "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+g",
+        "command": "-workbench.view.scm",
+        "when": "workbench.scm.active"
     }
 ]
