@@ -1,56 +1,61 @@
 {
 
-
     // Excluded files
     "files.exclude": {
         // "docs": true,
-        // "**/.vs": true,
+        "**/.vs": true,
         // "**/.vscode": true,
         "**/.editorconfig": true,
-        // "**/Dockerfile": true,
+        "**/Dockerfile": true,
 
         "**/.gitattributes": true,
         // "**/.gitignore": true,
         "**/.git": true,
-        "**/.dockerignore":true,
-        "**/.github":true,
-
+        "**/.dockerignore": true,
+        // "**/.github": true,
         "**/.idea": true,
+        // "**/src/test/**": true,
+
 
         // BMW
-        "**/suppressions.xml": true,
-        "**/checkstyle.xml": true,
-        "**/maven-version-rules.xml": true,
-        "**/checkstyle-suppressions.xml": true,
-        "**/mockserver.properties": true,
-        "**/assembly-kubernetes": true,
+        // "**/suppressions.xml": true,
+        // "**/checkstyle.xml": true,
+        // "**/Dockerfile*": true,
+        // "**/dynatrace": true,
+        // "**/helm": true,
+        // "**/maven-version-rules.xml": true,
+        // "**/checkstyle-suppressions.xml": true,
+        // "**/mockserver.properties": true,
+        // "**/assembly-kubernetes": true,
         // "**/kubernetes/**": true,
         // "**/pipelines/**": true,
 
         "**/.mvn": true,
         "**/mvnw": true,
         "**/mvnw.cmd": true,
+
         "**/LICENSE": true,
         "**/HELP.md": true,
         // "**/Readme.md": true,
+        // "**/README.md": true,
 
         "**/__pytorch__": true,
-        "**/__pycache__":true,
+        "**/__pycache__": true,
 
         "**/gradlew": true,
         "**/.gradle": true,
         "**/settings.gradle": true,
         "**/gradlew.bat": true,
         "**/gradle": true,
-
         "**/build.gradle": true,
         // "**/pom.xml": true,
 
         "**/build": true,
         "**/bin": true,
+        "**/target/**": true,
 
-        "**/node_modules": true,
-        "**/package-lock.json": true,
+        // "**/node_modules": true,
+        // "**/package-lock.json": true,
 
         "**/obj": true,
         "**/*.csproj": true,
@@ -58,68 +63,55 @@
         "**/*.sln": true,
         "**/*.meta": true,
 
-        "**/target/**": true,
-        // "**/src/test/**": true,
-
-        // "**/UserSettings": true,
-        // "**/Logs": true,
-        // "**/Packages": true,
-        // "**/Assets/TutorialInfo": true,
-        // "**/Assets/Settings": true,
-        // "**/Assets/Prefabs": true,
-        // "**/Assets/Scenes": true,
-        // "**/Assets/Actions": true,
-        // "**/Assets_": true,
-        // "**/*.inputactions": true,
+        "**/UserSettings": true,
+        "**/Logs": true,
+        "**/Packages": true,
+        "**/Assets/TutorialInfo": true,
+        "**/Assets/Settings": true,
+        "**/Assets/Prefabs": true,
+        "**/Assets/Scenes": true,
+        "**/Assets/Actions": true,
+        "**/Assets_": true,
+        "**/*.inputactions": true,
     },
-
 
 
     // VSCODE CUSTOMIZATION
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "workbench.colorCustomizations": {
-
-        "editorBracketHighlight.foreground1": "#FC618D", // class
-        // "editorBracketHighlight.foreground1": "#FF79C6", // class
+        "editorBracketHighlight.foreground1": "#F92672", // class F92672
         "editorBracketHighlight.foreground2": "#50FA7B", // blocks-inside-methods
         "editorBracketHighlight.foreground3": "#4de0ff", // methods
         "editorBracketHighlight.foreground4": "#ce9178", // additional
         "editorBracketHighlight.foreground5": "#6272A4", // additional2
-
-        // "editor.background": "#131315",       // desktop
-        "editor.background": "#171620",       // desktop
-        "editorGutter.background": "#171620", // numbers
-
-        // "sideBar.background": "#000000",      // explorer
-        "sideBar.background": "#141119",      // explorer
-
-        "terminal.background": "#141119",     // terminal
-        "panel.background": "#141119",        // terminal header
-
-        "activityBar.background": "#141119",  // left-side menu
-
-        "statusBar.background": "#141119",      // bottom bar
-        "titleBar.activeBackground": "#141119", // top menu
+        "editor.background": "#171412",   // #171620    // desktop
+        "editorGutter.background": "#171412", // numbers
+        "sideBar.background": "#171412",      // explorer
+        "terminal.background": "#171412", // terminal
+        "panel.background": "#171412", // terminal header
+        "activityBar.background": "#171412", // left-side menu
+        "statusBar.background": "#171412", // bottom bar
+        "titleBar.activeBackground": "#171412", // top menu
         "titleBar.inactiveBackground": "#141119",
-
-        "tab.activeBackground": "#220736",
+        "tab.activeBackground": "#2e2d30",
         "tab.activeForeground": "#fffefe",
-        "tab.activeBorderTop": "#BD93F9",
-        "tab.inactiveBackground": "#353535",
+        "tab.activeBorderTop": "#afacac",
+        "tab.inactiveBackground": "#171412",
         "tab.inactiveForeground": "#fffefe",
-
-        "tab.border": "#000000",
-        "editorGroupHeader.tabsBackground": "#141119", // tab header
-        "editorGroupHeader.tabsBorder": "#141119",     // tab header border
-
-        "editorGroup.border": "#BD93F9", // tab header border
-
+        "tab.border": "#171412",
+        "editorGroupHeader.tabsBackground": "#171412", // tab header
+        "editorGroupHeader.tabsBorder": "#141119", // tab header border
+        "editorGroup.border": "#6403ec", // #F92672 tab header border
+        "editor.lineHighlightBackground": "#1c1a1a",
+        "editor.lineHighlightBorder": "#171412",
+        "editorLineNumber.foreground": "#444141",
+        "panel.border": "#3e3939",
     },
-    "workbench.colorTheme": "Dracula",
 
 
 
     // EXTENSIONS
+    "workbench.colorTheme": "Dracula",
     "github.copilot.enable": {
         "*": true,
         "yaml": true,
@@ -130,219 +122,289 @@
 
 
     // CUSTOMIZATION
-    "editor.tokenColorCustomizations": {"textMateRules": [
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            { // IMPORTS, PACKAGE,
+                "scope": "storage.type.annotation.java, punctuation.definition.annotation, storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java",
+                "settings": {
+                    "foreground": "#999996",
+                    "fontStyle": ""
+                }
+            },
+            { // ACESSOR: public, private, proteced
+                "scope": "storage.type.primitive.java, storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java",
+                "settings": {
+                    // "foreground": "#FF79C6",
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                }
+            },
+            { // Types
+                //, entity.name.namespace
+                "scope": "hcl-blockType, terraform-variable, entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class",
+                "settings": {
+                    "foreground": "#66D9EF", //4de0ff
+                    "fontStyle": "",
+                }
+            },
+            { // HTML
+                //, entity.name.namespace
+                "scope": "entity.other.attribute-name.html",
+                "settings": {
+                    "foreground": "#66D9EF",
+                    "fontStyle": "italic",
+                }
+            },
+            { // methods
+                "scope": "entity.name.function.extension.cs, entity.name.function, variable.other.object.ts",
+                "settings": {
+                    "foreground": "#3ddd65", //"#50FA7B"
+                    "fontStyle": ""
+                }
+            },
+            { // variable method parameter
+                "scope": "variable.parameter, entity.name.variable.parameter.cs",
+                "settings": {
+                    "foreground": "#FFB86C",
+                    "fontStyle": ""
+                }
+            },
+            { // variable created inside method
+                "scope": "entity.name.variable.local.cs, variable.other.readwrite.cs, variable.other.constant, variable.other, variable.parameter",
+                "settings": {
+                    "foreground": "#fffffff5",
+                    "fontStyle": ""
+                }
+            },
+            { // String
+                "scope": "string, punctuation.definition.string, string.quoted.triple.java",
+                "settings": {
+                    "foreground": "#F1FA8C",
+                    "fontStyle": ""
+                }
+            },
+            { // Comments
+                "scope": "comment, punctuation.definition.comment",
+                "settings": {
+                    "foreground": "#6272A4",
+                    "fontStyle": ""
+                }
+            },
+            { // keywords
+                "scope": "entity.name.tag, storage.type.function.js, storage.type.js, storage.type.function.ts, storage.type.ts,keyword.control, storage.type.interface.ts",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                    // "foreground": "#F92672", "fontStyle": ""
+                }
+            },
+            { // HTML Tags
+                "scope": "punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html",
+                "settings": {
+                    "foreground": "#747272",
+                    "fontStyle": ""
+                }
+            },
+            { // HTML Tags
+                "scope": "entity.name.tag.js",
+                "settings": {
+                    "foreground": "#c8ce7edc",
+                    "fontStyle": ""
+                }
+            },
+            { // HTML Tags ==
+                "scope": "punctuation.separator.key-value.html",
+                "settings": {
+                    "foreground": "#747470dc",
+                    "fontStyle": ""
+                }
+            },
+            { // HTML DIAMONDS < >
+                "scope": "punctuation.definition.tag.begin.js, punctuation.definition.tag.end.js",
+                "settings": {
+                    "foreground": "#c8ce7edc",
+                    "fontStyle": "bold"
+                }
+            },
+            { // return, new,
+                "scope": "keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                    // "foreground": "#9f77d7", "fontStyle": ""
+                }
+            },
+            { // this
+                "scope": "variable.language.this.java, variable.language.this.ts, variable.language.this",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": "italic"
+                }
+            },
+            { // ponctuator
+                "scope": "ponctuation, punctuation.definition, meta.brace, punctuation.section, punctuation.bracket.round",
+                "settings": {
+                    // "foreground": "#F92672", "fontStyle": ""
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                }
+            },
+            { // diamonds <>
+                "scope": "punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end",
+                "settings": {
+                    "foreground": "#ffffff",
+                    "fontStyle": "bold",
+                }
+            },
+            { // .
+                "scope": "punctuation.separator.period.java, ponctuation.acessor, punctuation.accessor.ts, meta.method.identifier.java",
+                "settings": {
+                    "foreground": "#9f9f99",
+                    "fontStyle": ""
+                }
+            },
+            { // && > < <= >=
+                "scope": "entity.name.variable.event, keyword.operator.logical, keyword.operator.relational",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                }
+            },
+            { // : + = * / -
+                "scope": "punctuation.terminator.statement.cs, keyword.operator, punctuation.separator.parameter, entity.name.function.member.overload.cs",
+                "settings": {
+                    "foreground": "#b3b3ac",
+                    "fontStyle": ""
+                }
+            },
+            { // ;
+                "scope": "punctuation.terminator.statement.cs, punctuation.terminator.java, punctuation.terminator.statement.ts",
+                "settings": {
+                    "foreground": "#565655",
+                    "fontStyle": ""
+                }
+            },
+            { // quotes as in ' "
+                "scope": "punctuation.definition, punctuation.definition.string.begin, punctuation.definition.string.end",
+                "settings": {
+                    "foreground": "#ce9178",
+                    "fontStyle": ""
+                }
+            },
+            { // STATIC Methods
+                "scope": "support, support.function, support.other.variable, variable.other.object.ts, storage.type.event.cs",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                }
+            },
 
-        {   // IMPORTS, PACKAGE,
-            "scope": "storage.type.annotation.java, punctuation.definition.annotation, storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java", "settings": {
-                "foreground": "#999996", "fontStyle": ""
-        }},
+            // {   // Nao definido
+            //     "scope": "entity.name.type", "settings": {
+            //         "foreground": "#fffffff5", "fontStyle": ""
+            // }},
 
-        {   // ACESSOR: public, private, proteced
-            "scope": "storage.type.primitive.java, storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java", "settings": {
-                "foreground": "#FC618D", "fontStyle": ""
-                // "foreground": "#FF79C6", "fontStyle": ""
-        }},
-
-        {   // Types
-        //, entity.name.namespace
-            "scope": "hcl-blockType, terraform-variable, entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class", "settings": {
-                "foreground": "#4de0ff",
-                "fontStyle": "",
-        }},
-
-        {   // HTML
-        //, entity.name.namespace
-            "scope": "entity.other.attribute-name.html", "settings": {
-                "foreground": "#4de0ff",
-                "fontStyle": "italic",
-        }},
-
-        {   // methods
-            "scope": "entity.name.function.extension.cs, entity.name.function, variable.other.object.ts", "settings": {
-                "foreground": "#50FA7B", "fontStyle": ""
-        }},
-
-        {   // variable method parameter
-            "scope": "variable.parameter, entity.name.variable.parameter.cs", "settings": {
-                "foreground": "#FFB86C", "fontStyle": ""
-        }},
-
-        {   // variable created inside method
-            "scope": "entity.name.variable.local.cs, variable.other.readwrite.cs, variable.other.constant, variable.other, variable.parameter",
-            "settings": {
-                "foreground": "#fffffff5", "fontStyle": ""
-        }},
-
-        {   // String
-            "scope": "string", "settings": {
-                "foreground": "#F1FA8C", "fontStyle": ""
-        }},
-
-        {   // Comments
-            "scope": "comment, punctuation.definition.comment", "settings": {
-                "foreground": "#6272A4", "fontStyle": ""
-        }},
-
-        {   // keywords
-            "scope": "storage.type.function.js, storage.type.js, storage.type.function.ts, storage.type.ts,keyword.control, storage.type.interface.ts", "settings": {
-                "foreground": "#FC618D", "fontStyle": ""
-                // "foreground": "#FF79C6", "fontStyle": ""
-        }},
-
-        {   // HTML Tags
-            "scope": "punctuation.definition.tag.end.html, punctuation.definition.tag.begin.html", "settings": {
-                "foreground": "#747272", "fontStyle": ""
-        }},
-
-        {   // HTML Tags
-            "scope": "entity.name.tag.js", "settings": {
-                "foreground": "#c8ce7edc", "fontStyle": ""
-        }},
-
-        {   // HTML Tags ==
-            "scope": "punctuation.separator.key-value.html", "settings": {
-                "foreground": "#747470dc", "fontStyle": ""
-        }},
-
-        { // HTML DIAMONDS < >
-            "scope": "punctuation.definition.tag.begin.js, punctuation.definition.tag.end.js", "settings": {
-                "foreground": "#c8ce7edc", "fontStyle": "bold"
-            }
-        },
-
-        {   // return, new,
-            "scope": "keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java", "settings": {
-                "foreground": "#FC618D", "fontStyle": ""
-                // "foreground": "#FF79C6", "fontStyle": ""
-        }},
-
-        {   // this
-            "scope": "variable.language.this.java, variable.language.this.ts, variable.language.this", "settings": {
-                "foreground": "#BD93F9", "fontStyle": "italic"
-        }},
-
-        {   // ponctuator
-            "scope": "ponctuation, punctuation.definition, meta.brace, punctuation.section, punctuation.bracket.round", "settings": {
-                // "foreground": "#FC618D", "fontStyle": ""
-                "foreground": "#FF79C6", "fontStyle": ""
-        }},
-
-        {   // diamonds <>
-            "scope": "punctuation.definition.typeparameters.begin, punctuation.definition.typeparameters.end", "settings": {
-                "foreground": "#ffffff",
-                "fontStyle": "bold",
-        }},
-
-        { // .
-            "scope": "punctuation.separator.period.java, ponctuation.acessor, punctuation.accessor.ts, meta.method.identifier.java", "settings": {
-                "foreground": "#9f9f99", "fontStyle": ""
-            }
-        },
-
-        { // && > < <= >=
-            "scope": "entity.name.variable.event, keyword.operator.logical, keyword.operator.relational", "settings": {
-                "foreground": "#BD93F9", "fontStyle": ""
-            }
-        },
-
-        { // : + = * / -
-            "scope": "punctuation.terminator.statement.cs, keyword.operator, punctuation.separator.parameter, entity.name.function.member.overload.cs", "settings": {
-                "foreground": "#b3b3ac", "fontStyle": ""
-            }
-        },
-
-        { // ;
-            "scope":"punctuation.terminator.statement.cs, punctuation.terminator.java, punctuation.terminator.statement.ts", "settings": {
-                "foreground": "#565655", "fontStyle": ""
-            }
-        },
-
-        { // quotes as in ' "
-            "scope": "punctuation.definition, punctuation.definition.string.begin, punctuation.definition.string.end", "settings": {
-                "foreground": "#ce9178", "fontStyle": ""
-            }
-        },
-
-        {   // STATIC Methods
-            "scope": "support, support.function, support.other.variable, variable.other.object.ts, storage.type.event.cs", "settings": {
-                "foreground": "#BD93F9", "fontStyle": ""
-        }},
-
-        // {   // Nao definido
-        //     "scope": "entity.name.type", "settings": {
-        //         "foreground": "#fffffff5", "fontStyle": ""
-        // }},
-
-        {   // Others
-            "scope": "constant.numeric", "settings": {
-                "fontStyle": ""
-        }},
-
-        {   // @Annotation java
-            "scope": "storage.type.annotation.java, punctuation.definition.annotation", "settings": {
-                "foreground": "#c0c0c0",
-                "fontStyle": "italic"
-        }},
-
-        {   // FIELD   AND   field in this.FIELD
-            "scope": "text.html.derivative, entity.name.variable.field.cs, variable.other.enummember, entity.name.variable.property.cs, variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property", "settings": {
-                // "foreground": "#ffffff", "fontStyle": "bold"
-                "foreground": "#ffffff", "fontStyle": ""
-        }},
-
-        {   // null
-            "scope": ", constant.language.null.cs", "settings": {
-                "foreground": "#BD93F9", "fontStyle": "italic"
-        }},
-
-        {   // == !=
-            "scope": "keyword.operator.comparison", "settings": {
-                "foreground": "#BD93F9", "fontStyle": ""
-        }},
-
-        {   // text - xml
-            "scope": "text.xml, storage", "settings": {
-                "foreground": "#ffffff", "fontStyle": ""
-        }},
-
-        {   // text - xml
-            "scope": "variable.parameter", "settings": {
-                "foreground": "#FFB86C", "fontStyle": "italic"
-        }},
-
-        {   // text - xml
-            "scope": "constant.numeric", "settings": {
-                // "foreground": "#4DE0FF", "fontStyle": ""
-                "foreground": "#BD93F9", "fontStyle": ""
-        }},
-    ]},
-
+            { // @Annotation java
+                "scope": "storage.type.annotation.java, punctuation.definition.annotation",
+                "settings": {
+                    "foreground": "#c0c0c0",
+                    "fontStyle": "italic"
+                }
+            },
+            { // FIELD   AND   field in this.FIELD
+                "scope": "text.html.derivative, entity.name.variable.field.cs, variable.other.enummember, entity.name.variable.property.cs, variable.other.constant.property, variable.other.property, variable.other.object.property, support.variable.property",
+                "settings": {
+                    // "foreground": "#ffffff", "fontStyle": "bold"
+                    "foreground": "#ffffff",
+                    "fontStyle": ""
+                }
+            },
+            { // null
+                "scope": ", constant.language.null.cs",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": "italic"
+                }
+            },
+            { // == !=
+                "scope": "keyword.operator.comparison",
+                "settings": {
+                    "foreground": "#F92672",
+                    "fontStyle": ""
+                }
+            },
+            { // text - xml
+                "scope": "text.xml, storage",
+                "settings": {
+                    "foreground": "#ffffff",
+                    "fontStyle": ""
+                }
+            },
+            { // text - xml
+                "scope": "variable.parameter",
+                "settings": {
+                    "foreground": "#FFB86C",
+                    "fontStyle": "italic"
+                }
+            },
+            { // text - xml
+                "scope": "constant.numeric",
+                "settings": {
+                    // "foreground": "#4DE0FF", "fontStyle": ""
+                    // "foreground": "#F92672",
+                    "fontStyle": ""
+                }
+            },
+        ]
+    },
 
 
 
     "highlight.regexes": {
-
         // using (.*)|namespace (.*)|
-        "(.*)(package (.*)|import (.*))(.*)": [{},{
-            "color": "#999996", "fontStyle": ""
-        }],
-        "(.*)(// (.?)+||/** (.?)+)(.*)": [{},{ // comments
-            "color": "#6272A4", "fontStyle": ""
-        }],
-        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short | function |variable )(.*)": [{},{
-            "color": "#4de0ff", "fontStyle": ""
-        }],
-        "(.*)( bool )(.*)": [{},{
-            "color": "#4de0ff", "fontStyle": ""
-        }],
-        "(.*)( void |const)(.*)": [{},{
-            "color": "#4de0ff", "fontStyle": ""
-        }],
-        "(.*)( event )(.*)": [{},{
-            "color": "#9a4dff", "fontStyle": ""
-        }],
+        "(.*)(package (.*)|import (.*))(.*)": [
+            {},
+            {
+                "color": "#999996",
+                "fontStyle": ""
+            }
+        ],
+        "(.*)(// (.?)+||/** (.?)+)(.*)": [
+            {},
+            { // comments
+                "color": "#6272A4",
+                "fontStyle": ""
+            }
+        ],
+        "(.*)(var | string| int | bool | boolean | char | decimal | double| float | long | short | function |variable )(.*)": [
+            {},
+            {
+                "color": "#66D9EF",
+                "fontStyle": ""
+            }
+        ],
+        "(.*)( bool )(.*)": [
+            {},
+            {
+                "color": "#66D9EF",
+                "fontStyle": ""
+            }
+        ],
+        "(.*)( void |const)(.*)": [
+            {},
+            {
+                "color": "#66D9EF",
+                "fontStyle": ""
+            }
+        ],
+        "(.*)( event )(.*)": [
+            {},
+            {
+                "color": "#9a4dff",
+                "fontStyle": ""
+            }
+        ],
     },
-
 
 
 
@@ -355,12 +417,12 @@
     "java.eclipse.downloadSources": true,
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
     "java.debug.settings.vmArgs": "-Xmx8g",
-
     "java.debug.settings.console": "externalTerminal",
-    "terminal.integrated.env.windows": { "PYTHONPATH": "${workspaceFolder}" },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
     "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
-    "terminal.integrated.fontSize": 12,
-
+    "terminal.integrated.fontSize": 11,
 
 
     // TYPESCRIPT
@@ -368,13 +430,11 @@
     "javascript.updateImportsOnFileMove.enabled": "always",
 
 
-
     // C#
     "dotnetAcquisitionExtension.enableTelemetry": false,
     "files.associations": {
         "*.cs": "csharp"
     },
-
 
 
     // C#
@@ -386,13 +446,31 @@
 
 
     // FORMATTERS
-    "[xml]":    {"editor.defaultFormatter": "redhat.vscode-xml" },
-    "[jsonc]":  {"editor.defaultFormatter": "vscode.json-language-features"},
-    "[python]": {"editor.formatOnType": true},
-    "[javascript]": {"editor.defaultFormatter": "vscode.typescript-language-features"},
-    "[typescript]": {"editor.defaultFormatter": "vscode.typescript-language-features"},
-    "[csharp]": {"editor.defaultFormatter": "ms-dotnettools.csharp","editor.autoClosingBrackets": "always",},
-
+    "[xml]": {
+        "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[python]": {
+        "editor.formatOnType": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+        "editor.autoClosingBrackets": "always",
+    },
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    // "[typescriptreact]": {
+    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
+    // },
 
 
     // CONFIGS
@@ -406,19 +484,20 @@
     "editor.suggest.showModules": false,
     "editor.fontFamily": "Fira Code, MonacoB, Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
     "editor.lineHeight": 1.5,
-    "editor.rulers": [80, 120],
+    "editor.rulers": [
+        // 80,
+        100
+    ],
     "editor.renderLineHighlight": "gutter",
     "csharp.semanticHighlighting.enabled": false,
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
-
     "workbench.iconTheme": "vscode-icons",
-    "workbench.tree.indent": 16,
+    "workbench.tree.indent": 8,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tips.enabled": false,
     "window.customMenuBarAltFocus": false,
     "windows.titleBarStyle": "native",
-
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
     "workbench.layoutControl.enabled": false,
@@ -435,44 +514,15 @@
     "files.autoSave": "onFocusChange",
     "vsicons.dontShowNewVersionMessage": true,
     "microprofile.tools.codeLens.urlCodeLensEnabled": false,
-
-
     "quarkus.tools.debug.terminateProcessOnExit": "Always terminate",
-
     // "editor.suggest.insertMode": "replace",
     // "editor.acceptSuggestionOnEnter": "off",
-
-
     "java.referencesCodeLens.enabled": true,
     "java.implementationsCodeLens.enabled": true,
     "java.checkstyle.configuration": "C:\\dev\\lint",
-    "sonarlint.rules": {
-        "csharpsquid:S3903": {
-            "level": "off"
-        },
-        "csharpsquid:S1186": {
-            "level": "off"
-        },
-        "csharpsquid:S1104": {
-            "level": "off"
-        },
-        "csharpsquid:S3400": {
-            "level": "off"
-        },
-        "IDE:1006": {
-            "level": "off"
-        },
-        "csharpsquid:S2436": {
-            "level": "off"
-        }
-    },
-
 
     "extensions.ignoreRecommendations": true,
     "quarkus.tools.alwaysShowWelcomePage": false,
-
-
-
     "editor.detectIndentation": false,
     "editor.parameterHints.enabled": false,
     "javascript.inlayHints.parameterNames.enabled": "all",
@@ -480,23 +530,13 @@
 
 
 
-    // Change the formatting so it
-
-    "highlight.regexFlags": "",
-    "highlight.decorations": {
-        "rangeBehavior": 3
-    },
     "workbench.editor.enablePreviewFromQuickOpen": true,
     "workbench.editor.enablePreview": false,
     "editor.titleBar.enabled": false,
-
-
     "diffEditor.codeLens": true,
-    "diffEditor.ignoreTrimWhitespace": false,
     "sonarlint.pathToNodeExecutable": "C:\\Program Files\\nodejs\\node.exe",
     "editor.autoClosingQuotes": "never",
     "html.autoCreateQuotes": false,
-
     "apc.electron": {
         "titleBarStyle": "hidden",
         "trafficLightPosition": {
@@ -509,25 +549,41 @@
         "height": 26,
     },
     "apc.activityBar": {
-      "size": 40,
-      "itemSize": 40,
-      "itemMargin": 0
+        "size": 40,
+        "itemSize": 40,
+        "itemMargin": 0
     },
     "apc.stylesheet": {
-      ".title-label": "display: none !important",
-      ".composite.title": "display: block",
-      ".composite-bar-container": "display: flex !important; padding: 0 0",
-      ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: space-evenly !important",
+        ".title-label": "display: none !important",
+        ".composite.title": "display: none",
+        ".composite-bar-container": "display: flex !important; padding: 0 0",
+        ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: space-evenly !important",
     },
     "apc.menubar.compact": true,
-
     "terminal.integrated.defaultProfile.windows": "Git Bash",
 
+
+
     // OTHER
-
-
     "redhat.telemetry.enabled": false,
     "window.commandCenter": false,
     "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.lineNumbers": "off",
+
+    // S6813: @Inject should not be used. Use constructor instead
+    // S5411: Compare boolean using primitive types.
+    "sonarlint.rules": {
+        "java:S6813": {
+            "level": "off"
+        },
+        "java:S5411": {
+            "level": "off"
+        }
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.codeLens": false,
+    "workbench.statusBar.visible": false,
 
 }
