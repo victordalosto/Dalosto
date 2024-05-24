@@ -16,7 +16,6 @@
         "**/.idea": true,
         // "**/src/test/**": true,
 
-
         // BMW
         // "**/suppressions.xml": true,
         // "**/checkstyle.xml": true,
@@ -76,6 +75,7 @@
     },
 
 
+
     // VSCODE CUSTOMIZATION
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "workbench.colorCustomizations": {
@@ -111,7 +111,6 @@
 
 
     // EXTENSIONS
-    "workbench.colorTheme": "Dracula",
     "github.copilot.enable": {
         "*": true,
         "yaml": true,
@@ -191,7 +190,7 @@
                 }
             },
             { // keywords
-                "scope": "entity.name.tag, storage.type.function.js, storage.type.js, storage.type.function.ts, storage.type.ts,keyword.control, storage.type.interface.ts",
+                "scope": "storage.type.class.js, entity.name.tag, storage.type.function.js, storage.type.js, storage.type.function.ts, storage.type.ts,keyword.control, storage.type.interface.ts",
                 "settings": {
                     "foreground": "#F92672",
                     "fontStyle": ""
@@ -409,20 +408,19 @@
 
 
     // JAVA CONFIGURATIONS
-    //////  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\jdk-21"
+    //  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\jdk-21"
     "spring-boot.ls.java.home": "C:\\dev\\jdk-21",
     "java.jdt.ls.java.home": "C:\\dev\\jdk-21",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
     "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
-    "java.debug.settings.vmArgs": "-Xmx8g",
+    "java.debug.settings.vmArgs": "-Xmx18g",
     "java.debug.settings.console": "externalTerminal",
-    "terminal.integrated.env.windows": {
-        "PYTHONPATH": "${workspaceFolder}"
-    },
-    "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
-    "terminal.integrated.fontSize": 11,
+    "quarkus.tools.debug.terminateProcessOnExit": "Always terminate",
+    "java.referencesCodeLens.enabled": true,
+    "java.implementationsCodeLens.enabled": true,
+    // "java.checkstyle.configuration": "C:\\dev\\lint",
 
 
     // TYPESCRIPT
@@ -432,22 +430,29 @@
 
     // C#
     "dotnetAcquisitionExtension.enableTelemetry": false,
+    "csharp.suppressBuildAssetsNotification": true,
+    "dotnet.server.useOmnisharp": true,
+    "csharp.debug.logging.moduleLoad": false,
+    "csharp.debug.console": "integratedTerminal",
+    "csharp.semanticHighlighting.enabled": false,
     "files.associations": {
         "*.cs": "csharp"
     },
 
 
-    // C#
-    "csharp.suppressBuildAssetsNotification": true,
-    "dotnet.server.useOmnisharp": true,
-    "csharp.debug.logging.moduleLoad": false,
-    "csharp.debug.console": "integratedTerminal",
+    // PYTHON
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}"
+    },
 
 
 
     // FORMATTERS
     "[xml]": {
         "editor.defaultFormatter": "redhat.vscode-xml"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
@@ -468,28 +473,43 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    // "[typescriptreact]": {
-    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
-    // },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+
+
 
 
     // CONFIGS
-    "editor.foldingImportsByDefault": true,
-    "java.inlayHints.parameterNames.enabled": "all",
-    "editor.inlayHints.enabled": "offUnlessPressed",
-    "vsintellicode.modify.editor.suggestSelection": "disabled",
-    "files.trimTrailingWhitespace": true,
-    "explorer.sortOrder": "filesFirst",
-    "editor.inlineSuggest.enabled": true,
-    "editor.suggest.showModules": false,
+    "editor.fontSize": 16,
+    "editor.tabSize": 4,
     "editor.fontFamily": "Fira Code, MonacoB, Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
     "editor.lineHeight": 1.5,
+    "editor.foldingImportsByDefault": true,
+    "workbench.colorTheme": "Dracula",
+    "window.zoomLevel": 0,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.fontSize": 13,
+    "terminal.integrated.defaultProfile.linux": "JavaScript Debug Terminal",
+
+
+
+    // hints
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "java.inlayHints.parameterNames.enabled": "all",
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showModules": false,
+
+
+
+    // OTHERS
+    "vsintellicode.modify.editor.suggestSelection": "disabled",
+    "explorer.sortOrder": "filesFirst",
     "editor.rulers": [
         // 80,
         100
     ],
     "editor.renderLineHighlight": "gutter",
-    "csharp.semanticHighlighting.enabled": false,
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "workbench.iconTheme": "vscode-icons",
@@ -514,12 +534,10 @@
     "files.autoSave": "onFocusChange",
     "vsicons.dontShowNewVersionMessage": true,
     "microprofile.tools.codeLens.urlCodeLensEnabled": false,
-    "quarkus.tools.debug.terminateProcessOnExit": "Always terminate",
     // "editor.suggest.insertMode": "replace",
     // "editor.acceptSuggestionOnEnter": "off",
-    "java.referencesCodeLens.enabled": true,
-    "java.implementationsCodeLens.enabled": true,
-    "java.checkstyle.configuration": "C:\\dev\\lint",
+
+
 
     "extensions.ignoreRecommendations": true,
     "quarkus.tools.alwaysShowWelcomePage": false,
@@ -570,20 +588,24 @@
     "editor.stickyScroll.scrollWithEditor": false,
     "workbench.tree.enableStickyScroll": false,
     "editor.stickyScroll.enabled": false,
-    "editor.lineNumbers": "off",
+
+
 
     // S6813: @Inject should not be used. Use constructor instead
     // S5411: Compare boolean using primitive types.
+    // S1871: Bug code block com varios returns false false, ou true true
     "sonarlint.rules": {
         "java:S6813": {
             "level": "off"
         },
         "java:S5411": {
             "level": "off"
+        },
+        "java:S1871": {
+            "level": "off"
         }
     },
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.codeLens": false,
-    "workbench.statusBar.visible": false,
 
 }
