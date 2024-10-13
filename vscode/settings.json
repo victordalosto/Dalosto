@@ -63,7 +63,7 @@
         "**/*.meta": true,
 
         "**/UserSettings": true,
-        "**/Logs": true,
+        // "**/Logs": true,
         "**/Packages": true,
         "**/Assets/TutorialInfo": true,
         "**/Assets/Settings": true,
@@ -124,10 +124,10 @@
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             { // IMPORTS, PACKAGE,
-                "scope": "storage.type.annotation.java, punctuation.definition.annotation, storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java",
+                "scope": "storage.type.annotation.kotlin, storage.type.annotation.java, punctuation.definition.annotation, storage.modifier.import.java, keyword.control.import.ts, keyword.control.from.ts, entity.name.namespace, storage.modifier.package.java, meta.package.java, punctuation.separator.java, keyword.other.import.java, keyword.other.package.java",
                 "settings": {
                     "foreground": "#999996",
-                    "fontStyle": ""
+                    "fontStyle": "italic"
                 }
             },
             { // ACESSOR: public, private, proteced
@@ -140,7 +140,7 @@
             },
             { // Types
                 //, entity.name.namespace
-                "scope": "hcl-blockType, terraform-variable, entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class",
+                "scope": "entity.name.type, hcl-blockType, terraform-variable, entity.name.type.struct, entity.name.type.cs, keyword.type.cs, entity.name.type.enum, entity.name.type.ts, storage.type.primitive.java, support.type.primitive.ts, support.class, entity.name.type.interface, entity.name.type.class",
                 "settings": {
                     "foreground": "#66D9EF", //4de0ff
                     "fontStyle": "",
@@ -207,7 +207,7 @@
             { // HTML Tags
                 "scope": "entity.name.tag.js",
                 "settings": {
-                    "foreground": "#c8ce7edc",
+                    "foreground": "#F92672",
                     "fontStyle": ""
                 }
             },
@@ -221,12 +221,12 @@
             { // HTML DIAMONDS < >
                 "scope": "punctuation.definition.tag.begin.js, punctuation.definition.tag.end.js",
                 "settings": {
-                    "foreground": "#c8ce7edc",
+                    "foreground": "#747470dc",
                     "fontStyle": "bold"
                 }
             },
             { // return, new,
-                "scope": "keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java",
+                "scope": "source.asp.vb.net, keyword.operator.expression.new, keyword, keyword.operator.new, keyword.control.java",
                 "settings": {
                     "foreground": "#F92672",
                     "fontStyle": ""
@@ -409,12 +409,12 @@
 
     // JAVA CONFIGURATIONS
     //  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\jdk-21"
-    "spring-boot.ls.java.home": "C:\\dev\\jdk-21",
-    "java.jdt.ls.java.home": "C:\\dev\\jdk-21",
+    "spring-boot.ls.java.home": "D:\\dev\\java",
+    "java.jdt.ls.java.home": "D:\\dev\\java",
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
-    "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
+    // "java.format.settings.url": "https://raw.githubusercontent.com/victordalosto/Dalosto/master/configs/java-formatter.xml",
     "java.debug.settings.vmArgs": "-Xmx18g",
     "java.debug.settings.console": "externalTerminal",
     "quarkus.tools.debug.terminateProcessOnExit": "Always terminate",
@@ -482,9 +482,8 @@
 
     // CONFIGS
     "editor.fontSize": 16,
-    "editor.tabSize": 4,
     "editor.fontFamily": "Fira Code, MonacoB, Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
-    "editor.lineHeight": 1.5,
+    "editor.lineHeight": 1.6,
     "editor.foldingImportsByDefault": true,
     "workbench.colorTheme": "Dracula",
     "window.zoomLevel": 0,
@@ -512,8 +511,8 @@
     "editor.renderLineHighlight": "gutter",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.tree.indent": 8,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.tree.indent": 20,
     "workbench.tree.renderIndentGuides": "always",
     "workbench.tips.enabled": false,
     "window.customMenuBarAltFocus": false,
@@ -521,7 +520,6 @@
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
     "workbench.layoutControl.enabled": false,
-    "breadcrumbs.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "outline.showPackages": false,
 
@@ -541,7 +539,6 @@
 
     "extensions.ignoreRecommendations": true,
     "quarkus.tools.alwaysShowWelcomePage": false,
-    "editor.detectIndentation": false,
     "editor.parameterHints.enabled": false,
     "javascript.inlayHints.parameterNames.enabled": "all",
     "microprofile.tools.inlayHint.enabled": true,
@@ -549,10 +546,9 @@
 
 
     "workbench.editor.enablePreviewFromQuickOpen": true,
-    "workbench.editor.enablePreview": false,
     "editor.titleBar.enabled": false,
     "diffEditor.codeLens": true,
-    "sonarlint.pathToNodeExecutable": "C:\\Program Files\\nodejs\\node.exe",
+    "sonarlint.pathToNodeExecutable": "D:\\dev\\nodejs\\node.exe",
     "editor.autoClosingQuotes": "never",
     "html.autoCreateQuotes": false,
     "apc.electron": {
@@ -578,7 +574,7 @@
         ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: space-evenly !important",
     },
     "apc.menubar.compact": true,
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
 
 
 
@@ -591,9 +587,21 @@
 
 
 
+    // Workbench - tabs
+    "workbench.editor.tabSizingFixedMaxWidth": 120,
+    "workbench.editor.tabSizing": "fixed",
+    "workbench.editor.tabSizingFixedMinWidth": 120,
+    "workbench.editor.wrapTabs": true,
+
+
+
     // S6813: @Inject should not be used. Use constructor instead
     // S5411: Compare boolean using primitive types.
     // S1871: Bug code block com varios returns false false, ou true true
+    // S1165: classes should have final fields
+    // S3252: PanacheEntityBase complaining about .listAll() not using super class
+    // ts(2686): requires the import of React
+    // ts(7006): implicit any type.
     "sonarlint.rules": {
         "java:S6813": {
             "level": "off"
@@ -603,9 +611,40 @@
         },
         "java:S1871": {
             "level": "off"
+        },
+        "java:S1165": {
+            "level": "off"
+        },
+        "ts:2686": {
+            "level": "off"
+        },
+        "ts:7006": {
+            "level": "off"
+        },
+        "java:S3252": {
+            "level": "off"
         }
     },
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.codeLens": false,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.editor.enablePreview": false,
+    "git.suggestSmartCommit": false,
+    "git.autofetch": true,
+    "terminal.integrated.detectLocale": "on",
+    "breadcrumbs.enabled": false,
+    "editor.wordWrap": "wordWrapColumn",
+    "outline.showNumbers": false,
+    "editor.lineNumbers": "relative",
+    "search.showLineNumbers": true,
+    "workbench.statusBar.visible": false,
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "hidden",
+    "editor.hover.hidingDelay": 100,
+    "editor.hover.delay": 100,
+    "workbench.hover.delay": 50,
+    "workbench.sash.hoverDelay": 100,
+
 
 }
