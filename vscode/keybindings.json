@@ -938,10 +938,6 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "ctrl+e",
-        "command": "-workbench.action.quickOpen"
-    },
-    {
         "key": "ctrl+p",
         "command": "-workbench.action.quickOpen"
     },
@@ -1364,10 +1360,6 @@
         "command": "-workbench.action.focusBelowGroup"
     },
     {
-        "key": "ctrl+1",
-        "command": "-workbench.action.focusFirstEditorGroup"
-    },
-    {
         "key": "ctrl+0",
         "command": "-workbench.action.focusSideBar"
     },
@@ -1769,10 +1761,6 @@
         "command": "editor.foldLevel2"
     },
     {
-        "key": "ctrl+1",
-        "command": "editor.unfoldRecursively"
-    },
-    {
         "key": "ctrl+5",
         "command": "workbench.files.action.collapseExplorerFolders"
     },
@@ -1883,5 +1871,46 @@
         "key": "ctrl+shift+g",
         "command": "-workbench.view.scm",
         "when": "workbench.scm.active"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+oem_3",
+        "command": "-workbench.action.terminal.new",
+        "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.splitEditor"
+    },
+    {
+        "key": "ctrl+2",
+        "command": "workbench.action.focusSecondEditorGroup"
+    },
+    {
+        "key": "ctrl+3",
+        "command": "workbench.action.focusThirdEditorGroup"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+alt+pagedown",
+        "command": "-workbench.action.terminal.scrollDown",
+        "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "workbench.action.terminal.scrollUp",
+        "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+alt+pageup",
+        "command": "-workbench.action.terminal.scrollUp",
+        "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
     }
 ]
