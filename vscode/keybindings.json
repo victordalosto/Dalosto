@@ -157,10 +157,6 @@
         "when": "!editorFocus"
     },
     {
-        "key": "ctrl+tab",
-        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
-    },
-    {
         "key": "ctrl+shift+p",
         "command": "workbench.action.showCommands"
     },
@@ -1454,16 +1450,6 @@
         "when": "!activeEditorIsPinned"
     },
     {
-        "key": "ctrl+shift+tab",
-        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup",
-        "when": "!activeEditorGroupEmpty"
-    },
-    {
-        "key": "ctrl+tab",
-        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
-        "when": "!activeEditorGroupEmpty"
-    },
-    {
         "key": "ctrl+shift+t",
         "command": "-workbench.action.reopenClosedEditor"
     },
@@ -1516,16 +1502,6 @@
         "key": "shift+alt+f5",
         "command": "-workbench.action.compareEditor.previousChange",
         "when": "textCompareEditorVisible"
-    },
-    {
-        "key": "ctrl+tab",
-        "command": "-workbench.action.quickOpenNavigateNextInEditorPicker",
-        "when": "inEditorsPicker && inQuickOpen"
-    },
-    {
-        "key": "ctrl+shift+tab",
-        "command": "-workbench.action.quickOpenNavigatePreviousInEditorPicker",
-        "when": "inEditorsPicker && inQuickOpen"
     },
     {
         "key": "f1",
@@ -1883,7 +1859,7 @@
         "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
     },
     {
-        "key": "ctrl+shift+tab",
+        "key": "ctrl+shift+w",
         "command": "workbench.action.splitEditor"
     },
     {
@@ -1912,5 +1888,125 @@
         "key": "ctrl+alt+pageup",
         "command": "-workbench.action.terminal.scrollUp",
         "when": "terminalFocusInAny && terminalHasBeenCreated && !terminalAltBufferActive || terminalFocusInAny && terminalProcessSupported && !terminalAltBufferActive"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "go-to-relative.goToLine"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "-go-to-relative.goToLine"
+    },
+    {
+        "key": "alt+a",
+        "command": "cursorMove",
+        "args": {
+            "to": "viewPortCenter"
+        }
+    },
+    // {
+    //     "key": "ctrl+up",
+    //     "command": "editorScroll",
+    //     "when": "editorTextFocus",
+    //     "args":
+    //     {
+    //         "to": "up",
+    //         "by": "line",
+    //         "revealCursor": true
+    //     }
+    // },
+    // {
+    //     "key": "ctrl+down",
+    //     "command": "editorScroll",
+    //     "when": "editorTextFocus",
+    //     "args":
+    //     {
+    //         "to": "down",
+    //         "by": "line",
+    //         "revealCursor": true
+    //     }
+    // },
+    // {
+    //     "key": "ctrl+enter",
+    //     "command": "-github.copilot.generate",
+    //     "when": "editorTextFocus && github.copilot.activated && !commentEditorFocused && !inInteractiveInput && !interactiveEditorFocused"
+    // },
+    // {
+    //     "key": "ctrl+enter",
+    //     "command": "-inlineChat.acceptChanges",
+    //     "when": "inlineChatHasProvider && inlineChatVisible && !inlineChatDocumentChanged || inlineChatHasProvider && inlineChatVisible && config.inlineChat.mode != 'preview'"
+    // },
+    {
+        "key": "ctrl+enter",
+        "command": "git.openFile"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditorInGroup"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "value": 10
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "value": 5
+        },
+        "when": "editorTextFocus"
+
+    },
+    {
+        "key": "alt+left",
+        "command": "cursorWordPartLeft",
+        "when": "editorTextFocus",
+    },
+    {
+        "key": "alt+right",
+        "command": "cursorWordPartRight",
+        "when": "editorTextFocus",
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "cursorWordPartLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "cursorWordPartRightSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+left",
+        "command": "cursorWordStartLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "ctrl+right",
+        "command": "cursorWordEndRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+left",
+        "command": "cursorWordStartLeftSelect",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+ctrl+right",
+        "command": "cursorWordEndRightSelect",
+        "when": "editorTextFocus"
     }
 ]
