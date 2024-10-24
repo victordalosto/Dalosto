@@ -3,18 +3,19 @@
     // Excluded files
     "files.exclude": {
         // "docs": true,
-        "**/.vs": true,
+        // "**/.vs": true,
         // "**/.vscode": true,
+        // "**/.gitignore": true,
+        // "**/Dockerfile": true,
+        // "**/src/test/**": true,
+
         "**/.editorconfig": true,
-        "**/Dockerfile": true,
 
         "**/.gitattributes": true,
-        // "**/.gitignore": true,
         "**/.git": true,
         "**/.dockerignore": true,
-        // "**/.github": true,
+        "**/.github": true,
         "**/.idea": true,
-        // "**/src/test/**": true,
 
         "**/.mvn": true,
         "**/mvnw": true,
@@ -40,7 +41,7 @@
         "**/bin": true,
         "**/target/**": true,
 
-        // "**/node_modules": true,
+        "**/node_modules": true,
         // "**/package-lock.json": true,
 
         // "**/obj": true,
@@ -66,7 +67,6 @@
     // classes: FF1BF0 -> FF1BF0
     // types: 66D9EF -> 00FFFF
 
-    "workbench.iconTheme": "bearded-icons",
     // "workbench.colorTheme": "2077",
 
     "accessibility.dimUnfocused.enabled": true,
@@ -74,7 +74,6 @@
 
 
     // VSCODE CUSTOMIZATION
-    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "workbench.colorCustomizations": {
 
         "editor.foreground": "#ffffff",
@@ -91,7 +90,7 @@
         // Badge (notifications)
         "activityBar.activeBorder": "#FF1BF0",
         "activityBar.activeForeground": "#FF1BF0",
-        "activityBar.background": "#030D22",
+        "activityBar.background": "#01050e",
 
         "activityBar.inactiveForeground": "#FF2E97",
         "activityBarBadge.background": "#FF1BF0", // Badge background color (on notifications)
@@ -133,7 +132,7 @@
         "editorGroupHeader.tabsBackground": "#030D22", // tab header
         "editorGroupHeader.tabsBorder": "#141119", // tab header border
         "editorGroup.border": "#FF2E97", // #FF1BF0 tab header border
-        "editor.lineHighlightBackground": "#1c1a1a",
+        "editor.lineHighlightBackground": "#272424",
         "editor.lineHighlightBorder": "#030D22",
         "editor.selectionBackground": "#5a34a7",
         "editorLineNumber.foreground": "#444141",
@@ -141,8 +140,8 @@
 
         "editorLineNumber.activeForeground": "#FF2E97",
         "editorLineNumber.inactiveForeground": "#FF2E97",
-        "editorCursor.background": "#FF2E97",
-        "editorCursor.foreground": "#FF2E97",
+        "editorCursor.background": "#f38f4c",
+        "editorCursor.foreground": "#f38f4c",
 
         "editorGroupHeader.noTabsBackground": "#030D22",
 
@@ -193,7 +192,7 @@
                 }
             },
             { // ACESSOR: public, private, proteced
-                "scope": "source.tsx, storage.type.class.ts, storage.type.primitive.java, storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java",
+                "scope": "source.asp.vb.net, source.tsx, storage.type.class.ts, storage.type.primitive.java, storage.modifier, storage.modifier.cs, storage.modifier.java, storage.modifier.ts, storage.modifier.implements.java, storage.modifier.extends.java",
                 "settings": {
                     // "foreground": "#FF79C6",
                     "foreground": "#FF1BF0",
@@ -479,8 +478,12 @@
 
     // JAVA CONFIGURATIONS
     //  HOME  ->  "/usr/lib/jvm/java-17-openjdk-amd64/",  "C:\\dev\\jdk-21"
-    "spring-boot.ls.java.home": "D:\\dev\\java",
+    // "spring-boot.ls.java.home": "D:\\dev\\java",
+    "java.trace.server": "verbose",
     "java.jdt.ls.java.home": "D:\\dev\\java",
+    "kotlin.java.home": "D:\\dev\\java",
+    "kotlin.languageServer.enabled": true,
+    "kotlin.scripts.enabled": false,
     "maven.terminal.useJavaHome": true,
     "java.maven.downloadSources": true,
     "java.eclipse.downloadSources": true,
@@ -496,6 +499,8 @@
     // TYPESCRIPT
     "typescript.updateImportsOnFileMove.enabled": "always",
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.suggest.autoImports": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
 
 
     // C#
@@ -505,9 +510,14 @@
     // "csharp.debug.logging.moduleLoad": false,
     // "csharp.debug.console": "integratedTerminal",
     // "csharp.semanticHighlighting.enabled": false,
-    // "files.associations": {
-    //     "*.cs": "csharp"
-    // },
+
+    "files.associations": {
+        "*.cs": "csharp",
+        ".env.*": "dotenv",
+        ".prettierrc": "json",
+        "*.css": "css",
+        ".dev.vars": "dotenv"
+    },
 
 
     // PYTHON
@@ -550,11 +560,40 @@
 
 
 
-    // CONFIGS
+    // EDITOR
+
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    // "editor.tabSize": 4,
     "editor.fontSize": 16,
+    "editor.lineHeight": 1.7,
     "editor.fontFamily": "Fira Code, MonacoB, Consolas, Cascadia Mono, monaco monospace, Monaco, 'Courier New', JetBrains Mono",
-    "editor.lineHeight": 1.6,
     "editor.foldingImportsByDefault": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggest.showModules": false,
+    "editor.inlayHints.enabled": "offUnlessPressed",
+    "editor.rulers": [100],
+    "editor.renderLineHighlight": "line", // Gutter // Editor line
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.parameterHints.enabled": false,
+    "editor.titleBar.enabled": false,
+    "editor.autoClosingQuotes": "never",
+    "editor.stickyScroll.scrollWithEditor": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.glyphMargin": false,
+    "editor.folding": false,
+    "editor.hover.hidingDelay": 100,
+    "editor.hover.delay": 100,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.lineNumbers": "relative",
+    "editor.wordWrapColumn": 100,
+    "editor.cursorSurroundingLines": 8,
+
+
+
+    "update.mode": "manual",
+    "terminal.integrated.gpuAcceleration": "on",
+
     "window.zoomLevel": 0,
     "files.trimTrailingWhitespace": true,
     "terminal.integrated.fontSize": 13,
@@ -563,31 +602,19 @@
 
 
     // hints
-    "editor.inlayHints.enabled": "offUnlessPressed",
     "java.inlayHints.parameterNames.enabled": "all",
-    "editor.inlineSuggest.enabled": true,
-    "editor.suggest.showModules": false,
 
 
 
     // OTHERS
     "vsintellicode.modify.editor.suggestSelection": "disabled",
     "explorer.sortOrder": "filesFirst",
-    "editor.rulers": [
-        // 80,
-        100
-    ],
-    "editor.renderLineHighlight": "gutter",
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": false,
-    "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always",
-    "workbench.tips.enabled": false,
+
+
     "window.customMenuBarAltFocus": false,
     "windows.titleBarStyle": "native",
     "vsicons.presets.hideExplorerArrows": true,
     "vsicons.presets.foldersAllDefaultIcon": true,
-    "workbench.layoutControl.enabled": false,
     "window.enableMenuBarMnemonics": false,
     "outline.showPackages": false,
 
@@ -600,42 +627,42 @@
     "files.autoSave": "onFocusChange",
     "vsicons.dontShowNewVersionMessage": true,
     "microprofile.tools.codeLens.urlCodeLensEnabled": false,
-    // "editor.suggest.insertMode": "replace",
-    // "editor.acceptSuggestionOnEnter": "off",
 
 
 
+    // RECOMMENDATIONS
     "extensions.ignoreRecommendations": true,
     "quarkus.tools.alwaysShowWelcomePage": false,
-    "editor.parameterHints.enabled": false,
-    "javascript.inlayHints.parameterNames.enabled": "all",
     "microprofile.tools.inlayHint.enabled": true,
 
 
 
-    "workbench.editor.enablePreviewFromQuickOpen": true,
-    "editor.titleBar.enabled": false,
+
     "diffEditor.codeLens": true,
     "sonarlint.pathToNodeExecutable": "D:\\dev\\nodejs\\node.exe",
-    "editor.autoClosingQuotes": "never",
     "html.autoCreateQuotes": false,
     "apc.electron": {
-        "titleBarStyle": "hidden",
+        "titleBarStyle": "hiddenInset",
         "trafficLightPosition": {
             "x": 5,
             "y": 5
         },
         "frame": false,
+        "opacity": 1,
+        "vibrancy": "dark",
     },
     "apc.header": {
-        "height": 26,
+        "height": 25,
     },
     "apc.activityBar": {
+        "hideSettings": true,
         "size": 40,
         "itemSize": 40,
         "itemMargin": 0
     },
     "apc.stylesheet": {
+        ".editor-actions": "display: none",
+        ".title-label > h2": "display: none",
         ".title-label": "display: none !important",
         ".composite.title": "display: none",
         ".composite-bar-container": "display: flex !important; padding: 0 0",
@@ -649,10 +676,26 @@
     // OTHER
     "redhat.telemetry.enabled": false,
     "window.commandCenter": false,
-    "editor.stickyScroll.scrollWithEditor": false,
-    "workbench.tree.enableStickyScroll": false,
-    "editor.stickyScroll.enabled": false,
 
+
+    // WORKBENCH
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.tree.enableStickyScroll": false,
+    "workbench.hover.delay": 50,
+    "workbench.sash.hoverDelay": 100,
+
+
+    "workbench.editor.labelFormat": "short",
+
+    "workbench.iconTheme": "bearded-icons",
+    "workbench.editor.enablePreview": false,
+    "workbench.colorTheme": "Dracula Theme",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.tips.enabled": false,
+    "workbench.layoutControl.enabled": false,
 
 
     // Workbench - tabs
@@ -660,7 +703,6 @@
     "workbench.editor.tabSizing": "fixed",
     "workbench.editor.tabSizingFixedMinWidth": 120,
     "workbench.editor.wrapTabs": true,
-
 
 
     // S6813: @Inject should not be used. Use constructor instead
@@ -693,35 +735,76 @@
             "level": "off"
         }
     },
-
-    // Left space
-    // "editor.glyphMargin": false,
-    "editor.folding": false,
-
-    "editor.lineNumbers": "relative",
-    "search.showLineNumbers": true,
-
-    "workbench.hover.delay": 50,
-    "workbench.sash.hoverDelay": 100,
-
-    "editor.hover.hidingDelay": 100,
-    "editor.hover.delay": 100,
-    "editor.wordWrap": "wordWrapColumn",
-
-    "diffEditor.ignoreTrimWhitespace": true,
     "[javascriptreact]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.editor.enablePreview": false,
+
+
+    // Left space
+    "search.showLineNumbers": true,
+
+
+    "diffEditor.ignoreTrimWhitespace": true,
+
+    // Command
+    "multiCommand.commands": [
+        {
+            "command": "multiCommand.cursorAndScrollUp5",
+            "sequence": [
+                {"command": "scrollLineUp", "args": {"to": "up","by": "line"}},
+                {"command": "scrollLineUp", "args": {"to": "up","by": "line"}},
+                {"command": "scrollLineUp", "args": {"to": "up","by": "line"}},
+                {"command": "scrollLineUp", "args": {"to": "up","by": "line"}},
+                {"command": "scrollLineUp", "args": {"to": "up","by": "line"}},
+                {"command": "cursorMove","args": {"to": "up","by": "line","value": 5}},
+            ]
+        },
+        {
+            "command": "multiCommand.cursorAndScrollDown5",
+            "sequence": [
+                {"command": "scrollLineDown", "args": {"to": "down","by": "line"}},
+                {"command": "scrollLineDown", "args": {"to": "down","by": "line"}},
+                {"command": "scrollLineDown", "args": {"to": "down","by": "line"}},
+                {"command": "scrollLineDown", "args": {"to": "down","by": "line"}},
+                {"command": "scrollLineDown", "args": {"to": "down","by": "line"}},
+                {"command": "cursorMove","args": {"to": "down","by": "line","value": 5}},
+            ]
+        },
+        {
+            "command": "multiCommand.cursorAndScrollUp",
+            "sequence": [
+                {"command": "scrollLineUp", "args": {"to": "up","by": "line"}},
+                {"command": "cursorMove","args": {"to": "up","by": "line","value": 1}},
+            ]
+        },
+        {
+            "command": "multiCommand.cursorAndScrollDown",
+            "sequence": [
+                {"command": "scrollLineDown", "args": {"to": "down","by": "line"}},
+                {"command": "cursorMove","args": {"to": "down","by": "line","value": 1}},
+            ]
+        }
+    ],
+
+
+
     "git.suggestSmartCommit": false,
     "git.autofetch": true,
     "terminal.integrated.detectLocale": "on",
-    "breadcrumbs.enabled": false,
     "outline.showNumbers": false,
-    "editor.wordWrapColumn": 100,
-    "workbench.colorTheme": "Dracula Theme",
-    "workbench.productIconTheme": "fluent-icons",
-    "workbench.activityBar.location": "hidden",
+
+
+
+    "pascal.tags.autoGenerate": false,
+    "window.menuBarVisibility": "compact",
+
+
+
+
+    "kotlin.codegen.enabled": true,
+    "glassit.alpha": 255,
+    "breadcrumbs.enabled": false,
     "workbench.statusBar.visible": false,
+
 
 }
